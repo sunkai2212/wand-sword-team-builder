@@ -46,7 +46,10 @@ export function renderBoard(
     button.dataset.testid = "board-cell";
     button.dataset.cell = String(cell);
     button.setAttribute("aria-pressed", String(member?.id === selectedMemberId));
-    button.setAttribute("aria-label", member ? professionName(member.profession) : `空位${cell + 1}`);
+    button.setAttribute(
+      "aria-label",
+      member ? `位置 ${cell + 1}，${professionName(member.profession)}` : `空位${cell + 1}`,
+    );
     if (member) button.append(renderMember(member));
     button.addEventListener("click", () => handlers.onCellClick(cell));
     board.append(button);

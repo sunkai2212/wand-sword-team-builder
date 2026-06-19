@@ -13,6 +13,17 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   let professionCell: number | null = null;
   let statusMessage = "";
 
+  root.replaceChildren();
+  const main = document.createElement("main");
+  main.className = "app-shell";
+  const content = document.createElement("div");
+  const status = document.createElement("p");
+  status.className = "status-message";
+  status.setAttribute("role", "status");
+  status.setAttribute("aria-live", "polite");
+  main.append(content, status);
+  root.append(main);
+
   function showModal(dialog: HTMLElement): void {
     root.append(dialog);
     (dialog as HTMLDialogElement).showModal();
@@ -20,6 +31,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
 
   function focusStageTrigger(): void {
     root.querySelector<HTMLButtonElement>('[data-action="change-stage"]')?.focus();
+  }
+
+  function focusCell(cell: number): void {
+    root.querySelector<HTMLButtonElement>(`[data-testid="board-cell"][data-cell="${cell}"]`)?.focus();
   }
 
   function selectStage(stage: Stage): void {
@@ -32,10 +47,20 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
 
   function selectProfession(profession: Profession): void {
     if (!team || professionCell === null) return;
-    team = addMember(team, professionCell, profession);
+    const cell = professionCell;
+    team = addMember(team, cell, profession);
     professionCell = null;
     statusMessage = "";
     render();
+    focusCell(cell);
+  }
+
+  function cancelProfession(): void {
+    if (professionCell === null) return;
+    const cell = professionCell;
+    professionCell = null;
+    render();
+    focusCell(cell);
   }
 
   function handleCellClick(cell: number): void {
@@ -46,6 +71,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       selectedMemberId = selectedMemberId === member.id ? null : member.id;
       statusMessage = "";
       render();
+      focusCell(cell);
       return;
     }
 
@@ -55,12 +81,14 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       selectedMemberId = null;
       statusMessage = "";
       render();
+      focusCell(cell);
       return;
     }
 
     if (team.members.length >= 4) {
       statusMessage = "队伍已满4人";
       render();
+      focusCell(cell);
       return;
     }
 
@@ -89,22 +117,35 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       button.addEventListener("click", () => selectProfession(profession));
       choices.append(button);
     }
-    dialog.append(titleElement, choices);
-    dialog.addEventListener("cancel", (event) => event.preventDefault());
+    const cancelButton = document.createElement("button");
+    cancelButton.type = "button";
+    cancelButton.className = "text-button";
+    cancelButton.textContent = "取消";
+    cancelButton.addEventListener("click", () => {
+      dialog.close();
+      cancelProfession();
+    });
+    dialog.append(titleElement, choices, cancelButton);
+    dialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      dialog.close();
+      cancelProfession();
+    });
     trapDialogFocus(dialog);
     return dialog;
   }
 
   function render(): void {
-    root.replaceChildren();
+    root.querySelectorAll(":scope > dialog").forEach((dialog) => dialog.remove());
+    content.replaceChildren();
+    status.textContent = statusMessage;
+    main.hidden = team === null;
 
     if (!team) {
       showModal(renderStageSelector(selectStage));
       return;
     }
 
-    const main = document.createElement("main");
-    main.className = "app-shell";
     const heading = document.createElement("h1");
     heading.textContent = title;
 
@@ -123,13 +164,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     });
     toolbar.append(currentStage, changeStage);
 
-    const status = document.createElement("p");
-    status.className = "status-message";
-    status.setAttribute("role", "status");
-    status.textContent = statusMessage;
-
-    main.append(heading, toolbar, renderBoard(team, selectedMemberId, { onCellClick: handleCellClick }), status);
-    root.append(main);
+    content.append(heading, toolbar, renderBoard(team, selectedMemberId, { onCellClick: handleCellClick }));
 
     if (stageSelectorOpen) {
       showModal(renderStageSelector(selectStage, {

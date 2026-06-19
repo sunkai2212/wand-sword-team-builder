@@ -122,6 +122,12 @@ describe("progression validation", () => {
     expect(setStage(team, 7, false, catalog)).toEqual({ ...team, stage: 7 });
   });
 
+  it("preserves all state when setting the same stage", () => {
+    const team = configuredTeam();
+
+    expect(setStage(team, 7, false, catalog)).toEqual(team);
+  });
+
   it("lowers without confirmation when no skill is over-stage", () => {
     const team: Team = {
       ...configuredTeam(),
@@ -171,6 +177,14 @@ describe("progression validation", () => {
     for (const stage of [0, 8, 1.5, Number.NaN]) {
       expect(() =>
         setStage(configuredTeam(), stage as never, true, catalog),
+      ).toThrow(/stage.*integer.*1.*7/i);
+    }
+  });
+
+  it("rejects invalid runtime stages when counting affected slots", () => {
+    for (const stage of [0, 8, 1.5]) {
+      expect(() =>
+        countOverStageSkills(configuredTeam(), stage as never, catalog),
       ).toThrow(/stage.*integer.*1.*7/i);
     }
   });

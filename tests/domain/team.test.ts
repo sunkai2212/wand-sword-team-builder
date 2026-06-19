@@ -34,8 +34,19 @@ describe("team state", () => {
     const team = addMember(createTeam(7), 0, "knight");
 
     expect(() => addMember(team, -1, "fighter")).toThrow(/0.*19/);
+    expect(() => addMember(team, 1.5, "fighter")).toThrow(/integer.*0.*19/i);
     expect(() => addMember(team, 20, "fighter")).toThrow(/0.*19/);
     expect(() => addMember(team, 0, "fighter")).toThrow(/occupied/i);
+  });
+
+  it("does not reuse a removed member id", () => {
+    const team = addMember(createTeam(7), 0, "knight");
+    const removedId = team.members[0].id;
+    const removed = removeMember(team, removedId);
+
+    const readded = addMember(removed, 0, "knight");
+
+    expect(readded.members[0].id).not.toBe(removedId);
   });
 
   it("moves a member to an empty cell and treats moving in place as valid", () => {
@@ -51,7 +62,10 @@ describe("team state", () => {
     const first = addMember(createTeam(7), 1, "knight");
     const team = addMember(first, 2, "fighter");
 
+    expect(() => moveMember(team, -1, 9)).toThrow(/integer.*0.*19/i);
+    expect(() => moveMember(team, 1.5, 9)).toThrow(/integer.*0.*19/i);
     expect(() => moveMember(team, 8, 9)).toThrow(/no member/i);
+    expect(() => moveMember(team, 1, 9.5)).toThrow(/integer.*0.*19/i);
     expect(() => moveMember(team, 1, 20)).toThrow(/0.*19/);
     expect(() => moveMember(team, 1, 2)).toThrow(/occupied/i);
   });
@@ -112,6 +126,9 @@ describe("team state", () => {
     expect(skilled.members[0].active[2]).toBe("skill-active");
     expect(cleared.members[0].active[2]).toBeNull();
     expect(() => setSkill(team, id, "active", -1, "skill")).toThrow(/0.*3/);
+    expect(() => setSkill(team, id, "active", 1.5, "skill")).toThrow(
+      /integer.*0.*3/i,
+    );
     expect(() => setSkill(team, id, "active", 4, "skill")).toThrow(/0.*3/);
     expect(() => setSkill(team, "missing", "active", 0, "skill")).toThrow(
       /member.*missing/i,

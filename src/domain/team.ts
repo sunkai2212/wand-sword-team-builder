@@ -51,14 +51,6 @@ function replaceMember(team: Team, replacement: Member): Team {
   };
 }
 
-function nextMemberId(team: Team): string {
-  const highest = team.members.reduce((maximum, member) => {
-    const match = /^member-(\d+)$/.exec(member.id);
-    return match ? Math.max(maximum, Number(match[1])) : maximum;
-  }, 0);
-  return `member-${highest + 1}`;
-}
-
 export function createTeam(stage: Stage): Team {
   return { stage, members: [] };
 }
@@ -81,7 +73,7 @@ export function addMember(
     members: [
       ...team.members,
       {
-        id: nextMemberId(team),
+        id: globalThis.crypto.randomUUID(),
         cell,
         profession,
         active: emptySlots(),
@@ -93,6 +85,7 @@ export function addMember(
 }
 
 export function moveMember(team: Team, from: number, to: number): Team {
+  assertCell(from);
   const member = team.members.find((candidate) => candidate.cell === from);
   if (!member) throw new Error(`No member at cell ${from}`);
   assertCell(to);

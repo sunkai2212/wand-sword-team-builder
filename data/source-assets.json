@@ -1,0 +1,4237 @@
+[
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-active-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/fighter-s1-passive-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-active-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-warrior.jpg",
+    "output": "public/assets/skills/knight-s1-passive-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 333,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-active-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/warlock-s1-passive-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-active-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 35,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-1.webp",
+    "crop": {
+      "left": 137,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-2.webp",
+    "crop": {
+      "left": 367,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-3.webp",
+    "crop": {
+      "left": 597,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-4.webp",
+    "crop": {
+      "left": 827,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-5.webp",
+    "crop": {
+      "left": 1057,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-6.webp",
+    "crop": {
+      "left": 1287,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-7.webp",
+    "crop": {
+      "left": 1517,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-8.webp",
+    "crop": {
+      "left": 1747,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-9.webp",
+    "crop": {
+      "left": 1977,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-10.webp",
+    "crop": {
+      "left": 2207,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-11.webp",
+    "crop": {
+      "left": 2437,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-12.webp",
+    "crop": {
+      "left": 2667,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/1-mage.jpg",
+    "output": "public/assets/skills/sage-s1-passive-13.webp",
+    "crop": {
+      "left": 2897,
+      "top": 334,
+      "width": 65,
+      "height": 65
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-1.webp",
+    "crop": {
+      "left": 201,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-2.webp",
+    "crop": {
+      "left": 539,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-3.webp",
+    "crop": {
+      "left": 877,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-4.webp",
+    "crop": {
+      "left": 1215,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-5.webp",
+    "crop": {
+      "left": 1553,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-active-6.webp",
+    "crop": {
+      "left": 1891,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-passive-1.webp",
+    "crop": {
+      "left": 242,
+      "top": 539,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-passive-2.webp",
+    "crop": {
+      "left": 648,
+      "top": 539,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-passive-3.webp",
+    "crop": {
+      "left": 1054,
+      "top": 539,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-passive-4.webp",
+    "crop": {
+      "left": 1460,
+      "top": 539,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-fighter.jpg",
+    "output": "public/assets/skills/fighter-s2-passive-5.webp",
+    "crop": {
+      "left": 1866,
+      "top": 539,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-1.webp",
+    "crop": {
+      "left": 202,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-2.webp",
+    "crop": {
+      "left": 542,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-3.webp",
+    "crop": {
+      "left": 882,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-4.webp",
+    "crop": {
+      "left": 1222,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-5.webp",
+    "crop": {
+      "left": 1562,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-active-6.webp",
+    "crop": {
+      "left": 1902,
+      "top": 58,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-passive-1.webp",
+    "crop": {
+      "left": 243,
+      "top": 542,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-passive-2.webp",
+    "crop": {
+      "left": 651,
+      "top": 542,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-passive-3.webp",
+    "crop": {
+      "left": 1059,
+      "top": 542,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-passive-4.webp",
+    "crop": {
+      "left": 1467,
+      "top": 542,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-knight.jpg",
+    "output": "public/assets/skills/knight-s2-passive-5.webp",
+    "crop": {
+      "left": 1875,
+      "top": 542,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-1.webp",
+    "crop": {
+      "left": 200,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-2.webp",
+    "crop": {
+      "left": 536,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-3.webp",
+    "crop": {
+      "left": 872,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-4.webp",
+    "crop": {
+      "left": 1208,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-5.webp",
+    "crop": {
+      "left": 1544,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-active-6.webp",
+    "crop": {
+      "left": 1880,
+      "top": 57,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-passive-1.webp",
+    "crop": {
+      "left": 240,
+      "top": 536,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-passive-2.webp",
+    "crop": {
+      "left": 643,
+      "top": 536,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-passive-3.webp",
+    "crop": {
+      "left": 1046,
+      "top": 536,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-passive-4.webp",
+    "crop": {
+      "left": 1449,
+      "top": 536,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-warlock.jpg",
+    "output": "public/assets/skills/warlock-s2-passive-5.webp",
+    "crop": {
+      "left": 1852,
+      "top": 536,
+      "width": 115,
+      "height": 115
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-1.webp",
+    "crop": {
+      "left": 199,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-2.webp",
+    "crop": {
+      "left": 534,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-3.webp",
+    "crop": {
+      "left": 869,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-4.webp",
+    "crop": {
+      "left": 1204,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-5.webp",
+    "crop": {
+      "left": 1539,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-active-6.webp",
+    "crop": {
+      "left": 1874,
+      "top": 57,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-passive-1.webp",
+    "crop": {
+      "left": 240,
+      "top": 534,
+      "width": 114,
+      "height": 114
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-passive-2.webp",
+    "crop": {
+      "left": 642,
+      "top": 534,
+      "width": 114,
+      "height": 114
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-passive-3.webp",
+    "crop": {
+      "left": 1044,
+      "top": 534,
+      "width": 114,
+      "height": 114
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-passive-4.webp",
+    "crop": {
+      "left": 1446,
+      "top": 534,
+      "width": 114,
+      "height": 114
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/2-sage.jpg",
+    "output": "public/assets/skills/sage-s2-passive-5.webp",
+    "crop": {
+      "left": 1848,
+      "top": 534,
+      "width": 114,
+      "height": 114
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-active-1.webp",
+    "crop": {
+      "left": 200,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-active-2.webp",
+    "crop": {
+      "left": 536,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-active-3.webp",
+    "crop": {
+      "left": 872,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-active-4.webp",
+    "crop": {
+      "left": 1208,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-active-5.webp",
+    "crop": {
+      "left": 1544,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-passive-1.webp",
+    "crop": {
+      "left": 200,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-passive-2.webp",
+    "crop": {
+      "left": 536,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-passive-3.webp",
+    "crop": {
+      "left": 872,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-passive-4.webp",
+    "crop": {
+      "left": 1208,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-fighter.jpg",
+    "output": "public/assets/skills/fighter-s3-passive-5.webp",
+    "crop": {
+      "left": 1544,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-active-1.webp",
+    "crop": {
+      "left": 200,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-active-2.webp",
+    "crop": {
+      "left": 536,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-active-3.webp",
+    "crop": {
+      "left": 872,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-active-4.webp",
+    "crop": {
+      "left": 1208,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-active-5.webp",
+    "crop": {
+      "left": 1544,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-passive-1.webp",
+    "crop": {
+      "left": 200,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-passive-2.webp",
+    "crop": {
+      "left": 536,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-passive-3.webp",
+    "crop": {
+      "left": 872,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-passive-4.webp",
+    "crop": {
+      "left": 1208,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-knight.jpg",
+    "output": "public/assets/skills/knight-s3-passive-5.webp",
+    "crop": {
+      "left": 1544,
+      "top": 487,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-active-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-active-2.webp",
+    "crop": {
+      "left": 545,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-active-3.webp",
+    "crop": {
+      "left": 887,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-active-4.webp",
+    "crop": {
+      "left": 1229,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-active-5.webp",
+    "crop": {
+      "left": 1571,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-passive-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 497,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-passive-2.webp",
+    "crop": {
+      "left": 545,
+      "top": 497,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-passive-3.webp",
+    "crop": {
+      "left": 887,
+      "top": 497,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-passive-4.webp",
+    "crop": {
+      "left": 1229,
+      "top": 497,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-warlock.jpg",
+    "output": "public/assets/skills/warlock-s3-passive-5.webp",
+    "crop": {
+      "left": 1571,
+      "top": 497,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-active-1.webp",
+    "crop": {
+      "left": 199,
+      "top": 51,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-active-2.webp",
+    "crop": {
+      "left": 534,
+      "top": 51,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-active-3.webp",
+    "crop": {
+      "left": 869,
+      "top": 51,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-active-4.webp",
+    "crop": {
+      "left": 1204,
+      "top": 51,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-active-5.webp",
+    "crop": {
+      "left": 1539,
+      "top": 51,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-passive-1.webp",
+    "crop": {
+      "left": 199,
+      "top": 484,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-passive-2.webp",
+    "crop": {
+      "left": 534,
+      "top": 484,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-passive-3.webp",
+    "crop": {
+      "left": 869,
+      "top": 484,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-passive-4.webp",
+    "crop": {
+      "left": 1204,
+      "top": 484,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/3-sage.jpg",
+    "output": "public/assets/skills/sage-s3-passive-5.webp",
+    "crop": {
+      "left": 1539,
+      "top": 484,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-1.webp",
+    "crop": {
+      "left": 190,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-2.webp",
+    "crop": {
+      "left": 509,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-3.webp",
+    "crop": {
+      "left": 828,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-4.webp",
+    "crop": {
+      "left": 1147,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-5.webp",
+    "crop": {
+      "left": 1466,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-active-6.webp",
+    "crop": {
+      "left": 1785,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-1.webp",
+    "crop": {
+      "left": 190,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-2.webp",
+    "crop": {
+      "left": 509,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-3.webp",
+    "crop": {
+      "left": 828,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-4.webp",
+    "crop": {
+      "left": 1147,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-5.webp",
+    "crop": {
+      "left": 1466,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-fighter.jpg",
+    "output": "public/assets/skills/fighter-s4-passive-6.webp",
+    "crop": {
+      "left": 1785,
+      "top": 461,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-1.webp",
+    "crop": {
+      "left": 201,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-2.webp",
+    "crop": {
+      "left": 538,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-3.webp",
+    "crop": {
+      "left": 875,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-4.webp",
+    "crop": {
+      "left": 1212,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-5.webp",
+    "crop": {
+      "left": 1549,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-active-6.webp",
+    "crop": {
+      "left": 1886,
+      "top": 52,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-1.webp",
+    "crop": {
+      "left": 201,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-2.webp",
+    "crop": {
+      "left": 538,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-3.webp",
+    "crop": {
+      "left": 875,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-4.webp",
+    "crop": {
+      "left": 1212,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-5.webp",
+    "crop": {
+      "left": 1549,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-knight.jpg",
+    "output": "public/assets/skills/knight-s4-passive-6.webp",
+    "crop": {
+      "left": 1886,
+      "top": 491,
+      "width": 95,
+      "height": 95
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-1.webp",
+    "crop": {
+      "left": 190,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-2.webp",
+    "crop": {
+      "left": 509,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-3.webp",
+    "crop": {
+      "left": 828,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-4.webp",
+    "crop": {
+      "left": 1147,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-5.webp",
+    "crop": {
+      "left": 1466,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-active-6.webp",
+    "crop": {
+      "left": 1785,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-1.webp",
+    "crop": {
+      "left": 190,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-2.webp",
+    "crop": {
+      "left": 509,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-3.webp",
+    "crop": {
+      "left": 828,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-4.webp",
+    "crop": {
+      "left": 1147,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-5.webp",
+    "crop": {
+      "left": 1466,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-warlock.jpg",
+    "output": "public/assets/skills/warlock-s4-passive-6.webp",
+    "crop": {
+      "left": 1785,
+      "top": 463,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-1.webp",
+    "crop": {
+      "left": 209,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-2.webp",
+    "crop": {
+      "left": 559,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-3.webp",
+    "crop": {
+      "left": 909,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-4.webp",
+    "crop": {
+      "left": 1259,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-5.webp",
+    "crop": {
+      "left": 1609,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-active-6.webp",
+    "crop": {
+      "left": 1959,
+      "top": 54,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-1.webp",
+    "crop": {
+      "left": 209,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-2.webp",
+    "crop": {
+      "left": 559,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-3.webp",
+    "crop": {
+      "left": 909,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-4.webp",
+    "crop": {
+      "left": 1259,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-5.webp",
+    "crop": {
+      "left": 1609,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/4-sage.jpg",
+    "output": "public/assets/skills/sage-s4-passive-6.webp",
+    "crop": {
+      "left": 1959,
+      "top": 509,
+      "width": 99,
+      "height": 99
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-2.webp",
+    "crop": {
+      "left": 545,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-3.webp",
+    "crop": {
+      "left": 887,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-4.webp",
+    "crop": {
+      "left": 1229,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-5.webp",
+    "crop": {
+      "left": 1571,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-active-6.webp",
+    "crop": {
+      "left": 1913,
+      "top": 53,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-2.webp",
+    "crop": {
+      "left": 545,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-3.webp",
+    "crop": {
+      "left": 887,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-4.webp",
+    "crop": {
+      "left": 1229,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-5.webp",
+    "crop": {
+      "left": 1571,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-fighter.jpg",
+    "output": "public/assets/skills/fighter-s5-passive-6.webp",
+    "crop": {
+      "left": 1913,
+      "top": 495,
+      "width": 97,
+      "height": 97
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-1.webp",
+    "crop": {
+      "left": 202,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-2.webp",
+    "crop": {
+      "left": 541,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-3.webp",
+    "crop": {
+      "left": 880,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-4.webp",
+    "crop": {
+      "left": 1219,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-5.webp",
+    "crop": {
+      "left": 1558,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-active-6.webp",
+    "crop": {
+      "left": 1897,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-1.webp",
+    "crop": {
+      "left": 202,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-2.webp",
+    "crop": {
+      "left": 541,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-3.webp",
+    "crop": {
+      "left": 880,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-4.webp",
+    "crop": {
+      "left": 1219,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-5.webp",
+    "crop": {
+      "left": 1558,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-knight.jpg",
+    "output": "public/assets/skills/knight-s5-passive-6.webp",
+    "crop": {
+      "left": 1897,
+      "top": 490,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-1.webp",
+    "crop": {
+      "left": 202,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-2.webp",
+    "crop": {
+      "left": 541,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-3.webp",
+    "crop": {
+      "left": 880,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-4.webp",
+    "crop": {
+      "left": 1219,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-5.webp",
+    "crop": {
+      "left": 1558,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-active-6.webp",
+    "crop": {
+      "left": 1897,
+      "top": 52,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-1.webp",
+    "crop": {
+      "left": 202,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-2.webp",
+    "crop": {
+      "left": 541,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-3.webp",
+    "crop": {
+      "left": 880,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-4.webp",
+    "crop": {
+      "left": 1219,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-5.webp",
+    "crop": {
+      "left": 1558,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-warlock.jpg",
+    "output": "public/assets/skills/warlock-s5-passive-6.webp",
+    "crop": {
+      "left": 1897,
+      "top": 492,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-2.webp",
+    "crop": {
+      "left": 544,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-3.webp",
+    "crop": {
+      "left": 885,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-4.webp",
+    "crop": {
+      "left": 1226,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-5.webp",
+    "crop": {
+      "left": 1567,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-active-6.webp",
+    "crop": {
+      "left": 1908,
+      "top": 53,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-1.webp",
+    "crop": {
+      "left": 203,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-2.webp",
+    "crop": {
+      "left": 544,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-3.webp",
+    "crop": {
+      "left": 885,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-4.webp",
+    "crop": {
+      "left": 1226,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-5.webp",
+    "crop": {
+      "left": 1567,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/5-sage.jpg",
+    "output": "public/assets/skills/sage-s5-passive-6.webp",
+    "crop": {
+      "left": 1908,
+      "top": 495,
+      "width": 96,
+      "height": 96
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-1.webp",
+    "crop": {
+      "left": 198,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-2.webp",
+    "crop": {
+      "left": 531,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-3.webp",
+    "crop": {
+      "left": 864,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-4.webp",
+    "crop": {
+      "left": 1197,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-5.webp",
+    "crop": {
+      "left": 1530,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-active-6.webp",
+    "crop": {
+      "left": 1863,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-1.webp",
+    "crop": {
+      "left": 198,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-2.webp",
+    "crop": {
+      "left": 531,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-3.webp",
+    "crop": {
+      "left": 864,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-4.webp",
+    "crop": {
+      "left": 1197,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-5.webp",
+    "crop": {
+      "left": 1530,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-fighter.jpg",
+    "output": "public/assets/skills/fighter-s6-passive-6.webp",
+    "crop": {
+      "left": 1863,
+      "top": 488,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-1.webp",
+    "crop": {
+      "left": 189,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-2.webp",
+    "crop": {
+      "left": 506,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-3.webp",
+    "crop": {
+      "left": 823,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-4.webp",
+    "crop": {
+      "left": 1140,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-5.webp",
+    "crop": {
+      "left": 1457,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-active-6.webp",
+    "crop": {
+      "left": 1774,
+      "top": 49,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-1.webp",
+    "crop": {
+      "left": 189,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-2.webp",
+    "crop": {
+      "left": 506,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-3.webp",
+    "crop": {
+      "left": 823,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-4.webp",
+    "crop": {
+      "left": 1140,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-5.webp",
+    "crop": {
+      "left": 1457,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-knight.jpg",
+    "output": "public/assets/skills/knight-s6-passive-6.webp",
+    "crop": {
+      "left": 1774,
+      "top": 461,
+      "width": 89,
+      "height": 89
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-1.webp",
+    "crop": {
+      "left": 199,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-2.webp",
+    "crop": {
+      "left": 534,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-3.webp",
+    "crop": {
+      "left": 869,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-4.webp",
+    "crop": {
+      "left": 1204,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-5.webp",
+    "crop": {
+      "left": 1539,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-active-6.webp",
+    "crop": {
+      "left": 1874,
+      "top": 52,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-1.webp",
+    "crop": {
+      "left": 199,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-2.webp",
+    "crop": {
+      "left": 534,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-3.webp",
+    "crop": {
+      "left": 869,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-4.webp",
+    "crop": {
+      "left": 1204,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-5.webp",
+    "crop": {
+      "left": 1539,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-warlock.jpg",
+    "output": "public/assets/skills/warlock-s6-passive-6.webp",
+    "crop": {
+      "left": 1874,
+      "top": 487,
+      "width": 94,
+      "height": 94
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-1.webp",
+    "crop": {
+      "left": 191,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-2.webp",
+    "crop": {
+      "left": 511,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-3.webp",
+    "crop": {
+      "left": 831,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-4.webp",
+    "crop": {
+      "left": 1151,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-5.webp",
+    "crop": {
+      "left": 1471,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-active-6.webp",
+    "crop": {
+      "left": 1791,
+      "top": 49,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-1.webp",
+    "crop": {
+      "left": 191,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-2.webp",
+    "crop": {
+      "left": 511,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-3.webp",
+    "crop": {
+      "left": 831,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-4.webp",
+    "crop": {
+      "left": 1151,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-5.webp",
+    "crop": {
+      "left": 1471,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "data/source/skills/6-sage.jpg",
+    "output": "public/assets/skills/sage-s6-passive-6.webp",
+    "crop": {
+      "left": 1791,
+      "top": 462,
+      "width": 90,
+      "height": 90
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1071291291933182396&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1307323251662188448&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1508099448485465412&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1540907751813974688&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1956385351138032541&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2262101650259415542&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2843317760724117999&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3019689927730159396&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=519052708580646093&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6926165347018779853&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8395229983207753397&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-passive-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=947691575871691232&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/fighter-s7-active-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2632845302908178489&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2982582120754385185&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3337713806343275873&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3464938157182071250&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4053672701780922599&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4245683022294320344&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4639647082866319779&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4649562535314085325&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5188233476905779806&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-active-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5756052343464876467&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6048907273993693847&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6528816860993447889&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/knight-s7-passive-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1396000496192899967&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1616866626897296281&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2161374979565870695&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3256547749796629753&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4029830060554354054&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4131318061357932413&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4750050912401574505&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6134049375520212152&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7220009476632307124&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7652157004528084061&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-active-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8523527368017600557&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=956347366624243707&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/warlock-s7-passive-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=12897404603765483&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2324105672554846712&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-active-1.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2689850557368158251&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3470450968513140681&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3621477466482154338&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3683134887505059367&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-active-2.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3805157841427600883&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-active-3.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4358777341201526344&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-active-4.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5645414013674994266&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5871749429438022989&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-6.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6200252879892659893&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-passive-7.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6545498998385519364&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/skills/sage-s7-active-5.webp",
+    "crop": {
+      "left": 780,
+      "top": 900,
+      "width": 240,
+      "height": 240
+    },
+    "size": 128
+  },
+  {
+    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8706170955870767997&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/pets/qianming.webp",
+    "crop": {
+      "left": 430,
+      "top": 870,
+      "width": 460,
+      "height": 460
+    },
+    "size": 160
+  },
+  {
+    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7946606070523995916&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/pets/dark-emperor.webp",
+    "crop": {
+      "left": 430,
+      "top": 870,
+      "width": 460,
+      "height": 460
+    },
+    "size": 160
+  },
+  {
+    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5161113330777494202&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/pets/rainbow.webp",
+    "crop": {
+      "left": 430,
+      "top": 870,
+      "width": 460,
+      "height": 460
+    },
+    "size": 160
+  },
+  {
+    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=418755252266903712&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/pets/bamboo.webp",
+    "crop": {
+      "left": 430,
+      "top": 870,
+      "width": 460,
+      "height": 460
+    },
+    "size": 160
+  },
+  {
+    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3978459593059071579&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "output": "public/assets/pets/dawn-angel.webp",
+    "crop": {
+      "left": 430,
+      "top": 870,
+      "width": 460,
+      "height": 460
+    },
+    "size": 160
+  }
+]

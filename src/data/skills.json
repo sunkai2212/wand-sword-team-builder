@@ -1,0 +1,3042 @@
+[
+  {
+    "id": "fighter-s1-active-1",
+    "name": "斗士·1转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-1.webp"
+  },
+  {
+    "id": "fighter-s1-active-2",
+    "name": "斗士·1转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-2.webp"
+  },
+  {
+    "id": "fighter-s1-active-3",
+    "name": "斗士·1转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-3.webp"
+  },
+  {
+    "id": "fighter-s1-active-4",
+    "name": "斗士·1转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-4.webp"
+  },
+  {
+    "id": "fighter-s1-active-5",
+    "name": "斗士·1转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-5.webp"
+  },
+  {
+    "id": "fighter-s1-active-6",
+    "name": "斗士·1转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-6.webp"
+  },
+  {
+    "id": "fighter-s1-active-7",
+    "name": "斗士·1转·战技7",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-7.webp"
+  },
+  {
+    "id": "fighter-s1-active-8",
+    "name": "斗士·1转·战技8",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-8.webp"
+  },
+  {
+    "id": "fighter-s1-active-9",
+    "name": "斗士·1转·战技9",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-9.webp"
+  },
+  {
+    "id": "fighter-s1-active-10",
+    "name": "斗士·1转·战技10",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-10.webp"
+  },
+  {
+    "id": "fighter-s1-active-11",
+    "name": "斗士·1转·战技11",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-11.webp"
+  },
+  {
+    "id": "fighter-s1-active-12",
+    "name": "斗士·1转·战技12",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-12.webp"
+  },
+  {
+    "id": "fighter-s1-active-13",
+    "name": "斗士·1转·战技13",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-active-13.webp"
+  },
+  {
+    "id": "fighter-s1-passive-1",
+    "name": "斗士·1转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-1.webp"
+  },
+  {
+    "id": "fighter-s1-passive-2",
+    "name": "斗士·1转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-2.webp"
+  },
+  {
+    "id": "fighter-s1-passive-3",
+    "name": "斗士·1转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-3.webp"
+  },
+  {
+    "id": "fighter-s1-passive-4",
+    "name": "斗士·1转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-4.webp"
+  },
+  {
+    "id": "fighter-s1-passive-5",
+    "name": "斗士·1转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-5.webp"
+  },
+  {
+    "id": "fighter-s1-passive-6",
+    "name": "斗士·1转·秘法6",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-6.webp"
+  },
+  {
+    "id": "fighter-s1-passive-7",
+    "name": "斗士·1转·秘法7",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-7.webp"
+  },
+  {
+    "id": "fighter-s1-passive-8",
+    "name": "斗士·1转·秘法8",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-8.webp"
+  },
+  {
+    "id": "fighter-s1-passive-9",
+    "name": "斗士·1转·秘法9",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-9.webp"
+  },
+  {
+    "id": "fighter-s1-passive-10",
+    "name": "斗士·1转·秘法10",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-10.webp"
+  },
+  {
+    "id": "fighter-s1-passive-11",
+    "name": "斗士·1转·秘法11",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-11.webp"
+  },
+  {
+    "id": "fighter-s1-passive-12",
+    "name": "斗士·1转·秘法12",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-12.webp"
+  },
+  {
+    "id": "fighter-s1-passive-13",
+    "name": "斗士·1转·秘法13",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/fighter-s1-passive-13.webp"
+  },
+  {
+    "id": "knight-s1-active-1",
+    "name": "骑士·1转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-1.webp"
+  },
+  {
+    "id": "knight-s1-active-2",
+    "name": "骑士·1转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-2.webp"
+  },
+  {
+    "id": "knight-s1-active-3",
+    "name": "骑士·1转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-3.webp"
+  },
+  {
+    "id": "knight-s1-active-4",
+    "name": "骑士·1转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-4.webp"
+  },
+  {
+    "id": "knight-s1-active-5",
+    "name": "骑士·1转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-5.webp"
+  },
+  {
+    "id": "knight-s1-active-6",
+    "name": "骑士·1转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-6.webp"
+  },
+  {
+    "id": "knight-s1-active-7",
+    "name": "骑士·1转·战技7",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-7.webp"
+  },
+  {
+    "id": "knight-s1-active-8",
+    "name": "骑士·1转·战技8",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-8.webp"
+  },
+  {
+    "id": "knight-s1-active-9",
+    "name": "骑士·1转·战技9",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-9.webp"
+  },
+  {
+    "id": "knight-s1-active-10",
+    "name": "骑士·1转·战技10",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-10.webp"
+  },
+  {
+    "id": "knight-s1-active-11",
+    "name": "骑士·1转·战技11",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-11.webp"
+  },
+  {
+    "id": "knight-s1-active-12",
+    "name": "骑士·1转·战技12",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-12.webp"
+  },
+  {
+    "id": "knight-s1-active-13",
+    "name": "骑士·1转·战技13",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-active-13.webp"
+  },
+  {
+    "id": "knight-s1-passive-1",
+    "name": "骑士·1转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-1.webp"
+  },
+  {
+    "id": "knight-s1-passive-2",
+    "name": "骑士·1转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-2.webp"
+  },
+  {
+    "id": "knight-s1-passive-3",
+    "name": "骑士·1转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-3.webp"
+  },
+  {
+    "id": "knight-s1-passive-4",
+    "name": "骑士·1转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-4.webp"
+  },
+  {
+    "id": "knight-s1-passive-5",
+    "name": "骑士·1转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-5.webp"
+  },
+  {
+    "id": "knight-s1-passive-6",
+    "name": "骑士·1转·秘法6",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-6.webp"
+  },
+  {
+    "id": "knight-s1-passive-7",
+    "name": "骑士·1转·秘法7",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-7.webp"
+  },
+  {
+    "id": "knight-s1-passive-8",
+    "name": "骑士·1转·秘法8",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-8.webp"
+  },
+  {
+    "id": "knight-s1-passive-9",
+    "name": "骑士·1转·秘法9",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-9.webp"
+  },
+  {
+    "id": "knight-s1-passive-10",
+    "name": "骑士·1转·秘法10",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-10.webp"
+  },
+  {
+    "id": "knight-s1-passive-11",
+    "name": "骑士·1转·秘法11",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-11.webp"
+  },
+  {
+    "id": "knight-s1-passive-12",
+    "name": "骑士·1转·秘法12",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-12.webp"
+  },
+  {
+    "id": "knight-s1-passive-13",
+    "name": "骑士·1转·秘法13",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/knight-s1-passive-13.webp"
+  },
+  {
+    "id": "warlock-s1-active-1",
+    "name": "术士·1转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-1.webp"
+  },
+  {
+    "id": "warlock-s1-active-2",
+    "name": "术士·1转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-2.webp"
+  },
+  {
+    "id": "warlock-s1-active-3",
+    "name": "术士·1转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-3.webp"
+  },
+  {
+    "id": "warlock-s1-active-4",
+    "name": "术士·1转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-4.webp"
+  },
+  {
+    "id": "warlock-s1-active-5",
+    "name": "术士·1转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-5.webp"
+  },
+  {
+    "id": "warlock-s1-active-6",
+    "name": "术士·1转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-6.webp"
+  },
+  {
+    "id": "warlock-s1-active-7",
+    "name": "术士·1转·战技7",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-7.webp"
+  },
+  {
+    "id": "warlock-s1-active-8",
+    "name": "术士·1转·战技8",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-8.webp"
+  },
+  {
+    "id": "warlock-s1-active-9",
+    "name": "术士·1转·战技9",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-9.webp"
+  },
+  {
+    "id": "warlock-s1-active-10",
+    "name": "术士·1转·战技10",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-10.webp"
+  },
+  {
+    "id": "warlock-s1-active-11",
+    "name": "术士·1转·战技11",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-11.webp"
+  },
+  {
+    "id": "warlock-s1-active-12",
+    "name": "术士·1转·战技12",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-12.webp"
+  },
+  {
+    "id": "warlock-s1-active-13",
+    "name": "术士·1转·战技13",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-active-13.webp"
+  },
+  {
+    "id": "warlock-s1-passive-1",
+    "name": "术士·1转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-1.webp"
+  },
+  {
+    "id": "warlock-s1-passive-2",
+    "name": "术士·1转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-2.webp"
+  },
+  {
+    "id": "warlock-s1-passive-3",
+    "name": "术士·1转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-3.webp"
+  },
+  {
+    "id": "warlock-s1-passive-4",
+    "name": "术士·1转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-4.webp"
+  },
+  {
+    "id": "warlock-s1-passive-5",
+    "name": "术士·1转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-5.webp"
+  },
+  {
+    "id": "warlock-s1-passive-6",
+    "name": "术士·1转·秘法6",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-6.webp"
+  },
+  {
+    "id": "warlock-s1-passive-7",
+    "name": "术士·1转·秘法7",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-7.webp"
+  },
+  {
+    "id": "warlock-s1-passive-8",
+    "name": "术士·1转·秘法8",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-8.webp"
+  },
+  {
+    "id": "warlock-s1-passive-9",
+    "name": "术士·1转·秘法9",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-9.webp"
+  },
+  {
+    "id": "warlock-s1-passive-10",
+    "name": "术士·1转·秘法10",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-10.webp"
+  },
+  {
+    "id": "warlock-s1-passive-11",
+    "name": "术士·1转·秘法11",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-11.webp"
+  },
+  {
+    "id": "warlock-s1-passive-12",
+    "name": "术士·1转·秘法12",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-12.webp"
+  },
+  {
+    "id": "warlock-s1-passive-13",
+    "name": "术士·1转·秘法13",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/warlock-s1-passive-13.webp"
+  },
+  {
+    "id": "sage-s1-active-1",
+    "name": "贤者·1转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-1.webp"
+  },
+  {
+    "id": "sage-s1-active-2",
+    "name": "贤者·1转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-2.webp"
+  },
+  {
+    "id": "sage-s1-active-3",
+    "name": "贤者·1转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-3.webp"
+  },
+  {
+    "id": "sage-s1-active-4",
+    "name": "贤者·1转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-4.webp"
+  },
+  {
+    "id": "sage-s1-active-5",
+    "name": "贤者·1转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-5.webp"
+  },
+  {
+    "id": "sage-s1-active-6",
+    "name": "贤者·1转·战技6",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-6.webp"
+  },
+  {
+    "id": "sage-s1-active-7",
+    "name": "贤者·1转·战技7",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-7.webp"
+  },
+  {
+    "id": "sage-s1-active-8",
+    "name": "贤者·1转·战技8",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-8.webp"
+  },
+  {
+    "id": "sage-s1-active-9",
+    "name": "贤者·1转·战技9",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-9.webp"
+  },
+  {
+    "id": "sage-s1-active-10",
+    "name": "贤者·1转·战技10",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-10.webp"
+  },
+  {
+    "id": "sage-s1-active-11",
+    "name": "贤者·1转·战技11",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-11.webp"
+  },
+  {
+    "id": "sage-s1-active-12",
+    "name": "贤者·1转·战技12",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-12.webp"
+  },
+  {
+    "id": "sage-s1-active-13",
+    "name": "贤者·1转·战技13",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-active-13.webp"
+  },
+  {
+    "id": "sage-s1-passive-1",
+    "name": "贤者·1转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-1.webp"
+  },
+  {
+    "id": "sage-s1-passive-2",
+    "name": "贤者·1转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-2.webp"
+  },
+  {
+    "id": "sage-s1-passive-3",
+    "name": "贤者·1转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-3.webp"
+  },
+  {
+    "id": "sage-s1-passive-4",
+    "name": "贤者·1转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-4.webp"
+  },
+  {
+    "id": "sage-s1-passive-5",
+    "name": "贤者·1转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-5.webp"
+  },
+  {
+    "id": "sage-s1-passive-6",
+    "name": "贤者·1转·秘法6",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-6.webp"
+  },
+  {
+    "id": "sage-s1-passive-7",
+    "name": "贤者·1转·秘法7",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-7.webp"
+  },
+  {
+    "id": "sage-s1-passive-8",
+    "name": "贤者·1转·秘法8",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-8.webp"
+  },
+  {
+    "id": "sage-s1-passive-9",
+    "name": "贤者·1转·秘法9",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-9.webp"
+  },
+  {
+    "id": "sage-s1-passive-10",
+    "name": "贤者·1转·秘法10",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-10.webp"
+  },
+  {
+    "id": "sage-s1-passive-11",
+    "name": "贤者·1转·秘法11",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-11.webp"
+  },
+  {
+    "id": "sage-s1-passive-12",
+    "name": "贤者·1转·秘法12",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-12.webp"
+  },
+  {
+    "id": "sage-s1-passive-13",
+    "name": "贤者·1转·秘法13",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 1,
+    "icon": "/assets/skills/sage-s1-passive-13.webp"
+  },
+  {
+    "id": "fighter-s2-active-1",
+    "name": "斗士·2转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-1.webp"
+  },
+  {
+    "id": "fighter-s2-active-2",
+    "name": "斗士·2转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-2.webp"
+  },
+  {
+    "id": "fighter-s2-active-3",
+    "name": "斗士·2转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-3.webp"
+  },
+  {
+    "id": "fighter-s2-active-4",
+    "name": "斗士·2转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-4.webp"
+  },
+  {
+    "id": "fighter-s2-active-5",
+    "name": "斗士·2转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-5.webp"
+  },
+  {
+    "id": "fighter-s2-active-6",
+    "name": "斗士·2转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-active-6.webp"
+  },
+  {
+    "id": "fighter-s2-passive-1",
+    "name": "斗士·2转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-passive-1.webp"
+  },
+  {
+    "id": "fighter-s2-passive-2",
+    "name": "斗士·2转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-passive-2.webp"
+  },
+  {
+    "id": "fighter-s2-passive-3",
+    "name": "斗士·2转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-passive-3.webp"
+  },
+  {
+    "id": "fighter-s2-passive-4",
+    "name": "斗士·2转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-passive-4.webp"
+  },
+  {
+    "id": "fighter-s2-passive-5",
+    "name": "斗士·2转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/fighter-s2-passive-5.webp"
+  },
+  {
+    "id": "knight-s2-active-1",
+    "name": "骑士·2转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-1.webp"
+  },
+  {
+    "id": "knight-s2-active-2",
+    "name": "骑士·2转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-2.webp"
+  },
+  {
+    "id": "knight-s2-active-3",
+    "name": "骑士·2转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-3.webp"
+  },
+  {
+    "id": "knight-s2-active-4",
+    "name": "骑士·2转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-4.webp"
+  },
+  {
+    "id": "knight-s2-active-5",
+    "name": "骑士·2转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-5.webp"
+  },
+  {
+    "id": "knight-s2-active-6",
+    "name": "骑士·2转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-active-6.webp"
+  },
+  {
+    "id": "knight-s2-passive-1",
+    "name": "骑士·2转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-passive-1.webp"
+  },
+  {
+    "id": "knight-s2-passive-2",
+    "name": "骑士·2转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-passive-2.webp"
+  },
+  {
+    "id": "knight-s2-passive-3",
+    "name": "骑士·2转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-passive-3.webp"
+  },
+  {
+    "id": "knight-s2-passive-4",
+    "name": "骑士·2转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-passive-4.webp"
+  },
+  {
+    "id": "knight-s2-passive-5",
+    "name": "骑士·2转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/knight-s2-passive-5.webp"
+  },
+  {
+    "id": "warlock-s2-active-1",
+    "name": "术士·2转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-1.webp"
+  },
+  {
+    "id": "warlock-s2-active-2",
+    "name": "术士·2转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-2.webp"
+  },
+  {
+    "id": "warlock-s2-active-3",
+    "name": "术士·2转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-3.webp"
+  },
+  {
+    "id": "warlock-s2-active-4",
+    "name": "术士·2转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-4.webp"
+  },
+  {
+    "id": "warlock-s2-active-5",
+    "name": "术士·2转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-5.webp"
+  },
+  {
+    "id": "warlock-s2-active-6",
+    "name": "术士·2转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-active-6.webp"
+  },
+  {
+    "id": "warlock-s2-passive-1",
+    "name": "术士·2转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-passive-1.webp"
+  },
+  {
+    "id": "warlock-s2-passive-2",
+    "name": "术士·2转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-passive-2.webp"
+  },
+  {
+    "id": "warlock-s2-passive-3",
+    "name": "术士·2转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-passive-3.webp"
+  },
+  {
+    "id": "warlock-s2-passive-4",
+    "name": "术士·2转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-passive-4.webp"
+  },
+  {
+    "id": "warlock-s2-passive-5",
+    "name": "术士·2转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/warlock-s2-passive-5.webp"
+  },
+  {
+    "id": "sage-s2-active-1",
+    "name": "贤者·2转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-1.webp"
+  },
+  {
+    "id": "sage-s2-active-2",
+    "name": "贤者·2转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-2.webp"
+  },
+  {
+    "id": "sage-s2-active-3",
+    "name": "贤者·2转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-3.webp"
+  },
+  {
+    "id": "sage-s2-active-4",
+    "name": "贤者·2转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-4.webp"
+  },
+  {
+    "id": "sage-s2-active-5",
+    "name": "贤者·2转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-5.webp"
+  },
+  {
+    "id": "sage-s2-active-6",
+    "name": "贤者·2转·战技6",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-active-6.webp"
+  },
+  {
+    "id": "sage-s2-passive-1",
+    "name": "贤者·2转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-passive-1.webp"
+  },
+  {
+    "id": "sage-s2-passive-2",
+    "name": "贤者·2转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-passive-2.webp"
+  },
+  {
+    "id": "sage-s2-passive-3",
+    "name": "贤者·2转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-passive-3.webp"
+  },
+  {
+    "id": "sage-s2-passive-4",
+    "name": "贤者·2转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-passive-4.webp"
+  },
+  {
+    "id": "sage-s2-passive-5",
+    "name": "贤者·2转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 2,
+    "icon": "/assets/skills/sage-s2-passive-5.webp"
+  },
+  {
+    "id": "fighter-s3-active-1",
+    "name": "斗士·3转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-active-1.webp"
+  },
+  {
+    "id": "fighter-s3-active-2",
+    "name": "斗士·3转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-active-2.webp"
+  },
+  {
+    "id": "fighter-s3-active-3",
+    "name": "斗士·3转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-active-3.webp"
+  },
+  {
+    "id": "fighter-s3-active-4",
+    "name": "斗士·3转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-active-4.webp"
+  },
+  {
+    "id": "fighter-s3-active-5",
+    "name": "斗士·3转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-active-5.webp"
+  },
+  {
+    "id": "fighter-s3-passive-1",
+    "name": "斗士·3转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-passive-1.webp"
+  },
+  {
+    "id": "fighter-s3-passive-2",
+    "name": "斗士·3转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-passive-2.webp"
+  },
+  {
+    "id": "fighter-s3-passive-3",
+    "name": "斗士·3转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-passive-3.webp"
+  },
+  {
+    "id": "fighter-s3-passive-4",
+    "name": "斗士·3转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-passive-4.webp"
+  },
+  {
+    "id": "fighter-s3-passive-5",
+    "name": "斗士·3转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/fighter-s3-passive-5.webp"
+  },
+  {
+    "id": "knight-s3-active-1",
+    "name": "骑士·3转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-active-1.webp"
+  },
+  {
+    "id": "knight-s3-active-2",
+    "name": "骑士·3转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-active-2.webp"
+  },
+  {
+    "id": "knight-s3-active-3",
+    "name": "骑士·3转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-active-3.webp"
+  },
+  {
+    "id": "knight-s3-active-4",
+    "name": "骑士·3转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-active-4.webp"
+  },
+  {
+    "id": "knight-s3-active-5",
+    "name": "骑士·3转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-active-5.webp"
+  },
+  {
+    "id": "knight-s3-passive-1",
+    "name": "骑士·3转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-passive-1.webp"
+  },
+  {
+    "id": "knight-s3-passive-2",
+    "name": "骑士·3转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-passive-2.webp"
+  },
+  {
+    "id": "knight-s3-passive-3",
+    "name": "骑士·3转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-passive-3.webp"
+  },
+  {
+    "id": "knight-s3-passive-4",
+    "name": "骑士·3转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-passive-4.webp"
+  },
+  {
+    "id": "knight-s3-passive-5",
+    "name": "骑士·3转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/knight-s3-passive-5.webp"
+  },
+  {
+    "id": "warlock-s3-active-1",
+    "name": "术士·3转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-active-1.webp"
+  },
+  {
+    "id": "warlock-s3-active-2",
+    "name": "术士·3转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-active-2.webp"
+  },
+  {
+    "id": "warlock-s3-active-3",
+    "name": "术士·3转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-active-3.webp"
+  },
+  {
+    "id": "warlock-s3-active-4",
+    "name": "术士·3转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-active-4.webp"
+  },
+  {
+    "id": "warlock-s3-active-5",
+    "name": "术士·3转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-active-5.webp"
+  },
+  {
+    "id": "warlock-s3-passive-1",
+    "name": "术士·3转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-passive-1.webp"
+  },
+  {
+    "id": "warlock-s3-passive-2",
+    "name": "术士·3转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-passive-2.webp"
+  },
+  {
+    "id": "warlock-s3-passive-3",
+    "name": "术士·3转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-passive-3.webp"
+  },
+  {
+    "id": "warlock-s3-passive-4",
+    "name": "术士·3转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-passive-4.webp"
+  },
+  {
+    "id": "warlock-s3-passive-5",
+    "name": "术士·3转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/warlock-s3-passive-5.webp"
+  },
+  {
+    "id": "sage-s3-active-1",
+    "name": "贤者·3转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-active-1.webp"
+  },
+  {
+    "id": "sage-s3-active-2",
+    "name": "贤者·3转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-active-2.webp"
+  },
+  {
+    "id": "sage-s3-active-3",
+    "name": "贤者·3转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-active-3.webp"
+  },
+  {
+    "id": "sage-s3-active-4",
+    "name": "贤者·3转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-active-4.webp"
+  },
+  {
+    "id": "sage-s3-active-5",
+    "name": "贤者·3转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-active-5.webp"
+  },
+  {
+    "id": "sage-s3-passive-1",
+    "name": "贤者·3转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-passive-1.webp"
+  },
+  {
+    "id": "sage-s3-passive-2",
+    "name": "贤者·3转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-passive-2.webp"
+  },
+  {
+    "id": "sage-s3-passive-3",
+    "name": "贤者·3转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-passive-3.webp"
+  },
+  {
+    "id": "sage-s3-passive-4",
+    "name": "贤者·3转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-passive-4.webp"
+  },
+  {
+    "id": "sage-s3-passive-5",
+    "name": "贤者·3转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 3,
+    "icon": "/assets/skills/sage-s3-passive-5.webp"
+  },
+  {
+    "id": "fighter-s4-active-1",
+    "name": "斗士·4转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-1.webp"
+  },
+  {
+    "id": "fighter-s4-active-2",
+    "name": "斗士·4转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-2.webp"
+  },
+  {
+    "id": "fighter-s4-active-3",
+    "name": "斗士·4转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-3.webp"
+  },
+  {
+    "id": "fighter-s4-active-4",
+    "name": "斗士·4转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-4.webp"
+  },
+  {
+    "id": "fighter-s4-active-5",
+    "name": "斗士·4转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-5.webp"
+  },
+  {
+    "id": "fighter-s4-active-6",
+    "name": "斗士·4转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-active-6.webp"
+  },
+  {
+    "id": "fighter-s4-passive-1",
+    "name": "斗士·4转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-1.webp"
+  },
+  {
+    "id": "fighter-s4-passive-2",
+    "name": "斗士·4转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-2.webp"
+  },
+  {
+    "id": "fighter-s4-passive-3",
+    "name": "斗士·4转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-3.webp"
+  },
+  {
+    "id": "fighter-s4-passive-4",
+    "name": "斗士·4转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-4.webp"
+  },
+  {
+    "id": "fighter-s4-passive-5",
+    "name": "斗士·4转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-5.webp"
+  },
+  {
+    "id": "fighter-s4-passive-6",
+    "name": "斗士·4转·秘法6",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/fighter-s4-passive-6.webp"
+  },
+  {
+    "id": "knight-s4-active-1",
+    "name": "骑士·4转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-1.webp"
+  },
+  {
+    "id": "knight-s4-active-2",
+    "name": "骑士·4转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-2.webp"
+  },
+  {
+    "id": "knight-s4-active-3",
+    "name": "骑士·4转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-3.webp"
+  },
+  {
+    "id": "knight-s4-active-4",
+    "name": "骑士·4转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-4.webp"
+  },
+  {
+    "id": "knight-s4-active-5",
+    "name": "骑士·4转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-5.webp"
+  },
+  {
+    "id": "knight-s4-active-6",
+    "name": "骑士·4转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-active-6.webp"
+  },
+  {
+    "id": "knight-s4-passive-1",
+    "name": "骑士·4转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-1.webp"
+  },
+  {
+    "id": "knight-s4-passive-2",
+    "name": "骑士·4转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-2.webp"
+  },
+  {
+    "id": "knight-s4-passive-3",
+    "name": "骑士·4转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-3.webp"
+  },
+  {
+    "id": "knight-s4-passive-4",
+    "name": "骑士·4转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-4.webp"
+  },
+  {
+    "id": "knight-s4-passive-5",
+    "name": "骑士·4转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-5.webp"
+  },
+  {
+    "id": "knight-s4-passive-6",
+    "name": "骑士·4转·秘法6",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/knight-s4-passive-6.webp"
+  },
+  {
+    "id": "warlock-s4-active-1",
+    "name": "术士·4转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-1.webp"
+  },
+  {
+    "id": "warlock-s4-active-2",
+    "name": "术士·4转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-2.webp"
+  },
+  {
+    "id": "warlock-s4-active-3",
+    "name": "术士·4转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-3.webp"
+  },
+  {
+    "id": "warlock-s4-active-4",
+    "name": "术士·4转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-4.webp"
+  },
+  {
+    "id": "warlock-s4-active-5",
+    "name": "术士·4转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-5.webp"
+  },
+  {
+    "id": "warlock-s4-active-6",
+    "name": "术士·4转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-active-6.webp"
+  },
+  {
+    "id": "warlock-s4-passive-1",
+    "name": "术士·4转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-1.webp"
+  },
+  {
+    "id": "warlock-s4-passive-2",
+    "name": "术士·4转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-2.webp"
+  },
+  {
+    "id": "warlock-s4-passive-3",
+    "name": "术士·4转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-3.webp"
+  },
+  {
+    "id": "warlock-s4-passive-4",
+    "name": "术士·4转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-4.webp"
+  },
+  {
+    "id": "warlock-s4-passive-5",
+    "name": "术士·4转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-5.webp"
+  },
+  {
+    "id": "warlock-s4-passive-6",
+    "name": "术士·4转·秘法6",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/warlock-s4-passive-6.webp"
+  },
+  {
+    "id": "sage-s4-active-1",
+    "name": "贤者·4转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-1.webp"
+  },
+  {
+    "id": "sage-s4-active-2",
+    "name": "贤者·4转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-2.webp"
+  },
+  {
+    "id": "sage-s4-active-3",
+    "name": "贤者·4转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-3.webp"
+  },
+  {
+    "id": "sage-s4-active-4",
+    "name": "贤者·4转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-4.webp"
+  },
+  {
+    "id": "sage-s4-active-5",
+    "name": "贤者·4转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-5.webp"
+  },
+  {
+    "id": "sage-s4-active-6",
+    "name": "贤者·4转·战技6",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-active-6.webp"
+  },
+  {
+    "id": "sage-s4-passive-1",
+    "name": "贤者·4转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-1.webp"
+  },
+  {
+    "id": "sage-s4-passive-2",
+    "name": "贤者·4转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-2.webp"
+  },
+  {
+    "id": "sage-s4-passive-3",
+    "name": "贤者·4转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-3.webp"
+  },
+  {
+    "id": "sage-s4-passive-4",
+    "name": "贤者·4转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-4.webp"
+  },
+  {
+    "id": "sage-s4-passive-5",
+    "name": "贤者·4转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-5.webp"
+  },
+  {
+    "id": "sage-s4-passive-6",
+    "name": "贤者·4转·秘法6",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 4,
+    "icon": "/assets/skills/sage-s4-passive-6.webp"
+  },
+  {
+    "id": "fighter-s5-active-1",
+    "name": "斗士·5转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-1.webp"
+  },
+  {
+    "id": "fighter-s5-active-2",
+    "name": "斗士·5转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-2.webp"
+  },
+  {
+    "id": "fighter-s5-active-3",
+    "name": "斗士·5转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-3.webp"
+  },
+  {
+    "id": "fighter-s5-active-4",
+    "name": "斗士·5转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-4.webp"
+  },
+  {
+    "id": "fighter-s5-active-5",
+    "name": "斗士·5转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-5.webp"
+  },
+  {
+    "id": "fighter-s5-active-6",
+    "name": "斗士·5转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-active-6.webp"
+  },
+  {
+    "id": "fighter-s5-passive-1",
+    "name": "斗士·5转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-1.webp"
+  },
+  {
+    "id": "fighter-s5-passive-2",
+    "name": "斗士·5转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-2.webp"
+  },
+  {
+    "id": "fighter-s5-passive-3",
+    "name": "斗士·5转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-3.webp"
+  },
+  {
+    "id": "fighter-s5-passive-4",
+    "name": "斗士·5转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-4.webp"
+  },
+  {
+    "id": "fighter-s5-passive-5",
+    "name": "斗士·5转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-5.webp"
+  },
+  {
+    "id": "fighter-s5-passive-6",
+    "name": "斗士·5转·秘法6",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/fighter-s5-passive-6.webp"
+  },
+  {
+    "id": "knight-s5-active-1",
+    "name": "骑士·5转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-1.webp"
+  },
+  {
+    "id": "knight-s5-active-2",
+    "name": "骑士·5转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-2.webp"
+  },
+  {
+    "id": "knight-s5-active-3",
+    "name": "骑士·5转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-3.webp"
+  },
+  {
+    "id": "knight-s5-active-4",
+    "name": "骑士·5转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-4.webp"
+  },
+  {
+    "id": "knight-s5-active-5",
+    "name": "骑士·5转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-5.webp"
+  },
+  {
+    "id": "knight-s5-active-6",
+    "name": "骑士·5转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-active-6.webp"
+  },
+  {
+    "id": "knight-s5-passive-1",
+    "name": "骑士·5转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-1.webp"
+  },
+  {
+    "id": "knight-s5-passive-2",
+    "name": "骑士·5转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-2.webp"
+  },
+  {
+    "id": "knight-s5-passive-3",
+    "name": "骑士·5转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-3.webp"
+  },
+  {
+    "id": "knight-s5-passive-4",
+    "name": "骑士·5转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-4.webp"
+  },
+  {
+    "id": "knight-s5-passive-5",
+    "name": "骑士·5转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-5.webp"
+  },
+  {
+    "id": "knight-s5-passive-6",
+    "name": "骑士·5转·秘法6",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/knight-s5-passive-6.webp"
+  },
+  {
+    "id": "warlock-s5-active-1",
+    "name": "术士·5转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-1.webp"
+  },
+  {
+    "id": "warlock-s5-active-2",
+    "name": "术士·5转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-2.webp"
+  },
+  {
+    "id": "warlock-s5-active-3",
+    "name": "术士·5转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-3.webp"
+  },
+  {
+    "id": "warlock-s5-active-4",
+    "name": "术士·5转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-4.webp"
+  },
+  {
+    "id": "warlock-s5-active-5",
+    "name": "术士·5转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-5.webp"
+  },
+  {
+    "id": "warlock-s5-active-6",
+    "name": "术士·5转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-active-6.webp"
+  },
+  {
+    "id": "warlock-s5-passive-1",
+    "name": "术士·5转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-1.webp"
+  },
+  {
+    "id": "warlock-s5-passive-2",
+    "name": "术士·5转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-2.webp"
+  },
+  {
+    "id": "warlock-s5-passive-3",
+    "name": "术士·5转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-3.webp"
+  },
+  {
+    "id": "warlock-s5-passive-4",
+    "name": "术士·5转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-4.webp"
+  },
+  {
+    "id": "warlock-s5-passive-5",
+    "name": "术士·5转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-5.webp"
+  },
+  {
+    "id": "warlock-s5-passive-6",
+    "name": "术士·5转·秘法6",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/warlock-s5-passive-6.webp"
+  },
+  {
+    "id": "sage-s5-active-1",
+    "name": "贤者·5转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-1.webp"
+  },
+  {
+    "id": "sage-s5-active-2",
+    "name": "贤者·5转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-2.webp"
+  },
+  {
+    "id": "sage-s5-active-3",
+    "name": "贤者·5转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-3.webp"
+  },
+  {
+    "id": "sage-s5-active-4",
+    "name": "贤者·5转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-4.webp"
+  },
+  {
+    "id": "sage-s5-active-5",
+    "name": "贤者·5转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-5.webp"
+  },
+  {
+    "id": "sage-s5-active-6",
+    "name": "贤者·5转·战技6",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-active-6.webp"
+  },
+  {
+    "id": "sage-s5-passive-1",
+    "name": "贤者·5转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-1.webp"
+  },
+  {
+    "id": "sage-s5-passive-2",
+    "name": "贤者·5转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-2.webp"
+  },
+  {
+    "id": "sage-s5-passive-3",
+    "name": "贤者·5转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-3.webp"
+  },
+  {
+    "id": "sage-s5-passive-4",
+    "name": "贤者·5转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-4.webp"
+  },
+  {
+    "id": "sage-s5-passive-5",
+    "name": "贤者·5转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-5.webp"
+  },
+  {
+    "id": "sage-s5-passive-6",
+    "name": "贤者·5转·秘法6",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 5,
+    "icon": "/assets/skills/sage-s5-passive-6.webp"
+  },
+  {
+    "id": "fighter-s6-active-1",
+    "name": "斗士·6转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-1.webp"
+  },
+  {
+    "id": "fighter-s6-active-2",
+    "name": "斗士·6转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-2.webp"
+  },
+  {
+    "id": "fighter-s6-active-3",
+    "name": "斗士·6转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-3.webp"
+  },
+  {
+    "id": "fighter-s6-active-4",
+    "name": "斗士·6转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-4.webp"
+  },
+  {
+    "id": "fighter-s6-active-5",
+    "name": "斗士·6转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-5.webp"
+  },
+  {
+    "id": "fighter-s6-active-6",
+    "name": "斗士·6转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-active-6.webp"
+  },
+  {
+    "id": "fighter-s6-passive-1",
+    "name": "斗士·6转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-1.webp"
+  },
+  {
+    "id": "fighter-s6-passive-2",
+    "name": "斗士·6转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-2.webp"
+  },
+  {
+    "id": "fighter-s6-passive-3",
+    "name": "斗士·6转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-3.webp"
+  },
+  {
+    "id": "fighter-s6-passive-4",
+    "name": "斗士·6转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-4.webp"
+  },
+  {
+    "id": "fighter-s6-passive-5",
+    "name": "斗士·6转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-5.webp"
+  },
+  {
+    "id": "fighter-s6-passive-6",
+    "name": "斗士·6转·秘法6",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/fighter-s6-passive-6.webp"
+  },
+  {
+    "id": "knight-s6-active-1",
+    "name": "骑士·6转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-1.webp"
+  },
+  {
+    "id": "knight-s6-active-2",
+    "name": "骑士·6转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-2.webp"
+  },
+  {
+    "id": "knight-s6-active-3",
+    "name": "骑士·6转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-3.webp"
+  },
+  {
+    "id": "knight-s6-active-4",
+    "name": "骑士·6转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-4.webp"
+  },
+  {
+    "id": "knight-s6-active-5",
+    "name": "骑士·6转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-5.webp"
+  },
+  {
+    "id": "knight-s6-active-6",
+    "name": "骑士·6转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-active-6.webp"
+  },
+  {
+    "id": "knight-s6-passive-1",
+    "name": "骑士·6转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-1.webp"
+  },
+  {
+    "id": "knight-s6-passive-2",
+    "name": "骑士·6转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-2.webp"
+  },
+  {
+    "id": "knight-s6-passive-3",
+    "name": "骑士·6转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-3.webp"
+  },
+  {
+    "id": "knight-s6-passive-4",
+    "name": "骑士·6转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-4.webp"
+  },
+  {
+    "id": "knight-s6-passive-5",
+    "name": "骑士·6转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-5.webp"
+  },
+  {
+    "id": "knight-s6-passive-6",
+    "name": "骑士·6转·秘法6",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/knight-s6-passive-6.webp"
+  },
+  {
+    "id": "warlock-s6-active-1",
+    "name": "术士·6转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-1.webp"
+  },
+  {
+    "id": "warlock-s6-active-2",
+    "name": "术士·6转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-2.webp"
+  },
+  {
+    "id": "warlock-s6-active-3",
+    "name": "术士·6转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-3.webp"
+  },
+  {
+    "id": "warlock-s6-active-4",
+    "name": "术士·6转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-4.webp"
+  },
+  {
+    "id": "warlock-s6-active-5",
+    "name": "术士·6转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-5.webp"
+  },
+  {
+    "id": "warlock-s6-active-6",
+    "name": "术士·6转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-active-6.webp"
+  },
+  {
+    "id": "warlock-s6-passive-1",
+    "name": "术士·6转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-1.webp"
+  },
+  {
+    "id": "warlock-s6-passive-2",
+    "name": "术士·6转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-2.webp"
+  },
+  {
+    "id": "warlock-s6-passive-3",
+    "name": "术士·6转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-3.webp"
+  },
+  {
+    "id": "warlock-s6-passive-4",
+    "name": "术士·6转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-4.webp"
+  },
+  {
+    "id": "warlock-s6-passive-5",
+    "name": "术士·6转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-5.webp"
+  },
+  {
+    "id": "warlock-s6-passive-6",
+    "name": "术士·6转·秘法6",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/warlock-s6-passive-6.webp"
+  },
+  {
+    "id": "sage-s6-active-1",
+    "name": "贤者·6转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-1.webp"
+  },
+  {
+    "id": "sage-s6-active-2",
+    "name": "贤者·6转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-2.webp"
+  },
+  {
+    "id": "sage-s6-active-3",
+    "name": "贤者·6转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-3.webp"
+  },
+  {
+    "id": "sage-s6-active-4",
+    "name": "贤者·6转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-4.webp"
+  },
+  {
+    "id": "sage-s6-active-5",
+    "name": "贤者·6转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-5.webp"
+  },
+  {
+    "id": "sage-s6-active-6",
+    "name": "贤者·6转·战技6",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-active-6.webp"
+  },
+  {
+    "id": "sage-s6-passive-1",
+    "name": "贤者·6转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-1.webp"
+  },
+  {
+    "id": "sage-s6-passive-2",
+    "name": "贤者·6转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-2.webp"
+  },
+  {
+    "id": "sage-s6-passive-3",
+    "name": "贤者·6转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-3.webp"
+  },
+  {
+    "id": "sage-s6-passive-4",
+    "name": "贤者·6转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-4.webp"
+  },
+  {
+    "id": "sage-s6-passive-5",
+    "name": "贤者·6转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-5.webp"
+  },
+  {
+    "id": "sage-s6-passive-6",
+    "name": "贤者·6转·秘法6",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 6,
+    "icon": "/assets/skills/sage-s6-passive-6.webp"
+  },
+  {
+    "id": "fighter-s7-active-1",
+    "name": "斗士·7转·战技1",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-1.webp"
+  },
+  {
+    "id": "fighter-s7-passive-1",
+    "name": "斗士·7转·秘法1",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-1.webp"
+  },
+  {
+    "id": "fighter-s7-active-2",
+    "name": "斗士·7转·战技2",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-2.webp"
+  },
+  {
+    "id": "fighter-s7-passive-2",
+    "name": "斗士·7转·秘法2",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-2.webp"
+  },
+  {
+    "id": "fighter-s7-active-3",
+    "name": "斗士·7转·战技3",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-3.webp"
+  },
+  {
+    "id": "fighter-s7-active-4",
+    "name": "斗士·7转·战技4",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-4.webp"
+  },
+  {
+    "id": "fighter-s7-active-5",
+    "name": "斗士·7转·战技5",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-5.webp"
+  },
+  {
+    "id": "fighter-s7-passive-3",
+    "name": "斗士·7转·秘法3",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-3.webp"
+  },
+  {
+    "id": "fighter-s7-passive-4",
+    "name": "斗士·7转·秘法4",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-4.webp"
+  },
+  {
+    "id": "fighter-s7-passive-5",
+    "name": "斗士·7转·秘法5",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-5.webp"
+  },
+  {
+    "id": "fighter-s7-passive-6",
+    "name": "斗士·7转·秘法6",
+    "profession": "fighter",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-passive-6.webp"
+  },
+  {
+    "id": "fighter-s7-active-6",
+    "name": "斗士·7转·战技6",
+    "profession": "fighter",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/fighter-s7-active-6.webp"
+  },
+  {
+    "id": "knight-s7-passive-1",
+    "name": "骑士·7转·秘法1",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-1.webp"
+  },
+  {
+    "id": "knight-s7-passive-2",
+    "name": "骑士·7转·秘法2",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-2.webp"
+  },
+  {
+    "id": "knight-s7-active-1",
+    "name": "骑士·7转·战技1",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-1.webp"
+  },
+  {
+    "id": "knight-s7-active-2",
+    "name": "骑士·7转·战技2",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-2.webp"
+  },
+  {
+    "id": "knight-s7-passive-3",
+    "name": "骑士·7转·秘法3",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-3.webp"
+  },
+  {
+    "id": "knight-s7-active-3",
+    "name": "骑士·7转·战技3",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-3.webp"
+  },
+  {
+    "id": "knight-s7-active-4",
+    "name": "骑士·7转·战技4",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-4.webp"
+  },
+  {
+    "id": "knight-s7-active-5",
+    "name": "骑士·7转·战技5",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-5.webp"
+  },
+  {
+    "id": "knight-s7-active-6",
+    "name": "骑士·7转·战技6",
+    "profession": "knight",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-active-6.webp"
+  },
+  {
+    "id": "knight-s7-passive-4",
+    "name": "骑士·7转·秘法4",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-4.webp"
+  },
+  {
+    "id": "knight-s7-passive-5",
+    "name": "骑士·7转·秘法5",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-5.webp"
+  },
+  {
+    "id": "knight-s7-passive-6",
+    "name": "骑士·7转·秘法6",
+    "profession": "knight",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/knight-s7-passive-6.webp"
+  },
+  {
+    "id": "warlock-s7-passive-1",
+    "name": "术士·7转·秘法1",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-1.webp"
+  },
+  {
+    "id": "warlock-s7-active-1",
+    "name": "术士·7转·战技1",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-1.webp"
+  },
+  {
+    "id": "warlock-s7-passive-2",
+    "name": "术士·7转·秘法2",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-2.webp"
+  },
+  {
+    "id": "warlock-s7-passive-3",
+    "name": "术士·7转·秘法3",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-3.webp"
+  },
+  {
+    "id": "warlock-s7-active-2",
+    "name": "术士·7转·战技2",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-2.webp"
+  },
+  {
+    "id": "warlock-s7-active-3",
+    "name": "术士·7转·战技3",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-3.webp"
+  },
+  {
+    "id": "warlock-s7-active-4",
+    "name": "术士·7转·战技4",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-4.webp"
+  },
+  {
+    "id": "warlock-s7-active-5",
+    "name": "术士·7转·战技5",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-5.webp"
+  },
+  {
+    "id": "warlock-s7-passive-4",
+    "name": "术士·7转·秘法4",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-4.webp"
+  },
+  {
+    "id": "warlock-s7-active-6",
+    "name": "术士·7转·战技6",
+    "profession": "warlock",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-active-6.webp"
+  },
+  {
+    "id": "warlock-s7-passive-5",
+    "name": "术士·7转·秘法5",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-5.webp"
+  },
+  {
+    "id": "warlock-s7-passive-6",
+    "name": "术士·7转·秘法6",
+    "profession": "warlock",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/warlock-s7-passive-6.webp"
+  },
+  {
+    "id": "sage-s7-passive-1",
+    "name": "贤者·7转·秘法1",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-1.webp"
+  },
+  {
+    "id": "sage-s7-active-1",
+    "name": "贤者·7转·战技1",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-active-1.webp"
+  },
+  {
+    "id": "sage-s7-passive-2",
+    "name": "贤者·7转·秘法2",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-2.webp"
+  },
+  {
+    "id": "sage-s7-passive-3",
+    "name": "贤者·7转·秘法3",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-3.webp"
+  },
+  {
+    "id": "sage-s7-passive-4",
+    "name": "贤者·7转·秘法4",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-4.webp"
+  },
+  {
+    "id": "sage-s7-active-2",
+    "name": "贤者·7转·战技2",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-active-2.webp"
+  },
+  {
+    "id": "sage-s7-active-3",
+    "name": "贤者·7转·战技3",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-active-3.webp"
+  },
+  {
+    "id": "sage-s7-active-4",
+    "name": "贤者·7转·战技4",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-active-4.webp"
+  },
+  {
+    "id": "sage-s7-passive-5",
+    "name": "贤者·7转·秘法5",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-5.webp"
+  },
+  {
+    "id": "sage-s7-passive-6",
+    "name": "贤者·7转·秘法6",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-6.webp"
+  },
+  {
+    "id": "sage-s7-passive-7",
+    "name": "贤者·7转·秘法7",
+    "profession": "sage",
+    "kind": "passive",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-passive-7.webp"
+  },
+  {
+    "id": "sage-s7-active-5",
+    "name": "贤者·7转·战技5",
+    "profession": "sage",
+    "kind": "active",
+    "stage": 7,
+    "icon": "/assets/skills/sage-s7-active-5.webp"
+  }
+]

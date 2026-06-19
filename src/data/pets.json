@@ -1,0 +1,27 @@
+[
+  {
+    "id": "qianming",
+    "name": "千明灵狗",
+    "icon": "/assets/pets/qianming.webp"
+  },
+  {
+    "id": "dark-emperor",
+    "name": "暗夜帝王",
+    "icon": "/assets/pets/dark-emperor.webp"
+  },
+  {
+    "id": "rainbow",
+    "name": "虹彩星灵",
+    "icon": "/assets/pets/rainbow.webp"
+  },
+  {
+    "id": "bamboo",
+    "name": "竹林仙君",
+    "icon": "/assets/pets/bamboo.webp"
+  },
+  {
+    "id": "dawn-angel",
+    "name": "晨曦天使",
+    "icon": "/assets/pets/dawn-angel.webp"
+  }
+]

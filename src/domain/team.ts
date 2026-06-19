@@ -172,6 +172,9 @@ export function setSkill(
   if (!Number.isInteger(slot) || slot < 0 || slot > 3) {
     throw new Error(`Skill slot must be an integer from 0 to 3; received ${slot}`);
   }
+  if (skillId !== null && skillId.trim().length === 0) {
+    throw new Error("Skill id cannot be empty");
+  }
   const member = findMember(team, id);
   if (skillId !== null) {
     const otherSkills = [...member.active, ...member.passive].filter(

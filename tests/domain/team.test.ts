@@ -135,6 +135,18 @@ describe("team state", () => {
     );
   });
 
+  it("rejects empty and whitespace-only skill ids", () => {
+    const team = addMember(createTeam(7), 0, "knight");
+    const id = team.members[0].id;
+
+    expect(() => setSkill(team, id, "active", 0, "")).toThrow(
+      /skill id.*empty/i,
+    );
+    expect(() => setSkill(team, id, "passive", 0, "   ")).toThrow(
+      /skill id.*empty/i,
+    );
+  });
+
   it("rejects a duplicate skill across active and passive slots but always allows clearing", () => {
     const team = addMember(createTeam(7), 0, "knight");
     const id = team.members[0].id;

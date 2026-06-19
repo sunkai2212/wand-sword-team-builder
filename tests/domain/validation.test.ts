@@ -30,7 +30,19 @@ const stageSevenPassive: Skill = {
   stage: 7,
   icon: "passive-7.png",
 };
-const catalog = [stageSixActive, stageSevenActive, stageSevenPassive];
+const stageSixPassive: Skill = {
+  id: "passive-6",
+  profession: "knight",
+  kind: "passive",
+  stage: 6,
+  icon: "passive-6.png",
+};
+const catalog = [
+  stageSixActive,
+  stageSevenActive,
+  stageSixPassive,
+  stageSevenPassive,
+];
 
 function configuredTeam(): Team {
   return {
@@ -149,6 +161,67 @@ describe("progression validation", () => {
     expect(() => setStage(team, 6, false, catalog)).toThrow(
       /skill.*missing.*catalog/i,
     );
+  });
+
+  it("reports unknown selected skills even when raising or keeping the stage", () => {
+    const configured = configuredTeam();
+    const team: Team = {
+      ...configured,
+      stage: 6,
+      members: [
+        {
+          ...configured.members[0],
+          active: ["missing", null, null, null],
+          passive: [null, null, null, null],
+        },
+      ],
+    };
+
+    expect(() => setStage(team, 6, false, catalog)).toThrow(
+      /skill.*missing.*catalog/i,
+    );
+    expect(() => setStage(team, 7, false, catalog)).toThrow(
+      /skill.*missing.*catalog/i,
+    );
+  });
+
+  it("clears precise active and passive positions across multiple members", () => {
+    const team: Team = {
+      stage: 7,
+      members: [
+        {
+          id: "member-a",
+          cell: 4,
+          profession: "knight",
+          active: [null, null, null, "active-7"],
+          passive: [null, "passive-6", null, null],
+          petId: "rainbow",
+        },
+        {
+          id: "member-b",
+          cell: 15,
+          profession: "knight",
+          active: [null, "active-6", null, null],
+          passive: [null, null, "passive-7", null],
+          petId: "bamboo",
+        },
+      ],
+    };
+
+    const lowered = setStage(team, 6, true, catalog);
+
+    expect(lowered.members).toEqual([
+      {
+        ...team.members[0],
+        active: [null, null, null, null],
+        passive: [null, "passive-6", null, null],
+      },
+      {
+        ...team.members[1],
+        active: [null, "active-6", null, null],
+        passive: [null, null, null, null],
+      },
+    ]);
   });
 
   it("counts the slots that lowering would clear", () => {

@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import { pets, skills, visibleSkills } from "../../src/data/catalog";
+import {
+  parsePets,
+  parseSkills,
+  pets,
+  skills,
+  visibleSkills,
+} from "../../src/data/catalog";
 
 const professions = ["knight", "fighter", "warlock", "sage"] as const;
 
@@ -24,6 +30,77 @@ describe("verified catalog", () => {
         ),
       ).toHaveLength(12);
     }
+  });
+
+  it("contains the exact verified skill count matrix", () => {
+    const expected = {
+      1: [13, 13],
+      2: [6, 5],
+      3: [5, 5],
+      4: [6, 6],
+      5: [6, 6],
+      6: [6, 6],
+    } as const;
+
+    expect(skills).toHaveLength(380);
+    for (const profession of professions) {
+      for (const [stage, [active, passive]] of Object.entries(expected)) {
+        expect(
+          skills.filter(
+            (skill) =>
+              skill.profession === profession &&
+              skill.stage === Number(stage) &&
+              skill.kind === "active",
+          ),
+        ).toHaveLength(active);
+        expect(
+          skills.filter(
+            (skill) =>
+              skill.profession === profession &&
+              skill.stage === Number(stage) &&
+              skill.kind === "passive",
+          ),
+        ).toHaveLength(passive);
+      }
+    }
+    const expectedSeventh = {
+      knight: [6, 6],
+      fighter: [6, 6],
+      warlock: [6, 6],
+      sage: [5, 7],
+    } as const;
+    for (const profession of professions) {
+      const [active, passive] = expectedSeventh[profession];
+      expect(
+        skills.filter(
+          (skill) =>
+            skill.profession === profession &&
+            skill.stage === 7 &&
+            skill.kind === "active",
+        ),
+      ).toHaveLength(active);
+      expect(
+        skills.filter(
+          (skill) =>
+            skill.profession === profession &&
+            skill.stage === 7 &&
+            skill.kind === "passive",
+        ),
+      ).toHaveLength(passive);
+    }
+  });
+
+  it("does not invent skill names", () => {
+    expect(skills.every((skill) => !("name" in skill))).toBe(true);
+  });
+
+  it("rejects malformed catalog entries with their index", () => {
+    expect(() => parseSkills([{ id: "broken" }])).toThrow(
+      /skill catalog entry at index 0/i,
+    );
+    expect(() => parsePets([{ id: "broken" }])).toThrow(
+      /pet catalog entry at index 0/i,
+    );
   });
 
   it("uses globally unique skill ids", () => {

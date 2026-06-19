@@ -3652,7 +3652,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1071291291933182396&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-1.jpg",
     "output": "public/assets/skills/fighter-s7-active-1.webp",
     "crop": {
       "left": 780,
@@ -3663,7 +3663,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1307323251662188448&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-1.jpg",
     "output": "public/assets/skills/fighter-s7-passive-1.webp",
     "crop": {
       "left": 780,
@@ -3674,7 +3674,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1508099448485465412&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-2.jpg",
     "output": "public/assets/skills/fighter-s7-active-2.webp",
     "crop": {
       "left": 780,
@@ -3685,7 +3685,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1540907751813974688&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-2.jpg",
     "output": "public/assets/skills/fighter-s7-passive-2.webp",
     "crop": {
       "left": 780,
@@ -3696,7 +3696,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1956385351138032541&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-3.jpg",
     "output": "public/assets/skills/fighter-s7-active-3.webp",
     "crop": {
       "left": 780,
@@ -3707,7 +3707,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2262101650259415542&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-4.jpg",
     "output": "public/assets/skills/fighter-s7-active-4.webp",
     "crop": {
       "left": 780,
@@ -3718,7 +3718,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2843317760724117999&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-5.jpg",
     "output": "public/assets/skills/fighter-s7-active-5.webp",
     "crop": {
       "left": 780,
@@ -3729,7 +3729,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3019689927730159396&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-3.jpg",
     "output": "public/assets/skills/fighter-s7-passive-3.webp",
     "crop": {
       "left": 780,
@@ -3740,7 +3740,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=519052708580646093&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-4.jpg",
     "output": "public/assets/skills/fighter-s7-passive-4.webp",
     "crop": {
       "left": 780,
@@ -3751,7 +3751,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6926165347018779853&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-5.jpg",
     "output": "public/assets/skills/fighter-s7-passive-5.webp",
     "crop": {
       "left": 780,
@@ -3762,7 +3762,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8395229983207753397&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-passive-6.jpg",
     "output": "public/assets/skills/fighter-s7-passive-6.webp",
     "crop": {
       "left": 780,
@@ -3773,7 +3773,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/斗士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=947691575871691232&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/fighter/fighter-s7-active-6.jpg",
     "output": "public/assets/skills/fighter-s7-active-6.webp",
     "crop": {
       "left": 780,
@@ -3784,7 +3784,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2632845302908178489&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-1.jpg",
     "output": "public/assets/skills/knight-s7-passive-1.webp",
     "crop": {
       "left": 780,
@@ -3795,7 +3795,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2982582120754385185&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-2.jpg",
     "output": "public/assets/skills/knight-s7-passive-2.webp",
     "crop": {
       "left": 780,
@@ -3806,7 +3806,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3337713806343275873&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-1.jpg",
     "output": "public/assets/skills/knight-s7-active-1.webp",
     "crop": {
       "left": 780,
@@ -3817,7 +3817,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3464938157182071250&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-2.jpg",
     "output": "public/assets/skills/knight-s7-active-2.webp",
     "crop": {
       "left": 780,
@@ -3828,7 +3828,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4053672701780922599&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-3.jpg",
     "output": "public/assets/skills/knight-s7-passive-3.webp",
     "crop": {
       "left": 780,
@@ -3839,7 +3839,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4245683022294320344&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-3.jpg",
     "output": "public/assets/skills/knight-s7-active-3.webp",
     "crop": {
       "left": 780,
@@ -3850,7 +3850,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4639647082866319779&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-4.jpg",
     "output": "public/assets/skills/knight-s7-active-4.webp",
     "crop": {
       "left": 780,
@@ -3861,7 +3861,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4649562535314085325&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-5.jpg",
     "output": "public/assets/skills/knight-s7-active-5.webp",
     "crop": {
       "left": 780,
@@ -3872,7 +3872,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5188233476905779806&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-active-6.jpg",
     "output": "public/assets/skills/knight-s7-active-6.webp",
     "crop": {
       "left": 780,
@@ -3883,7 +3883,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5756052343464876467&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-4.jpg",
     "output": "public/assets/skills/knight-s7-passive-4.webp",
     "crop": {
       "left": 780,
@@ -3894,7 +3894,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6048907273993693847&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-5.jpg",
     "output": "public/assets/skills/knight-s7-passive-5.webp",
     "crop": {
       "left": 780,
@@ -3905,7 +3905,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/骑士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6528816860993447889&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/knight/knight-s7-passive-6.jpg",
     "output": "public/assets/skills/knight-s7-passive-6.webp",
     "crop": {
       "left": 780,
@@ -3916,7 +3916,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1396000496192899967&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-1.jpg",
     "output": "public/assets/skills/warlock-s7-passive-1.webp",
     "crop": {
       "left": 780,
@@ -3927,7 +3927,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1616866626897296281&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-1.jpg",
     "output": "public/assets/skills/warlock-s7-active-1.webp",
     "crop": {
       "left": 780,
@@ -3938,7 +3938,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2161374979565870695&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-2.jpg",
     "output": "public/assets/skills/warlock-s7-passive-2.webp",
     "crop": {
       "left": 780,
@@ -3949,7 +3949,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3256547749796629753&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-3.jpg",
     "output": "public/assets/skills/warlock-s7-passive-3.webp",
     "crop": {
       "left": 780,
@@ -3960,7 +3960,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4029830060554354054&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-2.jpg",
     "output": "public/assets/skills/warlock-s7-active-2.webp",
     "crop": {
       "left": 780,
@@ -3971,7 +3971,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4131318061357932413&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-3.jpg",
     "output": "public/assets/skills/warlock-s7-active-3.webp",
     "crop": {
       "left": 780,
@@ -3982,7 +3982,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4750050912401574505&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-4.jpg",
     "output": "public/assets/skills/warlock-s7-active-4.webp",
     "crop": {
       "left": 780,
@@ -3993,7 +3993,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6134049375520212152&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-5.jpg",
     "output": "public/assets/skills/warlock-s7-active-5.webp",
     "crop": {
       "left": 780,
@@ -4004,7 +4004,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7220009476632307124&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-4.jpg",
     "output": "public/assets/skills/warlock-s7-passive-4.webp",
     "crop": {
       "left": 780,
@@ -4015,7 +4015,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7652157004528084061&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-active-6.jpg",
     "output": "public/assets/skills/warlock-s7-active-6.webp",
     "crop": {
       "left": 780,
@@ -4026,7 +4026,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8523527368017600557&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-5.jpg",
     "output": "public/assets/skills/warlock-s7-passive-5.webp",
     "crop": {
       "left": 780,
@@ -4037,7 +4037,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/术士/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=956347366624243707&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/warlock/warlock-s7-passive-6.jpg",
     "output": "public/assets/skills/warlock-s7-passive-6.webp",
     "crop": {
       "left": 780,
@@ -4048,7 +4048,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=12897404603765483&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-1.jpg",
     "output": "public/assets/skills/sage-s7-passive-1.webp",
     "crop": {
       "left": 780,
@@ -4059,7 +4059,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2324105672554846712&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-active-1.jpg",
     "output": "public/assets/skills/sage-s7-active-1.webp",
     "crop": {
       "left": 780,
@@ -4070,7 +4070,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=2689850557368158251&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-2.jpg",
     "output": "public/assets/skills/sage-s7-passive-2.webp",
     "crop": {
       "left": 780,
@@ -4081,7 +4081,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3470450968513140681&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-3.jpg",
     "output": "public/assets/skills/sage-s7-passive-3.webp",
     "crop": {
       "left": 780,
@@ -4092,7 +4092,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3621477466482154338&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-4.jpg",
     "output": "public/assets/skills/sage-s7-passive-4.webp",
     "crop": {
       "left": 780,
@@ -4103,7 +4103,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3683134887505059367&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-active-2.jpg",
     "output": "public/assets/skills/sage-s7-active-2.webp",
     "crop": {
       "left": 780,
@@ -4114,7 +4114,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3805157841427600883&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-active-3.jpg",
     "output": "public/assets/skills/sage-s7-active-3.webp",
     "crop": {
       "left": 780,
@@ -4125,7 +4125,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4358777341201526344&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-active-4.jpg",
     "output": "public/assets/skills/sage-s7-active-4.webp",
     "crop": {
       "left": 780,
@@ -4136,7 +4136,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5645414013674994266&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-5.jpg",
     "output": "public/assets/skills/sage-s7-passive-5.webp",
     "crop": {
       "left": 780,
@@ -4147,7 +4147,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5871749429438022989&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-6.jpg",
     "output": "public/assets/skills/sage-s7-passive-6.webp",
     "crop": {
       "left": 780,
@@ -4158,7 +4158,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6200252879892659893&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-passive-7.jpg",
     "output": "public/assets/skills/sage-s7-passive-7.webp",
     "crop": {
       "left": 780,
@@ -4169,7 +4169,7 @@
     "size": 128
   },
   {
-    "source": "七转技能/贤者/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6545498998385519364&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/seventh/sage/sage-s7-active-5.jpg",
     "output": "public/assets/skills/sage-s7-active-5.webp",
     "crop": {
       "left": 780,
@@ -4180,7 +4180,7 @@
     "size": 128
   },
   {
-    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8706170955870767997&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/pets/qianming.jpg",
     "output": "public/assets/pets/qianming.webp",
     "crop": {
       "left": 430,
@@ -4191,7 +4191,7 @@
     "size": 160
   },
   {
-    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=7946606070523995916&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/pets/dark-emperor.jpg",
     "output": "public/assets/pets/dark-emperor.webp",
     "crop": {
       "left": 430,
@@ -4202,7 +4202,7 @@
     "size": 160
   },
   {
-    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5161113330777494202&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/pets/rainbow.jpg",
     "output": "public/assets/pets/rainbow.webp",
     "crop": {
       "left": 430,
@@ -4213,7 +4213,7 @@
     "size": 160
   },
   {
-    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=418755252266903712&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/pets/bamboo.jpg",
     "output": "public/assets/pets/bamboo.webp",
     "crop": {
       "left": 430,
@@ -4224,7 +4224,7 @@
     "size": 160
   },
   {
-    "source": "宠物/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3978459593059071579&skey=@crypt_d4779332_670741b547bcba64aa66adf9534c73fb&mmweb_appid=wx_webfilehelper.jpg",
+    "source": "data/source/pets/dawn-angel.jpg",
     "output": "public/assets/pets/dawn-angel.webp",
     "crop": {
       "left": 430,

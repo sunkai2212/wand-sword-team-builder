@@ -1,6 +1,7 @@
 import { mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
+import { resolveManifestAsset } from "./asset-paths.mjs";
 
 const root = process.cwd();
 const manifest = JSON.parse(
@@ -8,9 +9,9 @@ const manifest = JSON.parse(
 );
 
 let count = 0;
-for (const asset of manifest) {
-  const source = path.join(root, asset.source);
-  const output = path.join(root, asset.output);
+const seenOutputs = new Set();
+for (const [index, asset] of manifest.entries()) {
+  const { source, output } = resolveManifestAsset(root, asset, index, seenOutputs);
   await mkdir(path.dirname(output), { recursive: true });
   await sharp(source)
     .extract(asset.crop)

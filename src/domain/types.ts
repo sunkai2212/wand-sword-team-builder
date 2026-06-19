@@ -4,7 +4,6 @@ export type Stage = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 export interface Skill {
   id: string;
-  name: string;
   profession: Profession;
   kind: SkillKind;
   stage: Stage;

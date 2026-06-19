@@ -18,14 +18,29 @@ export function stageName(stage: Stage): string {
   return STAGE_NAMES[stage];
 }
 
+export function trapDialogFocus(dialog: HTMLDialogElement): void {
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const buttons = Array.from(dialog.querySelectorAll<HTMLButtonElement>("button:not(:disabled)"));
+    const first = buttons[0];
+    const last = buttons.at(-1);
+    if (!first || !last) return;
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
 export function renderStageSelector(
   onSelect: (stage: Stage) => void,
   options: StageSelectorOptions = {},
 ): HTMLElement {
-  const overlay = document.createElement("div");
-  overlay.className = "dialog-overlay";
-
-  const dialog = document.createElement("section");
+  const dialog = document.createElement("dialog");
   dialog.className = "dialog-panel";
   dialog.setAttribute("role", "dialog");
   dialog.setAttribute("aria-modal", "true");
@@ -42,6 +57,7 @@ export function renderStageSelector(
     button.type = "button";
     button.className = "choice-button";
     button.textContent = stageName(stage as Stage);
+    button.autofocus = stage === 1;
     button.addEventListener("click", () => onSelect(stage as Stage));
     choices.append(button);
   }
@@ -52,10 +68,20 @@ export function renderStageSelector(
     closeButton.type = "button";
     closeButton.className = "text-button";
     closeButton.textContent = "关闭";
-    closeButton.addEventListener("click", options.onClose);
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+      options.onClose?.();
+    });
     dialog.append(closeButton);
   }
 
-  overlay.append(dialog);
-  return overlay;
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    if (options.onClose) {
+      dialog.close();
+      options.onClose();
+    }
+  });
+  trapDialogFocus(dialog);
+  return dialog;
 }

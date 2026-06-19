@@ -124,15 +124,6 @@ h2 {
   color: #785019;
 }
 
-.dialog-overlay {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  background: rgb(47 43 38 / 42%);
-}
-
 .dialog-panel {
   width: min(100%, 24rem);
   padding: 1.25rem;
@@ -140,6 +131,10 @@ h2 {
   border-radius: 0.75rem;
   background: #fffdfa;
   box-shadow: 0 0.75rem 2rem rgb(47 43 38 / 18%);
+}
+
+.dialog-panel::backdrop {
+  background: rgb(47 43 38 / 42%);
 }
 
 .stage-choices,

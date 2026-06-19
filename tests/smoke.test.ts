@@ -4,6 +4,14 @@ describe('application shell', () => {
   beforeEach(() => {
     vi.resetModules()
     document.body.innerHTML = '<div id="app"></div>'
+    if (!HTMLDialogElement.prototype.showModal) {
+      Object.defineProperty(HTMLDialogElement.prototype, 'showModal', {
+        configurable: true,
+        value(this: HTMLDialogElement) {
+          this.open = true
+        },
+      })
+    }
   })
 
   afterEach(() => {

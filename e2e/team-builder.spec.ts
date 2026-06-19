@@ -78,3 +78,40 @@ test("修改转数时保留已有角色且选择层可关闭", async ({ page }) 
   await expect(page.getByRole("button", { name: "骑士", exact: true })).toHaveCount(1);
 });
 
+test("修改转数时焦点限制在层内，关闭后返回触发按钮", async ({ page }) => {
+  await chooseStage(page);
+  const trigger = page.getByRole("button", { name: "修改转数" });
+  await trigger.click();
+
+  const dialog = page.getByRole("dialog", { name: "选择当前转数" });
+  await expect(dialog.getByRole("button", { name: "一转", exact: true })).toBeFocused();
+  for (let index = 0; index < 10; index += 1) {
+    await page.keyboard.press("Tab");
+    const focus = await dialog.evaluate((element) => ({
+      inside: element.contains(document.activeElement),
+      active: `${document.activeElement?.tagName}:${document.activeElement?.textContent?.trim()}`,
+    }));
+    expect(focus.inside, `Tab ${index + 1} focused ${focus.active}`).toBe(true);
+  }
+  await page.keyboard.press("Shift+Tab");
+  expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+
+  await dialog.getByRole("button", { name: "关闭" }).click();
+  await expect(trigger).toBeFocused();
+});
+
+test("职业选择层也会阻止焦点进入背景", async ({ page }) => {
+  await chooseStage(page);
+  await page.getByTestId("board-cell").first().click();
+
+  const dialog = page.getByRole("dialog", { name: "选择职业" });
+  await expect(dialog.getByRole("button", { name: "骑士", exact: true })).toBeFocused();
+  for (let index = 0; index < 6; index += 1) {
+    await page.keyboard.press("Tab");
+    const focus = await dialog.evaluate((element) => ({
+      inside: element.contains(document.activeElement),
+      active: `${document.activeElement?.tagName}:${document.activeElement?.textContent?.trim()}`,
+    }));
+    expect(focus.inside, `Tab ${index + 1} focused ${focus.active}`).toBe(true);
+  }
+});

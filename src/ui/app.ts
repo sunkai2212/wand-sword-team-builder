@@ -2,7 +2,7 @@ import { addMember, createTeam, moveMember, setStage, type Team } from "../domai
 import type { Profession, Stage } from "../domain/types";
 import { skills } from "../data/catalog";
 import { renderBoard, professionName } from "./board";
-import { renderStageSelector, stageName } from "./stage-selector";
+import { renderStageSelector, stageName, trapDialogFocus } from "./stage-selector";
 
 const PROFESSIONS: Profession[] = ["knight", "fighter", "warlock", "sage"];
 
@@ -13,10 +13,21 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   let professionCell: number | null = null;
   let statusMessage = "";
 
+  function showModal(dialog: HTMLElement): void {
+    root.append(dialog);
+    (dialog as HTMLDialogElement).showModal();
+  }
+
+  function focusStageTrigger(): void {
+    root.querySelector<HTMLButtonElement>('[data-action="change-stage"]')?.focus();
+  }
+
   function selectStage(stage: Stage): void {
+    const shouldRestoreFocus = team !== null;
     team = team ? setStage(team, stage, true, skills) : createTeam(stage);
     stageSelectorOpen = false;
     render();
+    if (shouldRestoreFocus) focusStageTrigger();
   }
 
   function selectProfession(profession: Profession): void {
@@ -58,9 +69,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   }
 
   function renderProfessionSelector(): HTMLElement {
-    const overlay = document.createElement("div");
-    overlay.className = "dialog-overlay";
-    const dialog = document.createElement("section");
+    const dialog = document.createElement("dialog");
     dialog.className = "dialog-panel";
     dialog.setAttribute("role", "dialog");
     dialog.setAttribute("aria-modal", "true");
@@ -76,19 +85,21 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       button.type = "button";
       button.className = "choice-button";
       button.textContent = professionName(profession);
+      button.autofocus = profession === "knight";
       button.addEventListener("click", () => selectProfession(profession));
       choices.append(button);
     }
     dialog.append(titleElement, choices);
-    overlay.append(dialog);
-    return overlay;
+    dialog.addEventListener("cancel", (event) => event.preventDefault());
+    trapDialogFocus(dialog);
+    return dialog;
   }
 
   function render(): void {
     root.replaceChildren();
 
     if (!team) {
-      root.append(renderStageSelector(selectStage));
+      showModal(renderStageSelector(selectStage));
       return;
     }
 
@@ -104,6 +115,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     const changeStage = document.createElement("button");
     changeStage.type = "button";
     changeStage.className = "text-button";
+    changeStage.dataset.action = "change-stage";
     changeStage.textContent = "修改转数";
     changeStage.addEventListener("click", () => {
       stageSelectorOpen = true;
@@ -120,14 +132,15 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     root.append(main);
 
     if (stageSelectorOpen) {
-      root.append(renderStageSelector(selectStage, {
+      showModal(renderStageSelector(selectStage, {
         onClose: () => {
           stageSelectorOpen = false;
           render();
+          focusStageTrigger();
         },
       }));
     } else if (professionCell !== null) {
-      root.append(renderProfessionSelector());
+      showModal(renderProfessionSelector());
     }
   }
 

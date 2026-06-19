@@ -1,20 +1,168 @@
 :root {
   font-family: system-ui, sans-serif;
-  color: #1f2937;
-  background: #f5f3ee;
+  color: #2f2b26;
+  background: #f4f1eb;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 }
 
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #ad761d;
+  outline-offset: 2px;
+}
+
 .app-shell {
-  box-sizing: border-box;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 1.25rem 1rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
 }
 
 h1 {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 38rem;
+  margin-bottom: 1rem;
+}
+
+.toolbar p {
   margin: 0;
-  font-size: 1.75rem;
+  font-weight: 650;
+}
+
+.text-button,
+.choice-button,
+.board-cell {
+  border: 1px solid #b9afa1;
+  color: inherit;
+  background: #fffdfa;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, transform 80ms ease;
+}
+
+.text-button:hover,
+.choice-button:hover,
+.board-cell:hover {
+  border-color: #ad761d;
+  background: #fbf3e4;
+}
+
+.text-button:active,
+.choice-button:active,
+.board-cell:active {
+  transform: translateY(1px);
+}
+
+.text-button {
+  min-height: 2.5rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.position-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.35rem;
+  width: 100%;
+  max-width: 38rem;
+}
+
+.board-cell {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0.25rem;
+  border-radius: 0.4rem;
+}
+
+.board-cell[aria-pressed="true"] {
+  border-color: #986414;
+  background: #f6e6c7;
+}
+
+.board-cell img {
+  width: min(80%, 4.5rem);
+  height: min(70%, 4.5rem);
+  object-fit: contain;
+}
+
+.board-cell span {
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.status-message {
+  min-height: 1.5rem;
+  margin-top: 0.75rem;
+  color: #785019;
+}
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(47 43 38 / 42%);
+}
+
+.dialog-panel {
+  width: min(100%, 24rem);
+  padding: 1.25rem;
+  border: 1px solid #c8bcac;
+  border-radius: 0.75rem;
+  background: #fffdfa;
+  box-shadow: 0 0.75rem 2rem rgb(47 43 38 / 18%);
+}
+
+.stage-choices,
+.profession-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.choice-button {
+  min-height: 3rem;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: 650;
+}
+
+@media (min-width: 40rem) {
+  .app-shell {
+    padding: 2rem;
+  }
+
+  .board-cell span {
+    font-size: 0.875rem;
+  }
 }

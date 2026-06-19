@@ -1,4 +1,5 @@
 import './styles.css'
+import { mountApp } from './ui/app'
 
 export const APP_TITLE = '杖剑传说·4v4阵容图'
 
@@ -8,4 +9,4 @@ if (!app) {
   throw new Error('Missing #app root element')
 }
 
-app.innerHTML = `<main class="app-shell"><h1>${APP_TITLE}</h1></main>`
+mountApp(app)

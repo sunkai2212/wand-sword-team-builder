@@ -10,10 +10,11 @@ describe('application shell', () => {
     document.body.innerHTML = ''
   })
 
-  it('exports and renders the application title', async () => {
+  it('exports the application title and starts with stage selection', async () => {
     const { APP_TITLE } = await import('../src/main')
 
     expect(APP_TITLE).toBe('杖剑传说·4v4阵容图')
-    expect(document.querySelector('h1')?.textContent).toBe(APP_TITLE)
+    expect(document.querySelector('[role="dialog"]')?.textContent).toContain('选择当前转数')
+    expect(document.querySelector('h1')).toBeNull()
   })
 })

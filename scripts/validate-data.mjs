@@ -7,6 +7,10 @@ const root = process.cwd();
 const skills = JSON.parse(await readFile("src/data/skills.json", "utf8"));
 const pets = JSON.parse(await readFile("src/data/pets.json", "utf8"));
 const manifest = JSON.parse(await readFile("data/source-assets.json", "utf8"));
+if (!Array.isArray(manifest)) {
+  console.error("Asset manifest must be an array.");
+  process.exit(1);
+}
 const professions = ["knight", "fighter", "warlock", "sage"];
 const kinds = ["active", "passive"];
 const expectedCounts = {
@@ -93,9 +97,11 @@ for (const profession of professions) {
 if (pets.length !== 5) errors.push(`expected 5 pets, found ${pets.length}`);
 
 const seenOutputs = new Set();
+const manifestOutputs = new Set();
 for (const [index, asset] of manifest.entries()) {
   try {
     const resolved = resolveManifestAsset(root, asset, index, seenOutputs);
+    manifestOutputs.add(asset.output.replaceAll("\\", "/"));
     await access(resolved.source);
     await access(resolved.output);
   } catch (error) {
@@ -105,9 +111,6 @@ for (const [index, asset] of manifest.entries()) {
 
 const catalogOutputs = new Set(
   [...skills, ...pets].map((entry) => `public${entry.icon}`.replaceAll("\\", "/")),
-);
-const manifestOutputs = new Set(
-  manifest.map((asset) => asset.output.replaceAll("\\", "/")),
 );
 if (manifest.length !== 385) errors.push(`expected 385 manifest entries, found ${manifest.length}`);
 for (const output of catalogOutputs) {

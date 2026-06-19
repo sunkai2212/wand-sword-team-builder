@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import path from "node:path";
 
 // @ts-expect-error The production helper is a Node ESM module.
 import { resolveManifestAsset } from "../../scripts/asset-paths.mjs";
@@ -18,8 +19,16 @@ describe("asset manifest path safety", () => {
       seen,
     );
 
-    expect(resolved.source).toContain("data\\source\\skills");
-    expect(resolved.output).toContain("public\\assets\\skills");
+    expect(path.relative(root, resolved.source).split(path.sep).slice(0, 3)).toEqual([
+      "data",
+      "source",
+      "skills",
+    ]);
+    expect(path.relative(root, resolved.output).split(path.sep).slice(0, 3)).toEqual([
+      "public",
+      "assets",
+      "skills",
+    ]);
   });
 
   it.each([

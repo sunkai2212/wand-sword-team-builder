@@ -1,0 +1,97 @@
+import { execFileSync } from "node:child_process";
+import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import { describe, expect, it } from "vitest";
+
+const root = process.cwd();
+
+function runFailure(script: string, cwd: string): string {
+  try {
+    execFileSync(process.execPath, [path.join(root, script)], {
+      cwd,
+      encoding: "utf8",
+      stdio: "pipe",
+    });
+  } catch (error) {
+    return String((error as { stderr?: string }).stderr ?? error);
+  }
+  throw new Error(`${script} unexpectedly succeeded`);
+}
+
+describe("asset scripts diagnostics", () => {
+  it("reports image processing failures with manifest context", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-curate-"));
+    try {
+      await mkdir(path.join(temp, "data/source"), { recursive: true });
+      await writeFile(path.join(temp, "data/source/broken.jpg"), "not an image");
+      const asset = {
+        source: "data/source/broken.jpg",
+        output: "public/assets/broken.webp",
+        crop: { left: 1, top: 2, width: 3, height: 4 },
+        size: 64,
+      };
+      await writeFile(
+        path.join(temp, "data/source-assets.json"),
+        JSON.stringify([asset]),
+      );
+
+      const stderr = runFailure("scripts/curate-assets.mjs", temp);
+      expect(stderr).toMatch(/entry 0/);
+      expect(stderr).toContain(`source=${asset.source}`);
+      expect(stderr).toContain(`output=${asset.output}`);
+      expect(stderr).toContain(`crop=${JSON.stringify(asset.crop)}`);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("reports malformed manifest entries without an unhandled TypeError", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-validate-"));
+    try {
+      await mkdir(path.join(temp, "src/data"), { recursive: true });
+      await mkdir(path.join(temp, "data"), { recursive: true });
+      await copyFile(
+        path.join(root, "src/data/skills.json"),
+        path.join(temp, "src/data/skills.json"),
+      );
+      await copyFile(
+        path.join(root, "src/data/pets.json"),
+        path.join(temp, "src/data/pets.json"),
+      );
+      await writeFile(
+        path.join(temp, "data/source-assets.json"),
+        JSON.stringify([{ source: "data/source/broken.jpg" }]),
+      );
+
+      const stderr = runFailure("scripts/validate-data.mjs", temp);
+      expect(stderr).toMatch(/entry 0.*source=data\/source\/broken\.jpg.*output=<missing>/i);
+      expect(stderr).not.toMatch(/TypeError/);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("reports a non-array manifest as a schema error", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-schema-"));
+    try {
+      await mkdir(path.join(temp, "src/data"), { recursive: true });
+      await mkdir(path.join(temp, "data"), { recursive: true });
+      await copyFile(
+        path.join(root, "src/data/skills.json"),
+        path.join(temp, "src/data/skills.json"),
+      );
+      await copyFile(
+        path.join(root, "src/data/pets.json"),
+        path.join(temp, "src/data/pets.json"),
+      );
+      await writeFile(path.join(temp, "data/source-assets.json"), "{}");
+
+      const stderr = runFailure("scripts/validate-data.mjs", temp);
+      expect(stderr).toMatch(/asset manifest must be an array/i);
+      expect(stderr).not.toMatch(/TypeError/);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+});

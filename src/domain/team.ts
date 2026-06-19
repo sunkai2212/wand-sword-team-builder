@@ -1,6 +1,7 @@
 import type {
   Pet,
   Profession,
+  Skill,
   SkillKind,
   Stage,
 } from "./types";
@@ -26,6 +27,12 @@ export interface Team {
   members: Member[];
 }
 
+interface OverStageSkill {
+  memberId: string;
+  kind: SkillKind;
+  slot: number;
+}
+
 function emptySlots(): Slots {
   return [null, null, null, null];
 }
@@ -34,6 +41,38 @@ function assertCell(cell: number): void {
   if (!Number.isInteger(cell) || cell < 0 || cell > 19) {
     throw new Error(`Cell must be an integer from 0 to 19; received ${cell}`);
   }
+}
+
+function assertStage(stage: number): asserts stage is Stage {
+  if (!Number.isInteger(stage) || stage < 1 || stage > 7) {
+    throw new Error(`Stage must be an integer from 1 to 7; received ${stage}`);
+  }
+}
+
+function findOverStageSkills(
+  team: Team,
+  newStage: Stage,
+  catalog: readonly Skill[],
+): OverStageSkill[] {
+  const skillsById = new Map(catalog.map((skill) => [skill.id, skill]));
+  const overStage: OverStageSkill[] = [];
+
+  for (const member of team.members) {
+    for (const kind of ["active", "passive"] as const) {
+      member[kind].forEach((skillId, slot) => {
+        if (skillId === null) return;
+        const skill = skillsById.get(skillId);
+        if (!skill) {
+          throw new Error(`Selected skill ${skillId} is missing from catalog`);
+        }
+        if (skill.stage > newStage) {
+          overStage.push({ memberId: member.id, kind, slot });
+        }
+      });
+    }
+  }
+
+  return overStage;
 }
 
 function findMember(team: Team, id: string): Member {
@@ -151,4 +190,46 @@ export function setSkill(
 export function setPet(team: Team, id: string, petId: Pet["id"] | null): Team {
   const member = findMember(team, id);
   return replaceMember(team, { ...member, petId });
+}
+
+export function countOverStageSkills(
+  team: Team,
+  newStage: Stage,
+  catalog: readonly Skill[],
+): number {
+  assertStage(newStage);
+  const overStage = findOverStageSkills(team, newStage, catalog);
+  return newStage < team.stage ? overStage.length : 0;
+}
+
+export function setStage(
+  team: Team,
+  newStage: Stage,
+  confirmed: boolean,
+  catalog: readonly Skill[],
+): Team {
+  assertStage(newStage);
+  const overStage = findOverStageSkills(team, newStage, catalog);
+
+  if (newStage >= team.stage || overStage.length === 0) {
+    return { ...team, stage: newStage, members: [...team.members] };
+  }
+  if (!confirmed) throw new Error("Stage change needs confirmation");
+
+  const slotsToClear = new Set(
+    overStage.map(({ memberId, kind, slot }) => `${memberId}:${kind}:${slot}`),
+  );
+  return {
+    ...team,
+    stage: newStage,
+    members: team.members.map((member) => ({
+      ...member,
+      active: member.active.map((skillId, slot) =>
+        slotsToClear.has(`${member.id}:active:${slot}`) ? null : skillId,
+      ) as Slots,
+      passive: member.passive.map((skillId, slot) =>
+        slotsToClear.has(`${member.id}:passive:${slot}`) ? null : skillId,
+      ) as Slots,
+    })),
+  };
 }

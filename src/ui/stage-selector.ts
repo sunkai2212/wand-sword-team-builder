@@ -39,7 +39,7 @@ export function trapDialogFocus(dialog: HTMLDialogElement): void {
 export function renderStageSelector(
   onSelect: (stage: Stage) => void,
   options: StageSelectorOptions = {},
-): HTMLElement {
+): HTMLDialogElement {
   const dialog = document.createElement("dialog");
   dialog.className = "dialog-panel";
   dialog.setAttribute("role", "dialog");

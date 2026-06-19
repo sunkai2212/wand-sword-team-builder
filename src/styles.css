@@ -58,7 +58,12 @@ h2 {
 
 .text-button,
 .choice-button,
-.board-cell {
+.board-cell,
+.skill-slot,
+.pet-slot,
+.skill-option,
+.pet-option,
+.stage-tab {
   border: 1px solid #b9afa1;
   color: inherit;
   background: #fffdfa;
@@ -68,14 +73,24 @@ h2 {
 
 .text-button:hover,
 .choice-button:hover,
-.board-cell:hover {
+.board-cell:hover,
+.skill-slot:hover,
+.pet-slot:hover,
+.skill-option:hover,
+.pet-option:hover,
+.stage-tab:hover {
   border-color: #ad761d;
   background: #fbf3e4;
 }
 
 .text-button:active,
 .choice-button:active,
-.board-cell:active {
+.board-cell:active,
+.skill-slot:active,
+.pet-slot:active,
+.skill-option:active,
+.pet-option:active,
+.stage-tab:active {
   transform: translateY(1px);
 }
 
@@ -152,6 +167,171 @@ h2 {
   font-weight: 650;
 }
 
+.member-editors {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 38rem;
+  margin-top: 1rem;
+}
+
+.member-editor {
+  padding: 1rem;
+  border: 1px solid #c8bcac;
+  border-radius: 0.75rem;
+  background: #eee9e1;
+}
+
+.member-editor-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.9rem;
+}
+
+.member-editor-header img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+}
+
+.member-editor-header h2,
+.member-editor h3 {
+  margin: 0;
+}
+
+.member-editor h3 {
+  margin-bottom: 0.4rem;
+  color: #6e6254;
+  font-size: 0.8rem;
+}
+
+.member-skill-groups {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.member-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.skill-slot {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.skill-slot img,
+.skill-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skill-slot span {
+  font-size: 0.72rem;
+}
+
+.member-pet-group {
+  margin-top: 0.8rem;
+}
+
+.pet-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.5rem;
+}
+
+.pet-slot img {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+}
+
+.member-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.danger-button {
+  color: #8a372c;
+}
+
+.skill-stage-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.stage-tab {
+  min-height: 2.5rem;
+  padding: 0.35rem;
+  border-radius: 0.45rem;
+}
+
+.stage-tab[aria-pressed="true"] {
+  border-color: #986414;
+  background: #f6e6c7;
+}
+
+.skill-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  max-height: 55vh;
+  margin-bottom: 0.9rem;
+  overflow-y: auto;
+}
+
+.skill-option {
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.skill-option:disabled,
+.skill-option[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.pet-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.pet-option {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.6rem 0.35rem;
+  border-radius: 0.5rem;
+}
+
+.pet-option img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.pet-option span {
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
 @media (min-width: 40rem) {
   .app-shell {
     padding: 2rem;
@@ -159,5 +339,13 @@ h2 {
 
   .board-cell span {
     font-size: 0.875rem;
+  }
+
+  .member-editors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-picker-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }

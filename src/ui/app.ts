@@ -1,16 +1,33 @@
-import { addMember, createTeam, moveMember, setStage, type Team } from "../domain/team";
-import type { Profession, Stage } from "../domain/types";
-import { skills } from "../data/catalog";
-import { renderBoard, professionName } from "./board";
-import { renderStageSelector, stageName, trapDialogFocus } from "./stage-selector";
+import {
+  addMember,
+  changeProfession,
+  countOverStageSkills,
+  createTeam,
+  moveMember,
+  removeMember,
+  setPet,
+  setSkill,
+  setStage,
+  type Team,
+} from "../domain/team";
+import type { Profession, SkillKind, Stage } from "../domain/types";
+import { pets, skills } from "../data/catalog";
+import { renderBoard } from "./board";
+import { renderMemberEditors } from "./member-editor";
+import { renderPetPicker, renderProfessionPicker, renderSkillPicker } from "./pickers";
+import { renderStageSelector, stageName } from "./stage-selector";
 
-const PROFESSIONS: Profession[] = ["knight", "fighter", "warlock", "sage"];
+type Picker =
+  | { type: "skill"; memberId: string; kind: SkillKind; slot: number }
+  | { type: "pet"; memberId: string }
+  | { type: "profession"; memberId: string };
 
 export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"): void {
   let team: Team | null = null;
   let selectedMemberId: string | null = null;
   let stageSelectorOpen = true;
   let professionCell: number | null = null;
+  let picker: Picker | null = null;
   let statusMessage = "";
 
   root.replaceChildren();
@@ -24,9 +41,9 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   main.append(content, status);
   root.append(main);
 
-  function showModal(dialog: HTMLElement): void {
+  function showModal(dialog: HTMLDialogElement): void {
     root.append(dialog);
-    (dialog as HTMLDialogElement).showModal();
+    dialog.showModal();
   }
 
   function focusStageTrigger(): void {
@@ -37,15 +54,36 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     root.querySelector<HTMLButtonElement>(`[data-testid="board-cell"][data-cell="${cell}"]`)?.focus();
   }
 
-  function selectStage(stage: Stage): void {
+  function findEditor(memberId: string): HTMLElement | undefined {
+    return Array.from(root.querySelectorAll<HTMLElement>('[data-testid="member-editor"]'))
+      .find((editor) => editor.dataset.memberId === memberId);
+  }
+
+  function focusSkillSlot(memberId: string, kind: SkillKind, slot: number): void {
+    findEditor(memberId)
+      ?.querySelector<HTMLButtonElement>(`[data-testid="skill-slot"][data-kind="${kind}"][data-slot="${slot}"]`)
+      ?.focus();
+  }
+
+  function focusPetSlot(memberId: string): void {
+    findEditor(memberId)?.querySelector<HTMLButtonElement>('[data-testid="pet-slot"]')?.focus();
+  }
+
+  function selectStage(nextStage: Stage): void {
     const shouldRestoreFocus = team !== null;
-    team = team ? setStage(team, stage, true, skills) : createTeam(stage);
+    if (!team) {
+      team = createTeam(nextStage);
+    } else {
+      const count = countOverStageSkills(team, nextStage, skills);
+      if (count > 0 && !window.confirm(`降低转数会清除 ${count} 个超阶技能，是否继续？`)) return;
+      team = setStage(team, nextStage, count > 0, skills);
+    }
     stageSelectorOpen = false;
     render();
     if (shouldRestoreFocus) focusStageTrigger();
   }
 
-  function selectProfession(profession: Profession): void {
+  function selectNewProfession(profession: Profession): void {
     if (!team || professionCell === null) return;
     const cell = professionCell;
     team = addMember(team, cell, profession);
@@ -55,12 +93,22 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     focusCell(cell);
   }
 
-  function cancelProfession(): void {
+  function cancelNewProfession(): void {
     if (professionCell === null) return;
     const cell = professionCell;
     professionCell = null;
     render();
     focusCell(cell);
+  }
+
+  function closePicker(): void {
+    const closing = picker;
+    picker = null;
+    render();
+    if (!closing) return;
+    if (closing.type === "skill") focusSkillSlot(closing.memberId, closing.kind, closing.slot);
+    if (closing.type === "pet") focusPetSlot(closing.memberId);
+    if (closing.type === "profession") findEditor(closing.memberId)?.focus();
   }
 
   function handleCellClick(cell: number): void {
@@ -96,43 +144,64 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     render();
   }
 
-  function renderProfessionSelector(): HTMLElement {
-    const dialog = document.createElement("dialog");
-    dialog.className = "dialog-panel";
-    dialog.setAttribute("role", "dialog");
-    dialog.setAttribute("aria-modal", "true");
-    dialog.setAttribute("aria-labelledby", "profession-selector-title");
+  function renderOpenPicker(): HTMLDialogElement | null {
+    if (!team || !picker) return null;
+    const member = team.members.find((candidate) => candidate.id === picker?.memberId);
+    if (!member) return null;
 
-    const titleElement = document.createElement("h2");
-    titleElement.id = "profession-selector-title";
-    titleElement.textContent = "选择职业";
-    const choices = document.createElement("div");
-    choices.className = "profession-choices";
-    for (const profession of PROFESSIONS) {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "choice-button";
-      button.textContent = professionName(profession);
-      button.autofocus = profession === "knight";
-      button.addEventListener("click", () => selectProfession(profession));
-      choices.append(button);
+    if (picker.type === "skill") {
+      const { memberId, kind, slot } = picker;
+      return renderSkillPicker({
+        member,
+        kind,
+        slot,
+        stage: team.stage,
+        catalog: skills,
+        onSelect: (skillId) => {
+          if (!team) return;
+          team = setSkill(team, memberId, kind, slot, skillId);
+          statusMessage = "";
+          picker = null;
+          render();
+          focusSkillSlot(memberId, kind, slot);
+        },
+        onClear: () => {
+          if (!team) return;
+          team = setSkill(team, memberId, kind, slot, null);
+          statusMessage = "";
+          picker = null;
+          render();
+          focusSkillSlot(memberId, kind, slot);
+        },
+        onClose: closePicker,
+        onDuplicate: () => {
+          statusMessage = "该技能已装备";
+          status.textContent = statusMessage;
+        },
+      });
     }
-    const cancelButton = document.createElement("button");
-    cancelButton.type = "button";
-    cancelButton.className = "text-button";
-    cancelButton.textContent = "取消";
-    cancelButton.addEventListener("click", () => {
-      dialog.close();
-      cancelProfession();
-    });
-    dialog.append(titleElement, choices, cancelButton);
-    dialog.addEventListener("cancel", (event) => {
-      event.preventDefault();
-      dialog.close();
-      cancelProfession();
-    });
-    trapDialogFocus(dialog);
-    return dialog;
+
+    if (picker.type === "pet") {
+      const memberId = picker.memberId;
+      return renderPetPicker(pets, (petId) => {
+        if (!team) return;
+        team = setPet(team, memberId, petId);
+        statusMessage = "";
+        picker = null;
+        render();
+        focusPetSlot(memberId);
+      }, closePicker);
+    }
+
+    const memberId = picker.memberId;
+    return renderProfessionPicker("更换职业", (profession) => {
+      if (!team) return;
+      team = changeProfession(team, memberId, profession);
+      statusMessage = "";
+      picker = null;
+      render();
+      findEditor(memberId)?.focus();
+    }, closePicker);
   }
 
   function render(): void {
@@ -148,23 +217,46 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
 
     const heading = document.createElement("h1");
     heading.textContent = title;
-
     const toolbar = document.createElement("header");
     toolbar.className = "toolbar";
     const currentStage = document.createElement("p");
     currentStage.textContent = `当前：${stageName(team.stage)}`;
-    const changeStage = document.createElement("button");
-    changeStage.type = "button";
-    changeStage.className = "text-button";
-    changeStage.dataset.action = "change-stage";
-    changeStage.textContent = "修改转数";
-    changeStage.addEventListener("click", () => {
+    const changeStageButton = document.createElement("button");
+    changeStageButton.type = "button";
+    changeStageButton.className = "text-button";
+    changeStageButton.dataset.action = "change-stage";
+    changeStageButton.textContent = "修改转数";
+    changeStageButton.addEventListener("click", () => {
       stageSelectorOpen = true;
       render();
     });
-    toolbar.append(currentStage, changeStage);
+    toolbar.append(currentStage, changeStageButton);
 
-    content.append(heading, toolbar, renderBoard(team, selectedMemberId, { onCellClick: handleCellClick }));
+    const board = renderBoard(team, selectedMemberId, { onCellClick: handleCellClick });
+    const editors = renderMemberEditors(team, skills, pets, {
+      onOpenSkill: (memberId, kind, slot) => {
+        picker = { type: "skill", memberId, kind, slot };
+        render();
+      },
+      onOpenPet: (memberId) => {
+        picker = { type: "pet", memberId };
+        render();
+      },
+      onChangeProfession: (memberId) => {
+        picker = { type: "profession", memberId };
+        render();
+      },
+      onRemove: (memberId) => {
+        if (!team || !window.confirm("确定删除这个角色吗？")) return;
+        const cell = team.members.find((candidate) => candidate.id === memberId)?.cell;
+        team = removeMember(team, memberId);
+        if (selectedMemberId === memberId) selectedMemberId = null;
+        statusMessage = "";
+        render();
+        if (cell !== undefined) focusCell(cell);
+      },
+    });
+    content.append(heading, toolbar, board, editors);
 
     if (stageSelectorOpen) {
       showModal(renderStageSelector(selectStage, {
@@ -175,7 +267,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
         },
       }));
     } else if (professionCell !== null) {
-      showModal(renderProfessionSelector());
+      showModal(renderProfessionPicker("选择职业", selectNewProfession, cancelNewProfession));
+    } else {
+      const dialog = renderOpenPicker();
+      if (dialog) showModal(dialog);
     }
   }
 

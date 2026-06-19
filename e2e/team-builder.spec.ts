@@ -12,6 +12,10 @@ async function addKnight(page: import("@playwright/test").Page, cell: number) {
   await professionDialog.getByRole("button", { name: "骑士", exact: true }).click();
 }
 
+function memberEditor(page: import("@playwright/test").Page, index = 0) {
+  return page.getByTestId("member-editor").nth(index);
+}
+
 test("首次加载只显示不可关闭的转数选择层", async ({ page }) => {
   await page.goto("/");
 
@@ -181,4 +185,148 @@ test("满员提示更新时 live region 节点保持稳定", async ({ page }) =>
   await expect(status).toHaveText("队伍已满4人");
   expect(await statusNode!.evaluate((element) => element.isConnected)).toBe(true);
   await expect(page.getByTestId("board-cell").nth(4)).toBeFocused();
+});
+
+test("六转技能选择器只提供一至六转，七转队伍才提供七转", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+  let dialog = page.getByRole("dialog", { name: "选择战技1" });
+  await expect(dialog.locator('[data-testid="skill-stage-tab"]')).toHaveCount(6);
+  for (let stage = 1; stage <= 6; stage += 1) {
+    const tab = dialog.locator(`[data-testid="skill-stage-tab"][data-stage="${stage}"]`);
+    await expect(tab).toBeVisible();
+    await tab.click();
+    await expect(dialog.locator(`[data-testid="skill-option"][data-stage="${stage}"]`).first()).toBeVisible();
+  }
+  await expect(dialog.locator('[data-stage="7"]')).toHaveCount(0);
+  await expect(dialog.locator('[data-skill-id^="knight-s7-"]')).toHaveCount(0);
+  await page.keyboard.press("Escape");
+
+  await page.getByRole("button", { name: "修改转数" }).click();
+  await page.getByRole("dialog", { name: "选择当前转数" })
+    .getByRole("button", { name: "七转", exact: true }).click();
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+  dialog = page.getByRole("dialog", { name: "选择战技1" });
+  await expect(dialog.locator('[data-testid="skill-stage-tab"][data-stage="7"]')).toBeVisible();
+  await expect(dialog.locator('[data-skill-id="knight-s7-active-1"]')).toBeVisible();
+});
+
+test("技能按槽显示图标、禁止同成员重复并可清空", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  const activeSlot = editor.locator('[data-testid="skill-slot"][data-kind="active"][data-slot="0"]');
+  await activeSlot.click();
+  await page.locator('[data-testid="skill-option"][data-skill-id="knight-s6-active-1"]').click();
+  await expect(activeSlot).toBeFocused();
+  await expect(activeSlot.locator("img")).toHaveCount(1);
+  await expect(activeSlot).toHaveAttribute("aria-label", "战技1，骑士·六转·图标1");
+
+  await editor.getByRole("button", { name: "战技2", exact: true }).click();
+  const duplicate = page.locator('[data-testid="skill-option"][data-skill-id="knight-s6-active-1"]');
+  await expect(duplicate).toBeDisabled();
+  await duplicate.dispatchEvent("click");
+  await expect(page.getByRole("status")).toHaveText("该技能已装备");
+  await page.keyboard.press("Escape");
+
+  const passiveSlot = editor.locator('[data-testid="skill-slot"][data-kind="passive"][data-slot="0"]');
+  await passiveSlot.click();
+  await page.locator('[data-testid="skill-option"][data-skill-id="knight-s6-passive-1"]').click();
+  await expect(passiveSlot.locator("img")).toHaveCount(1);
+
+  await activeSlot.click();
+  await page.getByRole("dialog", { name: "选择战技1" })
+    .getByRole("button", { name: "清空此技能", exact: true }).click();
+  await expect(activeSlot).toBeFocused();
+  await expect(activeSlot).toHaveAccessibleName("战技1");
+  await expect(activeSlot.locator("img")).toHaveCount(0);
+});
+
+test("两名成员可选择同一只宠物并显示真实名称", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  await addKnight(page, 1);
+
+  for (let index = 0; index < 2; index += 1) {
+    const slot = memberEditor(page, index).getByTestId("pet-slot");
+    await slot.click();
+    const dialog = page.getByRole("dialog", { name: "选择宠物" });
+    await expect(dialog.locator('[data-testid="pet-option"]')).toHaveCount(5);
+    await dialog.locator('[data-testid="pet-option"][data-pet-id="qianming"]').click();
+    await expect(slot).toBeFocused();
+    await expect(slot).toContainText("千明灵狗");
+  }
+});
+
+test("更换职业清空技能但保留宠物，删除角色释放站位", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  await editor.getByRole("button", { name: "战技1", exact: true }).click();
+  await page.locator('[data-skill-id="knight-s6-active-1"]').click();
+  await editor.getByRole("button", { name: "宠物", exact: true }).click();
+  await page.locator('[data-pet-id="qianming"]').click();
+
+  await editor.getByRole("button", { name: "更换职业", exact: true }).click();
+  await page.getByRole("dialog", { name: "更换职业" })
+    .getByRole("button", { name: "斗士", exact: true }).click();
+  const changed = memberEditor(page);
+  await expect(changed).toBeFocused();
+  await expect(changed).toContainText("斗士");
+  await expect(changed.getByRole("button", { name: "战技1", exact: true })).toHaveCount(1);
+  await expect(changed.getByRole("button", { name: /千明灵狗/ })).toBeVisible();
+
+  page.once("dialog", (dialog) => dialog.accept());
+  await changed.getByRole("button", { name: "删除角色", exact: true }).click();
+  await expect(page.getByTestId("member-editor")).toHaveCount(0);
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("空位1");
+  await expect(page.getByTestId("board-cell").nth(0)).toBeFocused();
+});
+
+test("降低转数可取消，确认后只清除超阶技能", async ({ page }) => {
+  await chooseStage(page, "七转");
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  await editor.getByRole("button", { name: "战技1", exact: true }).click();
+  await page.locator('[data-skill-id="knight-s7-active-1"]').click();
+  await editor.getByRole("button", { name: "战技2", exact: true }).click();
+  await page.locator('[data-testid="skill-stage-tab"][data-stage="6"]').click();
+  await page.locator('[data-skill-id="knight-s6-active-1"]').click();
+
+  page.once("dialog", (dialog) => dialog.dismiss());
+  await page.getByRole("button", { name: "修改转数" }).click();
+  await page.getByRole("dialog", { name: "选择当前转数" })
+    .getByRole("button", { name: "六转", exact: true }).click();
+  await expect(page.getByText("当前：七转", { exact: true })).toBeVisible();
+  await expect(editor.locator('[data-skill-id="knight-s7-active-1"]')).toHaveCount(1);
+
+  page.once("dialog", async (dialog) => {
+    expect(dialog.message()).toBe("降低转数会清除 1 个超阶技能，是否继续？");
+    await dialog.accept();
+  });
+  await page.getByRole("dialog", { name: "选择当前转数" })
+    .getByRole("button", { name: "六转", exact: true }).click();
+  await expect(page.getByText("当前：六转", { exact: true })).toBeVisible();
+  await expect(memberEditor(page).getByRole("button", { name: "战技1", exact: true })).toBeVisible();
+  await expect(memberEditor(page).locator('[data-skill-id="knight-s6-active-1"]')).toHaveCount(1);
+});
+
+test("技能与宠物选择器用 Escape 关闭并把焦点还给槽位", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+  const skillSlot = editor.getByRole("button", { name: "战技1", exact: true });
+  await skillSlot.click();
+  await page.keyboard.press("Escape");
+  await expect(skillSlot).toBeFocused();
+
+  const petSlot = editor.getByRole("button", { name: "宠物", exact: true });
+  await petSlot.click();
+  await page.keyboard.press("Escape");
+  await expect(petSlot).toBeFocused();
 });

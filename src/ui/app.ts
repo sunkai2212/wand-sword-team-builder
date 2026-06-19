@@ -69,6 +69,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     findEditor(memberId)?.querySelector<HTMLButtonElement>('[data-testid="pet-slot"]')?.focus();
   }
 
+  function focusProfessionButton(memberId: string): void {
+    findEditor(memberId)?.querySelector<HTMLButtonElement>('[data-testid="change-profession"]')?.focus();
+  }
+
   function selectStage(nextStage: Stage): void {
     const shouldRestoreFocus = team !== null;
     if (!team) {
@@ -108,7 +112,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     if (!closing) return;
     if (closing.type === "skill") focusSkillSlot(closing.memberId, closing.kind, closing.slot);
     if (closing.type === "pet") focusPetSlot(closing.memberId);
-    if (closing.type === "profession") findEditor(closing.memberId)?.focus();
+    if (closing.type === "profession") focusProfessionButton(closing.memberId);
   }
 
   function handleCellClick(cell: number): void {
@@ -200,7 +204,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       statusMessage = "";
       picker = null;
       render();
-      findEditor(memberId)?.focus();
+      focusProfessionButton(memberId);
     }, closePicker);
   }
 

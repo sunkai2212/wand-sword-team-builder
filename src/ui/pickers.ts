@@ -22,6 +22,18 @@ function createDialog(titleText: string, titleId: string, onClose: () => void): 
   return dialog;
 }
 
+function createCancelButton(dialog: HTMLDialogElement, onClose: () => void): HTMLButtonElement {
+  const cancel = document.createElement("button");
+  cancel.type = "button";
+  cancel.className = "text-button";
+  cancel.textContent = "取消";
+  cancel.addEventListener("click", () => {
+    dialog.close();
+    onClose();
+  });
+  return cancel;
+}
+
 export interface SkillPickerOptions {
   member: Member;
   kind: SkillKind;
@@ -106,6 +118,7 @@ export function renderSkillPicker(options: SkillPickerOptions): HTMLDialogElemen
     clear.addEventListener("click", options.onClear);
     dialog.append(clear);
   }
+  dialog.append(createCancelButton(dialog, options.onClose));
   return dialog;
 }
 
@@ -135,7 +148,7 @@ export function renderPetPicker(
     button.append(image, name);
     grid.append(button);
   });
-  dialog.append(grid);
+  dialog.append(grid, createCancelButton(dialog, onClose));
   return dialog;
 }
 
@@ -156,11 +169,7 @@ export function renderProfessionPicker(
     button.addEventListener("click", () => onSelect(profession));
     choices.append(button);
   });
-  const cancel = document.createElement("button");
-  cancel.type = "button";
-  cancel.className = "text-button";
-  cancel.textContent = "取消";
-  cancel.addEventListener("click", onClose);
+  const cancel = createCancelButton(dialog, onClose);
   dialog.append(choices, cancel);
   return dialog;
 }

@@ -137,6 +137,8 @@ function renderMember(
   const change = document.createElement("button");
   change.type = "button";
   change.className = "text-button";
+  change.dataset.testid = "change-profession";
+  change.dataset.memberId = member.id;
   change.textContent = "更换职业";
   change.addEventListener("click", () => handlers.onChangeProfession(member.id));
   const remove = document.createElement("button");

@@ -275,7 +275,7 @@ test("更换职业清空技能但保留宠物，删除角色释放站位", async
   await page.getByRole("dialog", { name: "更换职业" })
     .getByRole("button", { name: "斗士", exact: true }).click();
   const changed = memberEditor(page);
-  await expect(changed).toBeFocused();
+  await expect(changed.getByTestId("change-profession")).toBeFocused();
   await expect(changed).toContainText("斗士");
   await expect(changed.getByRole("button", { name: "战技1", exact: true })).toHaveCount(1);
   await expect(changed.getByRole("button", { name: /千明灵狗/ })).toBeVisible();
@@ -329,4 +329,60 @@ test("技能与宠物选择器用 Escape 关闭并把焦点还给槽位", async 
   await petSlot.click();
   await page.keyboard.press("Escape");
   await expect(petSlot).toBeFocused();
+});
+
+test("技能与宠物选择器可用可见取消按钮关闭并把焦点还给槽位", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  const skillSlot = editor.getByRole("button", { name: "战技1", exact: true });
+  await skillSlot.click();
+  let dialog = page.getByRole("dialog", { name: "选择战技1" });
+  const skillCancel = dialog.getByRole("button", { name: "取消", exact: true });
+  await expect(skillCancel).toBeVisible();
+  await skillCancel.click();
+  await expect(dialog).toHaveCount(0);
+  await expect(skillSlot).toBeFocused();
+
+  const petSlot = editor.getByRole("button", { name: "宠物", exact: true });
+  await petSlot.click();
+  dialog = page.getByRole("dialog", { name: "选择宠物" });
+  const petCancel = dialog.getByRole("button", { name: "取消", exact: true });
+  await expect(petCancel).toBeVisible();
+  await petCancel.click();
+  await expect(dialog).toHaveCount(0);
+  await expect(petSlot).toBeFocused();
+});
+
+test("更换职业用 Escape、取消或选择成功后都把焦点还给更换职业按钮", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  let change = memberEditor(page).getByTestId("change-profession");
+  await change.click();
+  await page.keyboard.press("Escape");
+  await expect(change).toBeFocused();
+
+  await change.click();
+  let dialog = page.getByRole("dialog", { name: "更换职业" });
+  await dialog.getByRole("button", { name: "取消", exact: true }).click();
+  await expect(change).toBeFocused();
+
+  await change.click();
+  dialog = page.getByRole("dialog", { name: "更换职业" });
+  await dialog.getByRole("button", { name: "斗士", exact: true }).click();
+  change = memberEditor(page).getByTestId("change-profession");
+  await expect(change).toBeFocused();
+});
+
+test("390 像素宽屏下选择器显示取消按钮且页面没有横向溢出", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "选择战技1" });
+  await expect(dialog.getByRole("button", { name: "取消", exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
 });

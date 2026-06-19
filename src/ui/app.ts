@@ -13,6 +13,7 @@ import {
 import type { Profession, SkillKind, Stage } from "../domain/types";
 import { pets, skills } from "../data/catalog";
 import { renderBoard } from "./board";
+import { completionMessage } from "./completion";
 import { renderMemberEditors } from "./member-editor";
 import { renderPetPicker, renderProfessionPicker, renderSkillPicker } from "./pickers";
 import { renderStageSelector, stageName } from "./stage-selector";
@@ -38,7 +39,23 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   status.className = "status-message";
   status.setAttribute("role", "status");
   status.setAttribute("aria-live", "polite");
-  main.append(content, status);
+  const completion = document.createElement("footer");
+  completion.className = "completion-panel";
+  const completionText = document.createElement("p");
+  completionText.dataset.testid = "completion-message";
+  completionText.setAttribute("aria-live", "polite");
+  const generateButton = document.createElement("button");
+  generateButton.type = "button";
+  generateButton.className = "generate-button";
+  generateButton.textContent = "生成图片";
+  generateButton.addEventListener("click", () => {
+    if (!team || team.members.length === 0) return;
+    window.dispatchEvent(new CustomEvent("team-builder:generate", {
+      detail: structuredClone(team),
+    }));
+  });
+  completion.append(completionText, generateButton);
+  main.append(content, status, completion);
   root.append(main);
 
   function showModal(dialog: HTMLDialogElement): void {
@@ -213,11 +230,15 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     content.replaceChildren();
     status.textContent = statusMessage;
     main.hidden = team === null;
+    completion.hidden = team === null;
 
     if (!team) {
       showModal(renderStageSelector(selectStage));
       return;
     }
+
+    completionText.textContent = completionMessage(team);
+    generateButton.disabled = team.members.length === 0;
 
     const heading = document.createElement("h1");
     heading.textContent = title;

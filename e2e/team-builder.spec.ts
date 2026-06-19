@@ -16,6 +16,27 @@ function memberEditor(page: import("@playwright/test").Page, index = 0) {
   return page.getByTestId("member-editor").nth(index);
 }
 
+async function chooseSkill(
+  page: import("@playwright/test").Page,
+  editorIndex: number,
+  kind: "active" | "passive",
+  slot: number,
+) {
+  const editor = memberEditor(page, editorIndex);
+  await editor.locator(`[data-testid="skill-slot"][data-kind="${kind}"][data-slot="${slot}"]`).click();
+  await page.locator(`[data-testid="skill-option"][data-skill-id="knight-s6-${kind}-${slot + 1}"]`).click();
+}
+
+async function completeKnight(page: import("@playwright/test").Page, editorIndex: number) {
+  for (const kind of ["active", "passive"] as const) {
+    for (let slot = 0; slot < 4; slot += 1) {
+      await chooseSkill(page, editorIndex, kind, slot);
+    }
+  }
+  await memberEditor(page, editorIndex).getByTestId("pet-slot").click();
+  await page.locator('[data-testid="pet-option"][data-pet-id="qianming"]').click();
+}
+
 test("首次加载只显示不可关闭的转数选择层", async ({ page }) => {
   await page.goto("/");
 
@@ -314,6 +335,9 @@ test("降低转数可取消，确认后只清除超阶技能", async ({ page }) 
   await expect(page.getByText("当前：六转", { exact: true })).toBeVisible();
   await expect(memberEditor(page).getByRole("button", { name: "战技1", exact: true })).toBeVisible();
   await expect(memberEditor(page).locator('[data-skill-id="knight-s6-active-1"]')).toHaveCount(1);
+  await expect(page.getByTestId("completion-message")).toContainText("还缺 7 个技能和 1 只宠物");
+  await expect(page.getByRole("button", { name: "生成图片", exact: true })).toBeEnabled();
+  await expect(memberEditor(page).locator('[data-testid="skill-slot"].is-missing')).toHaveCount(7);
 });
 
 test("技能与宠物选择器用 Escape 关闭并把焦点还给槽位", async ({ page }) => {
@@ -385,4 +409,93 @@ test("390 像素宽屏下选择器显示取消按钮且页面没有横向溢出"
   const dialog = page.getByRole("dialog", { name: "选择战技1" });
   await expect(dialog.getByRole("button", { name: "取消", exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
+});
+
+test("空队禁用生成，添加一人后带缺项也可生成一次副本事件", async ({ page }) => {
+  await page.addInitScript(() => {
+    (window as Window & { generatedTeams?: unknown[] }).generatedTeams = [];
+    window.addEventListener("team-builder:generate", (event) => {
+      (window as Window & { generatedTeams: unknown[] }).generatedTeams.push(
+        (event as CustomEvent).detail,
+      );
+    });
+  });
+  await chooseStage(page, "七转");
+
+  const completion = page.getByTestId("completion-message");
+  const completionNode = await completion.elementHandle();
+  const generate = page.getByRole("button", { name: "生成图片", exact: true });
+  await expect(completion).toHaveText("请先添加至少 1 名角色");
+  await expect(generate).toBeDisabled();
+  await expect(generate).not.toBeFocused();
+  await generate.dispatchEvent("click");
+  expect(await page.evaluate(() => (window as Window & { generatedTeams: unknown[] }).generatedTeams.length)).toBe(0);
+
+  await addKnight(page, 0);
+  await expect(completion).toContainText("还需要添加 3 名角色");
+  await expect(completion).toContainText("还缺 8 个技能和 1 只宠物");
+  await expect(completion).toContainText("可直接生成");
+  await expect(generate).toBeEnabled();
+  expect(await completionNode!.evaluate((element) => element.isConnected)).toBe(true);
+
+  const editor = memberEditor(page);
+  await expect(editor.locator('[data-testid="skill-slot"].is-missing')).toHaveCount(8);
+  await expect(editor.locator('[data-testid="skill-slot"][aria-invalid="true"]')).toHaveCount(8);
+  await expect(editor.locator('[data-testid="pet-slot"].is-missing[aria-invalid="true"]')).toHaveCount(1);
+  await generate.click();
+  const events = await page.evaluate(() => (window as Window & { generatedTeams: Array<{ stage: number; members: unknown[] }> }).generatedTeams);
+  expect(events).toHaveLength(1);
+  expect(events[0]).toMatchObject({ stage: 7, members: [{ profession: "knight" }] });
+  await page.evaluate(() => {
+    const generated = (window as Window & { generatedTeams: Array<{ members: Array<{ profession: string }> }> }).generatedTeams;
+    generated[0].members[0].profession = "fighter";
+  });
+  await page.getByRole("button", { name: "修改转数" }).click();
+  await page.getByRole("dialog", { name: "选择当前转数" }).getByRole("button", { name: "关闭" }).click();
+  await expect(memberEditor(page)).toContainText("骑士");
+});
+
+test("填写和清空缺项时完成度数字、缺失标记即时更新", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const completion = page.getByTestId("completion-message");
+  const editor = memberEditor(page);
+  const skill = editor.locator('[data-testid="skill-slot"][data-kind="active"][data-slot="0"]');
+
+  await chooseSkill(page, 0, "active", 0);
+  await expect(completion).toContainText("还缺 7 个技能和 1 只宠物");
+  await expect(skill).not.toHaveClass(/is-missing/);
+  await expect(skill).not.toHaveAttribute("aria-invalid", "true");
+  await skill.click();
+  await page.getByRole("dialog", { name: "选择战技1" })
+    .getByRole("button", { name: "清空此技能", exact: true }).click();
+  await expect(completion).toContainText("还缺 8 个技能和 1 只宠物");
+  await expect(skill).toHaveClass(/is-missing/);
+  await expect(skill).toHaveAttribute("aria-invalid", "true");
+});
+
+test("完整阵容显示完成，清空配置仍允许生成，删除至空队才重新禁用", async ({ page }) => {
+  await chooseStage(page);
+  for (let cell = 0; cell < 4; cell += 1) await addKnight(page, cell);
+  for (let index = 0; index < 4; index += 1) await completeKnight(page, index);
+
+  const completion = page.getByTestId("completion-message");
+  const generate = page.getByRole("button", { name: "生成图片", exact: true });
+  await expect(completion).toHaveText("阵容配置已完成");
+  await expect(generate).toBeEnabled();
+  await expect(page.locator(".is-missing")).toHaveCount(0);
+
+  await memberEditor(page).getByTestId("change-profession").click();
+  await page.getByRole("dialog", { name: "更换职业" })
+    .getByRole("button", { name: "斗士", exact: true }).click();
+  await expect(completion).toContainText("还缺 8 个技能");
+  await expect(generate).toBeEnabled();
+  await expect(memberEditor(page).locator('[data-testid="skill-slot"].is-missing')).toHaveCount(8);
+
+  for (let index = 0; index < 4; index += 1) {
+    page.once("dialog", (dialog) => dialog.accept());
+    await memberEditor(page).getByRole("button", { name: "删除角色", exact: true }).click();
+  }
+  await expect(completion).toHaveText("请先添加至少 1 名角色");
+  await expect(generate).toBeDisabled();
 });

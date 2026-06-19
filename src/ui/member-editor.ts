@@ -53,6 +53,8 @@ function renderSkillSlot(
     image.loading = "lazy";
     button.append(image);
   } else {
+    button.classList.add("is-missing");
+    button.setAttribute("aria-invalid", "true");
     button.setAttribute("aria-label", `${prefix}${slot + 1}`);
     const empty = document.createElement("span");
     empty.textContent = `${prefix}${slot + 1}`;
@@ -83,6 +85,8 @@ function renderPetSlot(
     name.textContent = pet.name;
     button.append(image, name);
   } else {
+    button.classList.add("is-missing");
+    button.setAttribute("aria-invalid", "true");
     button.textContent = "宠物";
   }
   button.addEventListener("click", () => handlers.onOpenPet(member.id));

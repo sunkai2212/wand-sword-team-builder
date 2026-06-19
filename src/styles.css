@@ -139,6 +139,42 @@ h2 {
   color: #785019;
 }
 
+.completion-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 38rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #c8bcac;
+  border-radius: 0.75rem;
+  background: #fffdfa;
+}
+
+.completion-panel p {
+  margin: 0;
+}
+
+.generate-button {
+  flex: none;
+  min-height: 2.75rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid #986414;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: #986414;
+  cursor: pointer;
+}
+
+.generate-button:disabled {
+  border-color: #b9afa1;
+  color: #756d63;
+  background: #e7e1d8;
+  cursor: not-allowed;
+}
+
 .dialog-panel {
   width: min(100%, 24rem);
   padding: 1.25rem;
@@ -224,6 +260,12 @@ h2 {
   min-width: 0;
   padding: 0.3rem;
   border-radius: 0.5rem;
+}
+
+.skill-slot.is-missing,
+.pet-slot.is-missing {
+  border-color: #bd6d5d;
+  background: #fff8f5;
 }
 
 .skill-slot img,
@@ -347,5 +389,12 @@ h2 {
 
   .skill-picker-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 30rem) {
+  .completion-panel {
+    align-items: stretch;
+    flex-direction: column;
   }
 }

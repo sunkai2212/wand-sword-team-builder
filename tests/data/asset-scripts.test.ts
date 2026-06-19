@@ -20,6 +20,20 @@ function runFailure(script: string, cwd: string): string {
 }
 
 describe("asset scripts diagnostics", () => {
+  it("reports a non-array manifest before curating assets", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-curate-schema-"));
+    try {
+      await mkdir(path.join(temp, "data"), { recursive: true });
+      await writeFile(path.join(temp, "data/source-assets.json"), "{}");
+
+      const stderr = runFailure("scripts/curate-assets.mjs", temp);
+      expect(stderr).toMatch(/asset manifest must be an array/i);
+      expect(stderr).not.toMatch(/TypeError/);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
   it("reports image processing failures with manifest context", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-curate-"));
     try {

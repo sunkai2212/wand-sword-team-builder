@@ -7,6 +7,10 @@ const root = process.cwd();
 const manifest = JSON.parse(
   await readFile(path.join(root, "data/source-assets.json"), "utf8"),
 );
+if (!Array.isArray(manifest)) {
+  console.error("Asset manifest must be an array.");
+  process.exit(1);
+}
 
 let count = 0;
 const seenOutputs = new Set();

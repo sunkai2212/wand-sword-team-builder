@@ -237,7 +237,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       return;
     }
 
-    completionText.textContent = completionMessage(team);
+    const nextCompletionMessage = completionMessage(team);
+    if (completionText.textContent !== nextCompletionMessage) {
+      completionText.textContent = nextCompletionMessage;
+    }
     generateButton.disabled = team.members.length === 0;
 
     const heading = document.createElement("h1");

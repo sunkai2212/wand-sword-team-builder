@@ -10,7 +10,7 @@ import {
 
 export { calculateExportHeight, EXPORT_WIDTH, orderedMembers } from "./layout";
 
-const COLORS = {
+export const EXPORT_PALETTE = {
   ink: "#2f2b26",
   muted: "#756d63",
   paper: "#f4f1eb",
@@ -18,7 +18,19 @@ const COLORS = {
   line: "#c8bcac",
   header: "#2f2b26",
   white: "#fffdfa",
+  accent: "#9a7441",
 } as const;
+
+export const EXPORT_ACCENT_ROLES = {
+  titleRule: "accent",
+  sectionHeading: "accent",
+} as const satisfies Record<string, keyof typeof EXPORT_PALETTE>;
+
+const COLORS = EXPORT_PALETTE;
+
+function accentColor(role: keyof typeof EXPORT_ACCENT_ROLES): string {
+  return EXPORT_PALETTE[EXPORT_ACCENT_ROLES[role]];
+}
 
 const BOARD = {
   x: 72,
@@ -137,7 +149,10 @@ function drawHeader(ctx: CanvasRenderingContext2D, team: Team): void {
   ctx.textBaseline = "middle";
   ctx.font = "700 48px system-ui, sans-serif";
   ctx.fillText("杖剑传说·4v4阵容图", 64, 61);
+  ctx.fillStyle = accentColor("titleRule");
+  ctx.fillRect(64, 91, 360, 3);
   ctx.font = "500 27px system-ui, sans-serif";
+  ctx.fillStyle = COLORS.white;
   ctx.fillText(`当前：${team.stage}转`, 66, 113);
 }
 
@@ -220,7 +235,7 @@ async function drawMemberRow(
   const skillsX = 352;
   for (const [kindIndex, kind] of (["active", "passive"] as const).entries()) {
     const groupX = skillsX + kindIndex * 4 * (iconSize + iconGap);
-    ctx.fillStyle = COLORS.muted;
+    ctx.fillStyle = accentColor("sectionHeading");
     ctx.font = "600 21px system-ui, sans-serif";
     ctx.textAlign = "left";
     ctx.fillText(kind === "active" ? "战技" : "秘法", groupX, y + 32);

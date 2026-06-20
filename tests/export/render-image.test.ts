@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import type { Member } from "../../src/domain/team";
 import {
   calculateExportHeight,
+  EXPORT_ACCENT_ROLES,
+  EXPORT_PALETTE,
   EXPORT_WIDTH,
   orderedMembers,
 } from "../../src/export/render-image";
@@ -18,6 +20,14 @@ function member(cell: number): Member {
 }
 
 describe("image export layout", () => {
+  it("exposes a muted amber accent for restrained export details", () => {
+    expect(EXPORT_PALETTE.accent).toBe("#9a7441");
+    expect(EXPORT_ACCENT_ROLES).toEqual({
+      titleRule: "accent",
+      sectionHeading: "accent",
+    });
+  });
+
   it("uses a fixed 1080 pixel width", () => {
     expect(EXPORT_WIDTH).toBe(1080);
   });

@@ -175,6 +175,10 @@ h2 {
   cursor: not-allowed;
 }
 
+.generate-button[aria-busy="true"] {
+  cursor: wait;
+}
+
 .dialog-panel {
   width: min(100%, 24rem);
   padding: 1.25rem;

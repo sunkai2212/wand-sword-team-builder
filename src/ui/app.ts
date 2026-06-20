@@ -12,6 +12,8 @@ import {
 } from "../domain/team";
 import type { Profession, SkillKind, Stage } from "../domain/types";
 import { pets, skills } from "../data/catalog";
+import { downloadCanvas } from "../export/download-image";
+import { renderTeamImage } from "../export/render-image";
 import { renderBoard } from "./board";
 import { completionMessage } from "./completion";
 import { renderMemberEditors } from "./member-editor";
@@ -23,6 +25,8 @@ type Picker =
   | { type: "pet"; memberId: string }
   | { type: "profession"; memberId: string };
 
+let activeGenerateListener: ((event: Event) => void) | null = null;
+
 export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"): void {
   let team: Team | null = null;
   let selectedMemberId: string | null = null;
@@ -30,6 +34,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   let professionCell: number | null = null;
   let picker: Picker | null = null;
   let statusMessage = "";
+  let generateInProgress = false;
 
   root.replaceChildren();
   const main = document.createElement("main");
@@ -49,11 +54,43 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   generateButton.className = "generate-button";
   generateButton.textContent = "生成图片";
   generateButton.addEventListener("click", () => {
-    if (!team || team.members.length === 0) return;
+    if (!team || team.members.length === 0 || generateInProgress) return;
     window.dispatchEvent(new CustomEvent("team-builder:generate", {
       detail: structuredClone(team),
     }));
   });
+
+  async function generateImage(exportTeam: Team): Promise<void> {
+    if (generateInProgress) return;
+    generateInProgress = true;
+    generateButton.disabled = true;
+    generateButton.textContent = "生成中…";
+    generateButton.setAttribute("aria-busy", "true");
+    statusMessage = "";
+    status.textContent = "";
+    try {
+      const canvas = await renderTeamImage(exportTeam);
+      await downloadCanvas(canvas);
+      statusMessage = "图片已生成";
+    } catch {
+      statusMessage = "生成失败，请重试";
+    } finally {
+      generateInProgress = false;
+      generateButton.textContent = "生成图片";
+      generateButton.removeAttribute("aria-busy");
+      generateButton.disabled = !team || team.members.length === 0;
+      status.textContent = statusMessage;
+    }
+  }
+
+  if (activeGenerateListener) {
+    window.removeEventListener("team-builder:generate", activeGenerateListener);
+  }
+  activeGenerateListener = (event) => {
+    const exportTeam = (event as CustomEvent<Team>).detail;
+    if (exportTeam) void generateImage(exportTeam);
+  };
+  window.addEventListener("team-builder:generate", activeGenerateListener);
   completion.append(completionText, generateButton);
   main.append(content, status, completion);
   root.append(main);
@@ -241,7 +278,7 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     if (completionText.textContent !== nextCompletionMessage) {
       completionText.textContent = nextCompletionMessage;
     }
-    generateButton.disabled = team.members.length === 0;
+    generateButton.disabled = team.members.length === 0 || generateInProgress;
 
     const heading = document.createElement("h1");
     heading.textContent = title;

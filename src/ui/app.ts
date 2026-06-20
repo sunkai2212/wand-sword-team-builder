@@ -92,7 +92,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
   };
   window.addEventListener("team-builder:generate", activeGenerateListener);
   completion.append(completionText, generateButton);
-  main.append(content, status, completion);
+  const disclaimer = document.createElement("p");
+  disclaimer.className = "site-disclaimer";
+  disclaimer.textContent = "非官方玩家工具。游戏名称、图标与角色素材的权利归其原权利人所有。";
+  main.append(content, status, completion, disclaimer);
   root.append(main);
 
   function showModal(dialog: HTMLDialogElement): void {

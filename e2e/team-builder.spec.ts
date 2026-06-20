@@ -843,3 +843,9 @@ test("task9: 减少动态效果偏好会关闭非必要过渡与按压位移", a
   )).toBe(true);
   expect(styles.transform).toBe("none");
 });
+
+test("页面显示非官方素材声明", async ({ page }) => {
+  await chooseStage(page);
+
+  await expect(page.getByText("非官方玩家工具。游戏名称、图标与角色素材的权利归其原权利人所有。")).toBeVisible();
+});

@@ -677,3 +677,113 @@ test("failed profession asset still exports a valid image with a placeholder", a
   await expectImageRegionToContainDrawing(path, { left: 72, top: 1015, width: 88, height: 88 });
   await expectImageRegionToContainDrawing(path, { left: 0, top: 0, width: 1080, height: 1210 });
 });
+
+for (const viewport of [
+  { width: 390, height: 844 },
+  { width: 360, height: 800 },
+]) {
+  test(`task9: ${viewport.width}px 手机编辑器无水平滚动且站位格满足触控尺寸`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await chooseStage(page);
+
+    expect(await page.evaluate(() =>
+      document.documentElement.scrollWidth <= document.documentElement.clientWidth,
+    )).toBe(true);
+
+    const cells = await page.getByTestId("board-cell").evaluateAll((elements) =>
+      elements.map((element) => {
+        const rect = element.getBoundingClientRect();
+        return { width: rect.width, height: rect.height };
+      }),
+    );
+    expect(cells).toHaveLength(20);
+    for (const cell of cells) {
+      expect(cell.width).toBeGreaterThanOrEqual(44);
+      expect(cell.height).toBeGreaterThanOrEqual(44);
+    }
+  });
+}
+
+test("task9: 390px 手机可见控件满足触控高度且生成按钮接近容器全宽", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  const tooShort = await page.locator("button:visible").evaluateAll((buttons) =>
+    buttons
+      .map((button) => ({
+        label: button.getAttribute("aria-label") ?? button.textContent?.trim() ?? "",
+        height: button.getBoundingClientRect().height,
+      }))
+      .filter((button) => button.height < 44),
+  );
+  expect(tooShort).toEqual([]);
+
+  const panelBox = await page.locator(".completion-panel").boundingBox();
+  const buttonBox = await page.locator(".generate-button").boundingBox();
+  expect(panelBox).not.toBeNull();
+  expect(buttonBox).not.toBeNull();
+  expect(buttonBox!.width).toBeGreaterThanOrEqual(panelBox!.width - 34);
+});
+
+test("task9: 390px 技能选择器不超过视口 88% 且底部操作始终可达", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await chooseStage(page);
+  await addKnight(page, 0);
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+
+  const dialog = page.getByRole("dialog", { name: "选择战技1" });
+  const cancel = dialog.getByRole("button", { name: "取消", exact: true });
+  const dialogBox = await dialog.boundingBox();
+  expect(dialogBox).not.toBeNull();
+  expect(dialogBox!.height).toBeLessThanOrEqual(844 * 0.88 + 1);
+  await expect(cancel).toBeVisible();
+  const dialogButtonHeights = await dialog.locator("button:visible").evaluateAll((buttons) =>
+    buttons.map((button) => button.getBoundingClientRect().height),
+  );
+  expect(dialogButtonHeights.every((height) => height >= 44)).toBe(true);
+
+  await dialog.locator(".skill-picker-grid").evaluate((grid) => {
+    grid.scrollTop = grid.scrollHeight;
+  });
+  await cancel.focus();
+  await expect(cancel).toBeFocused();
+  await cancel.click();
+  await expect(dialog).toHaveCount(0);
+});
+
+test("task9: 1280px 主内容宽度受控居中且成员编辑为两列", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await chooseStage(page);
+  await addKnight(page, 0);
+  await addKnight(page, 1);
+
+  const shellBox = await page.locator(".app-shell").boundingBox();
+  expect(shellBox).not.toBeNull();
+  expect(shellBox!.width).toBeGreaterThanOrEqual(720);
+  expect(shellBox!.width).toBeLessThanOrEqual(800);
+  expect(Math.abs(shellBox!.x - (1280 - shellBox!.width) / 2)).toBeLessThanOrEqual(2);
+
+  const editorBoxes = await page.getByTestId("member-editor").evaluateAll((editors) =>
+    editors.map((editor) => editor.getBoundingClientRect()),
+  );
+  expect(editorBoxes).toHaveLength(2);
+  expect(Math.abs(editorBoxes[0].top - editorBoxes[1].top)).toBeLessThanOrEqual(2);
+  expect(editorBoxes[1].left).toBeGreaterThan(editorBoxes[0].right);
+});
+
+test("task9: 减少动态效果偏好会关闭非必要过渡与按压位移", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await chooseStage(page);
+
+  const styles = await page.getByRole("button", { name: "修改转数" }).evaluate((button) => {
+    const normal = getComputedStyle(button);
+    button.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+    return {
+      duration: normal.transitionDuration,
+      transform: getComputedStyle(button).transform,
+    };
+  });
+  expect(styles.duration.split(",").every((duration) => Number.parseFloat(duration) <= 0.01)).toBe(true);
+  expect(styles.transform).toBe("none");
+});

@@ -1,5 +1,7 @@
 # 任务 10 完成快照：最终验证、文档与静态交付
 
+> 其中“仅支持站点根路径”的部署边界已于 2026-06-21 解除。当前线上部署状态以 `2026-06-21-github-pages-live.md` 为准。
+
 ## 恢复入口
 
 - 工作树：`C:\Users\sunka\OneDrive\桌面\遗物数据库\.worktrees\team-builder`

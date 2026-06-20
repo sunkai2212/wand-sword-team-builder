@@ -1,5 +1,7 @@
 # GitHub Pages 部署中断快照
 
+> 已于 2026-06-21 完成部署；本文件仅保留为历史中断记录。当前状态以 `2026-06-21-github-pages-live.md` 为准。
+
 ## 恢复入口
 
 - 项目目录：`C:\Users\sunka\OneDrive\桌面\遗物数据库`

@@ -10,6 +10,7 @@
   --color-accent-strong: #6e4910;
   --color-accent-soft: #f2e9d8;
   --color-danger: #8b342d;
+  --color-danger-border: #c9a7a3;
   --color-danger-soft: #f8eceb;
   --color-disabled: #e4e4e2;
   --color-focus: #79500e;
@@ -412,7 +413,7 @@ h3 {
 }
 
 .danger-button {
-  border-color: #c9a7a3;
+  border-color: var(--color-danger-border);
   color: var(--color-danger);
 }
 

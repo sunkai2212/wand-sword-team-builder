@@ -740,10 +740,24 @@ test("task9: 390px 技能选择器不超过视口 88% 且底部操作始终可�
   let cancel = dialog.getByRole("button", { name: "取消", exact: true });
   let clear = dialog.getByRole("button", { name: "清空此技能", exact: true });
   const dialogBox = await dialog.boundingBox();
+  const initialClearBox = await clear.boundingBox();
+  const initialCancelBox = await cancel.boundingBox();
   expect(dialogBox).not.toBeNull();
+  expect(initialClearBox).not.toBeNull();
+  expect(initialCancelBox).not.toBeNull();
   expect(dialogBox!.height).toBeLessThanOrEqual(844 * 0.88 + 1);
   await expect(cancel).toBeVisible();
   await expect(clear).toBeVisible();
+  for (const buttonBox of [initialClearBox!, initialCancelBox!]) {
+    expect(buttonBox.x).toBeGreaterThanOrEqual(dialogBox!.x);
+    expect(buttonBox.y).toBeGreaterThanOrEqual(dialogBox!.y);
+    expect(buttonBox.x + buttonBox.width).toBeLessThanOrEqual(dialogBox!.x + dialogBox!.width);
+    expect(buttonBox.y + buttonBox.height).toBeLessThanOrEqual(dialogBox!.y + dialogBox!.height);
+    expect(buttonBox.x).toBeGreaterThanOrEqual(0);
+    expect(buttonBox.y).toBeGreaterThanOrEqual(0);
+    expect(buttonBox.x + buttonBox.width).toBeLessThanOrEqual(390);
+    expect(buttonBox.y + buttonBox.height).toBeLessThanOrEqual(844);
+  }
   const dialogButtonHeights = await dialog.locator("button:visible").evaluateAll((buttons) =>
     buttons.map((button) => button.getBoundingClientRect().height),
   );
@@ -752,6 +766,22 @@ test("task9: 390px 技能选择器不超过视口 88% 且底部操作始终可�
   await dialog.locator(".skill-picker-grid").evaluate((grid) => {
     grid.scrollTop = grid.scrollHeight;
   });
+  const scrolledClearBox = await clear.boundingBox();
+  const scrolledCancelBox = await cancel.boundingBox();
+  expect(scrolledClearBox).not.toBeNull();
+  expect(scrolledCancelBox).not.toBeNull();
+  expect(scrolledClearBox!.y).toBeCloseTo(initialClearBox!.y, 0);
+  expect(scrolledCancelBox!.y).toBeCloseTo(initialCancelBox!.y, 0);
+  for (const buttonBox of [scrolledClearBox!, scrolledCancelBox!]) {
+    expect(buttonBox.x).toBeGreaterThanOrEqual(dialogBox!.x);
+    expect(buttonBox.y).toBeGreaterThanOrEqual(dialogBox!.y);
+    expect(buttonBox.x + buttonBox.width).toBeLessThanOrEqual(dialogBox!.x + dialogBox!.width);
+    expect(buttonBox.y + buttonBox.height).toBeLessThanOrEqual(dialogBox!.y + dialogBox!.height);
+    expect(buttonBox.x).toBeGreaterThanOrEqual(0);
+    expect(buttonBox.y).toBeGreaterThanOrEqual(0);
+    expect(buttonBox.x + buttonBox.width).toBeLessThanOrEqual(390);
+    expect(buttonBox.y + buttonBox.height).toBeLessThanOrEqual(844);
+  }
   await cancel.scrollIntoViewIfNeeded();
   await cancel.click();
   await expect(dialog).toHaveCount(0);
@@ -793,15 +823,20 @@ test("task9: 减少动态效果偏好会关闭非必要过渡与按压位移", a
   await page.emulateMedia({ reducedMotion: "reduce" });
   await chooseStage(page);
 
-  const styles = await page.getByRole("button", { name: "修改转数" }).evaluate((button) => {
-    const normal = getComputedStyle(button);
-    button.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+  const button = page.getByRole("button", { name: "修改转数" });
+  const buttonBox = await button.boundingBox();
+  expect(buttonBox).not.toBeNull();
+  await page.mouse.move(buttonBox!.x + buttonBox!.width / 2, buttonBox!.y + buttonBox!.height / 2);
+  await page.mouse.down();
+  const styles = await button.evaluate((element) => {
+    const pressed = getComputedStyle(element);
     return {
-      duration: normal.transitionDuration,
-      properties: normal.transitionProperty,
-      transform: getComputedStyle(button).transform,
+      duration: pressed.transitionDuration,
+      properties: pressed.transitionProperty,
+      transform: pressed.transform,
     };
   });
+  await page.mouse.up();
   expect(styles.duration.split(",").every((duration) => Number.parseFloat(duration) <= 0.01)).toBe(true);
   expect(styles.properties.split(",").map((property) => property.trim()).every(
     (property) => property === "opacity" || property === "transform",

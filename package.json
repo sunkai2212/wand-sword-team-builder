@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run data:check && tsc --noEmit && vite build",
+    "build:pages": "cross-env PAGES_BASE_PATH=/wand-sword-team-builder/ npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@playwright/test": "^1.61.0",
     "@types/node": "^25.9.3",
+    "cross-env": "^10.1.0",
     "jsdom": "^29.1.1",
     "sharp": "^0.35.1",
     "typescript": "^6.0.3",

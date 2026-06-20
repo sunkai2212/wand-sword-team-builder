@@ -23,6 +23,7 @@ npm test
 npm run test:e2e
 npm run assets:build
 npm run build
+npm run build:pages
 ```
 
 - `data:check` 校验 380 个技能、5 个宠物及全部素材引用。
@@ -30,10 +31,13 @@ npm run build
 - `test:e2e` 在 Chromium 中运行完整交互测试。
 - `assets:build` 从仓库内源图重新裁切并生成 WebP 图标。
 - `build` 执行数据校验、TypeScript 检查并生成生产文件。
+- `build:pages` 生成适用于 GitHub Pages 项目子路径的生产文件。
 
 ## 静态部署
 
-运行 `npm run build` 后，将 `dist/` 目录完整发布到静态托管服务的站点根路径。当前图标使用 `/assets/...` 根路径，不支持直接挂在 GitHub Pages 等项目子路径下。网页运行时不需要服务器接口、数据库或额外环境变量；队伍配置和图片生成均在用户浏览器中完成。
+公开网址：`https://sunkai2212.github.io/wand-sword-team-builder/`。
+
+推送到 `master` 后，GitHub Actions 会自动执行校验、测试、`npm run build:pages` 并发布 `dist/`。手动检查 Pages 产物时也应使用 `npm run build:pages`；普通站点根路径部署仍可使用 `npm run build`。网页运行时不需要服务器接口、数据库或额外环境变量，队伍配置和图片生成均在用户浏览器中完成。
 
 ## 更新技能或宠物素材
 

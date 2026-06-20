@@ -1,4 +1,5 @@
 import { pets, skills } from "../data/catalog";
+import { resolveAssetUrl } from "../asset-url";
 import type { Member, Team } from "../domain/team";
 import type { Pet, Profession, Skill } from "../domain/types";
 import {
@@ -169,7 +170,7 @@ async function drawBoard(ctx: CanvasRenderingContext2D, team: Team): Promise<voi
     fillRoundedRect(ctx, x, y, cellSize, cellSize, 16, COLORS.panel, COLORS.line);
     if (!member) continue;
 
-    const image = await safeLoadImage(`/assets/professions/${member.profession}.svg`);
+    const image = await safeLoadImage(resolveAssetUrl(`/assets/professions/${member.profession}.svg`));
     if (image) {
       drawContainedImage(ctx, image, x + 24, y + 18, cellSize - 48, cellSize - 62);
     } else {
@@ -214,7 +215,7 @@ async function drawMemberRow(
     + index * (EXPORT_LAYOUT.memberRowHeight + EXPORT_LAYOUT.memberRowGap);
   fillRoundedRect(ctx, 54, y, 972, EXPORT_LAYOUT.memberRowHeight, 18, COLORS.panel, COLORS.line);
 
-  await drawIcon(ctx, `/assets/professions/${member.profession}.svg`, 72, y + 45, 88);
+  await drawIcon(ctx, resolveAssetUrl(`/assets/professions/${member.profession}.svg`), 72, y + 45, 88);
   ctx.fillStyle = COLORS.ink;
   ctx.font = "700 25px system-ui, sans-serif";
   ctx.textAlign = "center";

@@ -94,6 +94,11 @@ describe("verified catalog", () => {
     expect(skills.every((skill) => !("name" in skill))).toBe(true);
   });
 
+  it("resolves catalog icons through the active Vite base", () => {
+    expect(skills.every((skill) => skill.icon.startsWith("/assets/skills/"))).toBe(true);
+    expect(pets.every((pet) => pet.icon.startsWith("/assets/pets/"))).toBe(true);
+  });
+
   it("rejects malformed catalog entries with their index", () => {
     expect(() => parseSkills([{ id: "broken" }])).toThrow(
       /skill catalog entry at index 0/i,

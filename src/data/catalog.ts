@@ -1,5 +1,6 @@
 import petsJson from "./pets.json";
 import skillsJson from "./skills.json";
+import { resolveAssetUrl } from "../asset-url";
 import type { Pet, Profession, Skill, SkillKind, Stage } from "../domain/types";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -62,8 +63,14 @@ export function parsePets(value: unknown): Pet[] {
   });
 }
 
-export const skills = parseSkills(skillsJson);
-export const pets = parsePets(petsJson);
+export const skills = parseSkills(skillsJson).map((skill) => ({
+  ...skill,
+  icon: resolveAssetUrl(skill.icon),
+}));
+export const pets = parsePets(petsJson).map((pet) => ({
+  ...pet,
+  icon: resolveAssetUrl(pet.icon),
+}));
 
 export function visibleSkills(
   profession: Profession,

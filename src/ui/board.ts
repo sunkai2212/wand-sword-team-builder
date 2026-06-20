@@ -1,11 +1,12 @@
 import type { Member, Team } from "../domain/team";
 import type { Profession } from "../domain/types";
+import { resolveAssetUrl } from "../asset-url";
 
 const PROFESSIONS: Record<Profession, { name: string; image: string }> = {
-  knight: { name: "骑士", image: "/assets/professions/knight.svg" },
-  fighter: { name: "斗士", image: "/assets/professions/fighter.svg" },
-  warlock: { name: "术士", image: "/assets/professions/warlock.svg" },
-  sage: { name: "贤者", image: "/assets/professions/sage.svg" },
+  knight: { name: "骑士", image: resolveAssetUrl("/assets/professions/knight.svg") },
+  fighter: { name: "斗士", image: resolveAssetUrl("/assets/professions/fighter.svg") },
+  warlock: { name: "术士", image: resolveAssetUrl("/assets/professions/warlock.svg") },
+  sage: { name: "贤者", image: resolveAssetUrl("/assets/professions/sage.svg") },
 };
 
 export interface BoardHandlers {

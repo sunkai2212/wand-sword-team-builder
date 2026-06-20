@@ -1,5 +1,6 @@
 import type { Member, Team } from "../domain/team";
 import type { Pet, Skill, SkillKind } from "../domain/types";
+import { resolveAssetUrl } from "../asset-url";
 import { professionName } from "./board";
 import { stageName } from "./stage-selector";
 
@@ -107,7 +108,7 @@ function renderMember(
   const header = document.createElement("header");
   header.className = "member-editor-header";
   const portrait = document.createElement("img");
-  portrait.src = `/assets/professions/${member.profession}.svg`;
+  portrait.src = resolveAssetUrl(`/assets/professions/${member.profession}.svg`);
   portrait.alt = "";
   const title = document.createElement("h2");
   title.textContent = `位置 ${member.cell + 1} · ${professionName(member.profession)}`;

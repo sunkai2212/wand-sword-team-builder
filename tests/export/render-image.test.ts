@@ -32,14 +32,21 @@ describe("image export layout", () => {
     expect(EXPORT_WIDTH).toBe(1080);
   });
 
-  it("grows monotonically from one to four configured members", () => {
-    const heights = [1, 2, 3, 4].map(calculateExportHeight);
+  it("uses explicit heights for teams of one through four members", () => {
+    expect(calculateExportHeight(1)).toBe(1210);
+    expect(calculateExportHeight(2)).toBe(1416);
+    expect(calculateExportHeight(3)).toBe(1622);
+    expect(calculateExportHeight(4)).toBe(1828);
+  });
 
-    expect(heights[0]).toBeGreaterThanOrEqual(1000);
-    expect(heights[3]).toBeGreaterThanOrEqual(1600);
-    expect(heights[3]).toBeLessThanOrEqual(2000);
-    expect(heights).toEqual([...heights].sort((left, right) => left - right));
-    expect(new Set(heights).size).toBe(4);
+  it("keeps the final member row inside every supported canvas height", () => {
+    const canvasHeights = [1210, 1416, 1622, 1828];
+    const finalRowBottoms = [1160, 1366, 1572, 1778];
+
+    finalRowBottoms.forEach((bottom, index) => {
+      expect(bottom).toBeLessThan(canvasHeights[index]);
+      expect(canvasHeights[index] - bottom).toBe(50);
+    });
   });
 
   it("orders members by board cell without modifying the input", () => {

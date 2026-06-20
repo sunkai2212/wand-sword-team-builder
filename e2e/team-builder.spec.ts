@@ -1,6 +1,35 @@
 import { expect, test } from "@playwright/test";
 import sharp from "sharp";
-import { calculateExportHeight } from "../src/export/layout";
+
+interface ImageRegion {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}
+
+async function imageRegionSignal(path: string, region: ImageRegion) {
+  const stats = await sharp(path).extract(region).stats();
+  return {
+    entropy: stats.entropy,
+    maxDeviation: Math.max(...stats.channels.slice(0, 3).map((channel) => channel.stdev)),
+  };
+}
+
+async function expectImageRegionToContainDrawing(path: string, region: ImageRegion) {
+  const signal = await imageRegionSignal(path, region);
+  expect(signal.entropy).toBeGreaterThan(0.01);
+  expect(signal.maxDeviation).toBeGreaterThan(1);
+}
+
+async function downloadGeneratedImage(page: import("@playwright/test").Page) {
+  const downloadPromise = page.waitForEvent("download");
+  await page.locator(".generate-button").click();
+  const download = await downloadPromise;
+  const path = await download.path();
+  if (!path) throw new Error("Downloaded image path is unavailable");
+  return { download, path };
+}
 
 async function chooseStage(page: import("@playwright/test").Page, stage = "六转") {
   await page.goto("/");
@@ -567,7 +596,7 @@ test("一名未配置角色可下载尺寸正确的 PNG", async ({ page }) => {
   expect(download.suggestedFilename()).toMatch(/^杖剑传说-阵容-\d{4}-\d{2}-\d{2}\.png$/);
   expect(metadata.format).toBe("png");
   expect(metadata.width).toBe(1080);
-  expect(metadata.height).toBe(calculateExportHeight(1));
+  expect(metadata.height).toBe(1210);
   await expect(page.getByRole("status")).toHaveText("图片已生成");
 });
 
@@ -604,4 +633,47 @@ test("PNG 生成失败后恢复按钮并保留队伍", async ({ page }) => {
   await expect(page.getByRole("status")).toHaveText("生成失败，请重试");
   await expect(button).toBeEnabled();
   await expect(memberEditor(page)).toContainText("骑士");
+});
+
+test("one empty member export draws the header, board, member row, and empty slots", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  const { path } = await downloadGeneratedImage(page);
+  const metadata = await sharp(path).metadata();
+  expect(metadata).toMatchObject({ format: "png", width: 1080, height: 1210 });
+
+  await expectImageRegionToContainDrawing(path, { left: 0, top: 0, width: 1080, height: 150 });
+  await expectImageRegionToContainDrawing(path, { left: 72, top: 185, width: 936, height: 746 });
+  await expectImageRegionToContainDrawing(path, { left: 54, top: 970, width: 972, height: 190 });
+  await expectImageRegionToContainDrawing(path, { left: 188, top: 1018, width: 98, height: 98 });
+  await expectImageRegionToContainDrawing(path, { left: 352, top: 1030, width: 68, height: 68 });
+});
+
+test("four member export draws the final member row without clipping", async ({ page }) => {
+  await chooseStage(page);
+  for (let cell = 0; cell < 4; cell += 1) await addKnight(page, cell);
+  await chooseSkill(page, 3, "active", 0);
+
+  const { path } = await downloadGeneratedImage(page);
+  const metadata = await sharp(path).metadata();
+  expect(metadata).toMatchObject({ format: "png", width: 1080, height: 1828 });
+  await expectImageRegionToContainDrawing(path, { left: 54, top: 1588, width: 972, height: 190 });
+});
+
+test("failed profession asset still exports a valid image with a placeholder", async ({ page }) => {
+  let failedProfessionRequests = 0;
+  await page.route("**/assets/professions/knight.svg", async (route) => {
+    failedProfessionRequests += 1;
+    await route.abort();
+  });
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  const { path } = await downloadGeneratedImage(page);
+  const metadata = await sharp(path).metadata();
+  expect(failedProfessionRequests).toBeGreaterThan(0);
+  expect(metadata).toMatchObject({ format: "png", width: 1080, height: 1210 });
+  await expectImageRegionToContainDrawing(path, { left: 72, top: 1015, width: 88, height: 88 });
+  await expectImageRegionToContainDrawing(path, { left: 0, top: 0, width: 1080, height: 1210 });
 });

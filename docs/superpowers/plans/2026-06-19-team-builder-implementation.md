@@ -874,7 +874,7 @@ git commit -m "feat: polish responsive accessible editor"
 
 - [ ] **Step 2: 写 README**
 
-README 必须包含：Node.js 环境要求；`npm install`、`npm run dev`、`npm test`、`npm run test:e2e`、`npm run build` 命令；如何将新技能截图加入 `source-assets.json`；如何重新生成素材；`dist/` 可部署到任意静态托管服务。
+README 必须包含：Node.js 环境要求；`npm install`、`npm run dev`、`npm test`、`npm run test:e2e`、`npm run build` 命令；如何将新技能截图加入 `source-assets.json`；如何重新生成素材；`dist/` 可部署到静态托管服务的站点根路径。
 
 - [ ] **Step 3: 执行全量验证**
 

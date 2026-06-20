@@ -1,5 +1,7 @@
 # 任务 10 中断快照：最终验证、文档与静态部署
 
+> 状态：已由 `2026-06-20-task-10-final-delivery.md` 取代；其中记录的 Playwright 退出问题已在任务 10 最终实现中解决。
+
 ## 恢复入口
 
 - 工作树：`C:\Users\sunka\OneDrive\桌面\遗物数据库\.worktrees\team-builder`

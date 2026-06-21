@@ -62,6 +62,16 @@ describe("asset scripts diagnostics", () => {
     )).toBe(false);
   });
 
+  it("uses the shared circular frame for every skill icon", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{ output: string; mask?: string }>;
+    const skills = manifest.filter((entry) => entry.output.includes("/skills/"));
+
+    expect(skills).toHaveLength(380);
+    expect(skills.every((entry) => entry.mask === "circle")).toBe(true);
+  });
+
   it("applies an optional circular mask to generated assets", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-circle-mask-"));
     try {

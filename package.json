@@ -11,6 +11,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "assets:build": "node scripts/curate-assets.mjs",
+    "assets:audit-centering": "node scripts/audit-skill-centering.mjs --output dist/skill-icon-centering-audit.html",
     "data:check": "node scripts/validate-data.mjs"
   },
   "devDependencies": {

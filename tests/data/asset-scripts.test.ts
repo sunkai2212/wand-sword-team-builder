@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
@@ -20,6 +20,26 @@ function runFailure(script: string, cwd: string): string {
 }
 
 describe("asset scripts diagnostics", () => {
+  it("builds a 380-icon centering sheet with target guides", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-centering-"));
+    try {
+      const output = path.join(temp, "audit.html");
+      execFileSync(process.execPath, [
+        path.join(root, "scripts/audit-skill-centering.mjs"),
+        "--output",
+        output,
+      ], { cwd: root, stdio: "pipe" });
+
+      const html = await readFile(output, "utf8");
+      expect(html.match(/class="skill-card"/g)).toHaveLength(380);
+      expect(html).toContain("class=\"target-circle\"");
+      expect(html).toContain("data-stage=\"7\"");
+      expect(html).toContain("data:image/webp;base64,");
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
   it("reports a non-array manifest before curating assets", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-curate-schema-"));
     try {

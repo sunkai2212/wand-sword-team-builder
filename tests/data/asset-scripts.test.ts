@@ -2,9 +2,11 @@ import { execFileSync } from "node:child_process";
 import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
+import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 
 const root = process.cwd();
+sharp.cache(false);
 
 function runFailure(script: string, cwd: string): string {
   try {
@@ -37,6 +39,66 @@ describe("asset scripts diagnostics", () => {
       expect(html).toContain("data:image/webp;base64,");
     } finally {
       await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("does not keep the offset shared crop for stage-seven skills", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      output: string;
+      crop: { left: number; top: number; width: number; height: number };
+    }>;
+    const stageSeven = manifest.filter(
+      (entry) => entry.output.includes("/skills/") && entry.output.includes("-s7-"),
+    );
+
+    expect(stageSeven).toHaveLength(48);
+    expect(stageSeven.some((entry) =>
+      entry.crop.left === 780 &&
+      entry.crop.top === 900 &&
+      entry.crop.width === 240 &&
+      entry.crop.height === 240
+    )).toBe(false);
+  });
+
+  it("applies an optional circular mask to generated assets", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-circle-mask-"));
+    try {
+      await mkdir(path.join(temp, "data/source"), { recursive: true });
+      await sharp({
+        create: {
+          width: 64,
+          height: 64,
+          channels: 3,
+          background: "#ff0000",
+        },
+      }).png().toFile(path.join(temp, "data/source/solid.png"));
+      await writeFile(
+        path.join(temp, "data/source-assets.json"),
+        JSON.stringify([{
+          source: "data/source/solid.png",
+          output: "public/assets/masked.webp",
+          crop: { left: 0, top: 0, width: 64, height: 64 },
+          size: 64,
+          mask: "circle",
+        }]),
+      );
+
+      execFileSync(process.execPath, [path.join(root, "scripts/curate-assets.mjs")], {
+        cwd: temp,
+        stdio: "pipe",
+      });
+      const { data, info } = await sharp(path.join(temp, "public/assets/masked.webp"))
+        .ensureAlpha()
+        .raw()
+        .toBuffer({ resolveWithObject: true });
+      const alpha = (x: number, y: number) => data[(y * info.width + x) * info.channels + 3];
+
+      expect(alpha(0, 0)).toBe(0);
+      expect(alpha(32, 32)).toBe(255);
+    } finally {
+      await rm(temp, { recursive: true, force: true, maxRetries: 3, retryDelay: 50 });
     }
   });
 

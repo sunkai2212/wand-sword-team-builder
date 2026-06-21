@@ -18,9 +18,18 @@ for (const [index, asset] of manifest.entries()) {
   const { source, output } = resolveManifestAsset(root, asset, index, seenOutputs);
   try {
     await mkdir(path.dirname(output), { recursive: true });
-    await sharp(source)
+    let image = sharp(source)
       .extract(asset.crop)
-      .resize(asset.size, asset.size, { fit: "cover" })
+      .resize(asset.size, asset.size, { fit: "cover" });
+    if (asset.mask === "circle") {
+      const center = asset.size / 2;
+      const radius = asset.size * 7 / 16;
+      const mask = Buffer.from(
+        `<svg width="${asset.size}" height="${asset.size}"><circle cx="${center}" cy="${center}" r="${radius}" fill="white"/></svg>`,
+      );
+      image = image.composite([{ input: mask, blend: "dest-in" }]);
+    }
+    await image
       .webp({ quality: 90 })
       .toFile(output);
   } catch (error) {

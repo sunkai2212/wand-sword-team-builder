@@ -72,6 +72,26 @@ describe("asset scripts diagnostics", () => {
     expect(skills.every((entry) => entry.mask === "circle")).toBe(true);
   });
 
+  it("uses expanded source crops and sharpening for stage-six skill icons", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      output: string;
+      crop: { width: number; height: number };
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const stageSix = manifest.filter(
+      (entry) => entry.output.includes("/skills/") && entry.output.includes("-s6-"),
+    );
+
+    expect(stageSix).toHaveLength(48);
+    expect(Math.min(...stageSix.map((entry) => entry.crop.width))).toBeGreaterThanOrEqual(76);
+    expect(Math.min(...stageSix.map((entry) => entry.crop.height))).toBeGreaterThanOrEqual(76);
+    expect(stageSix.every((entry) => entry.sharpen === true)).toBe(true);
+    expect(stageSix.every((entry) => entry.quality === 95)).toBe(true);
+  });
+
   it("applies an optional circular mask to generated assets", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-circle-mask-"));
     try {

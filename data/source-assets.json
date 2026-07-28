@@ -3411,577 +3411,673 @@
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-1.webp",
     "crop": {
-      "left": 199,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 186,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-2.webp",
     "crop": {
-      "left": 532,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 519,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-3.webp",
     "crop": {
-      "left": 865,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 852,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-4.webp",
     "crop": {
-      "left": 1198,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 1185,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-5.webp",
     "crop": {
-      "left": 1531,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 1518,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-active-6.webp",
     "crop": {
-      "left": 1864,
-      "top": 56,
-      "width": 84,
-      "height": 84
+      "left": 1851,
+      "top": 43,
+      "width": 111,
+      "height": 111
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-1.webp",
     "crop": {
-      "left": 210,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 198,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-2.webp",
     "crop": {
-      "left": 543,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 531,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-3.webp",
     "crop": {
-      "left": 876,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 864,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-4.webp",
     "crop": {
-      "left": 1209,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 1197,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-5.webp",
     "crop": {
-      "left": 1542,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 1530,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-fighter.jpg",
     "output": "public/assets/skills/fighter-s6-passive-6.webp",
     "crop": {
-      "left": 1875,
-      "top": 507,
-      "width": 62,
-      "height": 62
+      "left": 1863,
+      "top": 495,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-1.webp",
     "crop": {
-      "left": 190,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 178,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-2.webp",
     "crop": {
-      "left": 507,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 495,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-3.webp",
     "crop": {
-      "left": 824,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 812,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-4.webp",
     "crop": {
-      "left": 1141,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 1129,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-5.webp",
     "crop": {
-      "left": 1458,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 1446,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-active-6.webp",
     "crop": {
-      "left": 1775,
-      "top": 53,
-      "width": 79,
-      "height": 79
+      "left": 1763,
+      "top": 41,
+      "width": 104,
+      "height": 104
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-1.webp",
     "crop": {
-      "left": 202,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 192,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-2.webp",
     "crop": {
-      "left": 519,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 509,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-3.webp",
     "crop": {
-      "left": 836,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 826,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-4.webp",
     "crop": {
-      "left": 1153,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 1143,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-5.webp",
     "crop": {
-      "left": 1470,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 1460,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-knight.jpg",
     "output": "public/assets/skills/knight-s6-passive-6.webp",
     "crop": {
-      "left": 1787,
-      "top": 481,
-      "width": 55,
-      "height": 55
+      "left": 1777,
+      "top": 471,
+      "width": 76,
+      "height": 76
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-1.webp",
     "crop": {
-      "left": 205,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 192,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-2.webp",
     "crop": {
-      "left": 540,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 527,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-3.webp",
     "crop": {
-      "left": 875,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 862,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-4.webp",
     "crop": {
-      "left": 1210,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 1197,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-5.webp",
     "crop": {
-      "left": 1545,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 1532,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-active-6.webp",
     "crop": {
-      "left": 1880,
-      "top": 58,
-      "width": 82,
-      "height": 82
+      "left": 1867,
+      "top": 45,
+      "width": 108,
+      "height": 108
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-1.webp",
     "crop": {
-      "left": 215,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 203,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-2.webp",
     "crop": {
-      "left": 550,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 538,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-3.webp",
     "crop": {
-      "left": 885,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 873,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-4.webp",
     "crop": {
-      "left": 1220,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 1208,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-5.webp",
     "crop": {
-      "left": 1555,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 1543,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-warlock.jpg",
     "output": "public/assets/skills/warlock-s6-passive-6.webp",
     "crop": {
-      "left": 1890,
-      "top": 503,
-      "width": 62,
-      "height": 62
+      "left": 1878,
+      "top": 491,
+      "width": 86,
+      "height": 86
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-1.webp",
     "crop": {
-      "left": 193,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 180,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-2.webp",
     "crop": {
-      "left": 513,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 500,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-3.webp",
     "crop": {
-      "left": 833,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 820,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-4.webp",
     "crop": {
-      "left": 1153,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 1140,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-5.webp",
     "crop": {
-      "left": 1473,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 1460,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-active-6.webp",
     "crop": {
-      "left": 1793,
-      "top": 53,
-      "width": 80,
-      "height": 80
+      "left": 1780,
+      "top": 40,
+      "width": 106,
+      "height": 106
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-1.webp",
     "crop": {
-      "left": 204,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 193,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-2.webp",
     "crop": {
-      "left": 524,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 513,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-3.webp",
     "crop": {
-      "left": 844,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 833,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-4.webp",
     "crop": {
-      "left": 1164,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 1153,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-5.webp",
     "crop": {
-      "left": 1484,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 1473,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/6-sage.jpg",
     "output": "public/assets/skills/sage-s6-passive-6.webp",
     "crop": {
-      "left": 1804,
-      "top": 478,
-      "width": 58,
-      "height": 58
+      "left": 1793,
+      "top": 467,
+      "width": 80,
+      "height": 80
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/seventh/fighter/fighter-s7-active-1.jpg",

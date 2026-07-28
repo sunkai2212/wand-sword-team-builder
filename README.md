@@ -41,13 +41,13 @@ npm run build:pages
 
 ## 更新技能或宠物素材
 
-1. 将稳定命名的源图放入 `data/source/skills/`、`data/source/seventh/` 或 `data/source/pets/`。
+1. 将稳定命名的源图放入与清单对应的目录：1–6 转使用 `data/source/manual/detail/`，7 转使用 `data/source/seventh/`，宠物使用 `data/source/pets/`，职业形象使用 `data/source/professions/`。
 2. 在 `data/source-assets.json` 增加或修改对应条目，填写源图路径、输出路径、裁切区域和尺寸。
 3. 同步更新 `src/data/skills.json` 或 `src/data/pets.json` 中的目录记录。技能记录只保留职业、转数、类型和图标引用，不添加未经核验的名称或说明。
 4. 运行 `npm run assets:build` 重新生成图标。
 5. 运行 `npm run data:check` 和 `npm test` 确认数量、引用与规则一致。
 
-仓库已包含重新生成当前图标所需的源图，不依赖本机下载目录。
+仓库已包含重新生成当前图标所需的源图，不依赖本机下载目录。当前功能、素材约定和交接说明见 [docs/CURRENT_STATE.md](docs/CURRENT_STATE.md)。
 
 ## 素材声明
 

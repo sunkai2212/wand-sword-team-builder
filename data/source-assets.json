@@ -1404,136 +1404,158 @@
     "mask": "circle"
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-1.jpg",
     "output": "public/assets/skills/fighter-s2-active-1.webp",
     "crop": {
-      "left": 201,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-2.jpg",
     "output": "public/assets/skills/fighter-s2-active-2.webp",
     "crop": {
-      "left": 539,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-3.jpg",
     "output": "public/assets/skills/fighter-s2-active-3.webp",
     "crop": {
-      "left": 877,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-4.jpg",
     "output": "public/assets/skills/fighter-s2-active-4.webp",
     "crop": {
-      "left": 1215,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-5.jpg",
     "output": "public/assets/skills/fighter-s2-active-5.webp",
     "crop": {
-      "left": 1553,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/active-6.jpg",
     "output": "public/assets/skills/fighter-s2-active-6.webp",
     "crop": {
-      "left": 1891,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 0,
+      "top": 0,
+      "width": 236,
+      "height": 236
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/passive-1.jpg",
     "output": "public/assets/skills/fighter-s2-passive-1.webp",
     "crop": {
-      "left": 262,
-      "top": 518,
-      "width": 76,
-      "height": 76
+      "left": 0,
+      "top": 0,
+      "width": 166,
+      "height": 166
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/passive-2.jpg",
     "output": "public/assets/skills/fighter-s2-passive-2.webp",
     "crop": {
-      "left": 668,
-      "top": 518,
-      "width": 76,
-      "height": 76
+      "left": 0,
+      "top": 0,
+      "width": 166,
+      "height": 166
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/passive-3.jpg",
     "output": "public/assets/skills/fighter-s2-passive-3.webp",
     "crop": {
-      "left": 1074,
-      "top": 518,
-      "width": 76,
-      "height": 76
+      "left": 0,
+      "top": 0,
+      "width": 166,
+      "height": 166
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/passive-4.jpg",
     "output": "public/assets/skills/fighter-s2-passive-4.webp",
     "crop": {
-      "left": 1480,
-      "top": 518,
-      "width": 76,
-      "height": 76
+      "left": 0,
+      "top": 0,
+      "width": 166,
+      "height": 166
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-fighter.jpg",
+    "source": "data/source/manual/detail/fighter/s2/passive-5.jpg",
     "output": "public/assets/skills/fighter-s2-passive-5.webp",
     "crop": {
-      "left": 1886,
-      "top": 518,
-      "width": 76,
-      "height": 76
+      "left": 0,
+      "top": 0,
+      "width": 166,
+      "height": 166
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/manual/knight/s2/active-1.jpg",

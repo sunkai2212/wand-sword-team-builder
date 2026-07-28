@@ -1,4 +1,4 @@
-import { readFile, readdir } from "node:fs/promises";
+import { mkdir, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -55,6 +55,8 @@ export async function listDetailSkillScreenshots(root) {
 }
 
 const labelCrop = { left: 140, top: 860, width: 240, height: 140 };
+export const detailIconCrop = { left: 768, top: 887, width: 236, height: 236 };
+export const detailPassiveIconCrop = { left: 801, top: 923, width: 166, height: 166 };
 
 async function labelSignature(file) {
   const { data, info } = await sharp(file)
@@ -116,6 +118,15 @@ async function activeCountByGroup(root) {
   return counts;
 }
 
+async function nonSeventhSkillOutputs(root) {
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "data", "source-assets.json"), "utf8"),
+  );
+  return manifest.filter((asset) =>
+    asset.output.includes("/skills/") && !asset.output.includes("-s7-")
+  );
+}
+
 export async function classifyDetailSkillKinds(root) {
   const screenshots = await listDetailSkillScreenshots(root);
   const fighterStageTwo = screenshots.filter((file) => file.group === "fighter-s2");
@@ -155,4 +166,57 @@ export async function classifyDetailSkillKinds(root) {
   return classified.sort((left, right) =>
     left.group.localeCompare(right.group, "en") || left.file.localeCompare(right.file, "en")
   );
+}
+
+export async function buildDetailSkillMapping(root) {
+  const [screenshots, outputs] = await Promise.all([
+    classifyDetailSkillKinds(root),
+    nonSeventhSkillOutputs(root),
+  ]);
+  const screenshotGroups = new Map();
+  const outputGroups = new Map();
+
+  for (const screenshot of screenshots) {
+    const key = `${screenshot.group}:${screenshot.kind}`;
+    const group = screenshotGroups.get(key) ?? [];
+    group.push(screenshot.file);
+    screenshotGroups.set(key, group);
+  }
+  for (const output of outputs) {
+    const match = output.output.match(/\/(fighter|knight|warlock|sage)-s([1-6])-/);
+    if (!match) {
+      throw new Error(`Cannot identify the profession and turn for ${output.output}.`);
+    }
+    const [, profession, stage] = match;
+    const kind = output.output.includes("-active-") ? "active" : "passive";
+    const key = `${profession}-s${stage}:${kind}`;
+    const items = outputGroups.get(key) ?? [];
+    items.push(output.output);
+    outputGroups.set(key, items);
+  }
+
+  const mapping = [];
+  for (const [key, groupOutputs] of outputGroups) {
+    const sortedOutputs = groupOutputs.sort((left, right) => left.localeCompare(right, "en"));
+    const sourceGroup = groupForOutput(sortedOutputs[0]);
+    const sourceKey = `${sourceGroup}:${key.endsWith(":active") ? "active" : "passive"}`;
+    const sources = (screenshotGroups.get(sourceKey) ?? []).sort((left, right) => left.localeCompare(right, "en"));
+    if (sources.length !== sortedOutputs.length) {
+      throw new Error(`Screenshot count does not match output count for ${key}.`);
+    }
+    mapping.push(...sortedOutputs.map((output, index) => ({
+      output,
+      source: sources[index],
+      kind: key.endsWith(":active") ? "active" : "passive",
+    })));
+  }
+  return mapping.sort((left, right) => left.output.localeCompare(right.output, "en"));
+}
+
+export async function writeCroppedDetailSource(source, output, crop = detailIconCrop) {
+  await mkdir(path.dirname(output), { recursive: true });
+  await sharp(source)
+    .extract(crop)
+    .jpeg({ quality: 100, chromaSubsampling: "4:4:4" })
+    .toFile(output);
 }

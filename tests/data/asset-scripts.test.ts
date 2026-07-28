@@ -5,8 +5,11 @@ import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import {
+  buildDetailSkillMapping,
   classifyDetailSkillKinds,
+  detailPassiveIconCrop,
   listDetailSkillScreenshots,
+  writeCroppedDetailSource,
 } from "../../scripts/rebuild-detail-skill-icons.mjs";
 
 const root = process.cwd();
@@ -64,6 +67,95 @@ describe("asset scripts diagnostics", () => {
       const entries = screenshots.filter((file) => file.group === group);
       expect(entries.filter((file) => file.kind === "active"), group).toHaveLength(active);
       expect(entries.filter((file) => file.kind === "passive"), group).toHaveLength(passive);
+    }
+  });
+
+  it("maps every non-seventh output to a screenshot of the same skill kind", async () => {
+    const mapping = await buildDetailSkillMapping(root);
+    const fighterStageOne = mapping.filter((entry) => entry.output.includes("/fighter-s1-"));
+    const knightStageOne = mapping.filter((entry) => entry.output.includes("/knight-s1-"));
+
+    expect(mapping).toHaveLength(332);
+    expect(mapping.some((entry) => entry.output.includes("-s7-"))).toBe(false);
+    expect(mapping.every((entry) => entry.output.includes(`-${entry.kind}-`))).toBe(true);
+    expect(fighterStageOne.map((entry) => entry.source))
+      .toEqual(knightStageOne.map((entry) => entry.source));
+  });
+
+  it("uses the seventh-turn reference frame for the fighter second-turn sample", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      source: string;
+      output: string;
+      crop: { left: number; top: number; width: number; height: number };
+      mask?: string;
+      maskRadiusRatio?: number;
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const entries = manifest.filter((entry) => entry.output.includes("/skills/fighter-s2-"));
+
+    expect(entries).toHaveLength(11);
+    expect(entries.every((entry) => entry.source.startsWith("data/source/manual/detail/fighter/s2/"))).toBe(true);
+    expect(entries.every((entry) => entry.crop.left === 0 && entry.crop.top === 0)).toBe(true);
+    expect(entries.filter((entry) => entry.output.includes("-active-")).every((entry) =>
+      entry.crop.width === 236 && entry.crop.height === 236
+    )).toBe(true);
+    expect(entries.filter((entry) => entry.output.includes("-passive-")).every((entry) =>
+      entry.crop.width === 166 && entry.crop.height === 166
+    )).toBe(true);
+    expect(entries.every((entry) => entry.mask === "circle" && entry.maskRadiusRatio === undefined)).toBe(true);
+    expect(entries.every((entry) => entry.sharpen === true && entry.quality === 95)).toBe(true);
+  });
+
+  it("stores the seventh-turn reference crop as a compact stable source", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-detail-source-"));
+    try {
+      const source = path.join(temp, "detail.jpg");
+      const output = path.join(temp, "stable.jpg");
+      await sharp({
+        create: { width: 1320, height: 2868, channels: 3, background: "#000000" },
+      }).composite([{
+        input: await sharp({
+          create: { width: 236, height: 236, channels: 3, background: "#ff0000" },
+        }).png().toBuffer(),
+        left: 768,
+        top: 887,
+      }]).jpeg().toFile(source);
+
+      await writeCroppedDetailSource(source, output);
+      const { data, info } = await sharp(output).raw().toBuffer({ resolveWithObject: true });
+
+      expect(info).toMatchObject({ width: 236, height: 236 });
+      expect(data[(100 * info.width + 100) * info.channels]).toBeGreaterThan(200);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("uses the smaller seventh-turn reference crop for a passive detail screenshot", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-passive-detail-source-"));
+    try {
+      const source = path.join(temp, "detail.jpg");
+      const output = path.join(temp, "stable.jpg");
+      await sharp({
+        create: { width: 1320, height: 2868, channels: 3, background: "#000000" },
+      }).composite([{
+        input: await sharp({
+          create: { width: 166, height: 166, channels: 3, background: "#00ff00" },
+        }).png().toBuffer(),
+        left: detailPassiveIconCrop.left,
+        top: detailPassiveIconCrop.top,
+      }]).jpeg().toFile(source);
+
+      await writeCroppedDetailSource(source, output, detailPassiveIconCrop);
+      const { data, info } = await sharp(output).raw().toBuffer({ resolveWithObject: true });
+
+      expect(info).toMatchObject({ width: 166, height: 166 });
+      expect(data[(80 * info.width + 80) * info.channels + 1]).toBeGreaterThan(200);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
     }
   });
 

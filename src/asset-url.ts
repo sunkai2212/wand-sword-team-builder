@@ -1,4 +1,4 @@
-const SKILL_ASSET_VERSION = "2026-07-28-knight-s6-active-1-pullback";
+const SKILL_ASSET_VERSION = "2026-07-28-detail-crops-s7-reference";
 
 function versionSkillAsset(url: string): string {
   return url.includes("/assets/skills/")

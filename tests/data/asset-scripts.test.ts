@@ -209,6 +209,26 @@ describe("asset scripts diagnostics", () => {
     expect(seventh.every((entry) => !entry.source.startsWith("data/source/manual/detail/"))).toBe(true);
   });
 
+  it("keeps knight sixth-turn active one as the warm-spectrum glowblade icon", async () => {
+    const { data, info } = await sharp(
+      path.join(root, "public/assets/skills/knight-s6-active-1.webp"),
+    ).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    let visible = 0;
+    let warm = 0;
+    let cool = 0;
+
+    for (let index = 0; index < data.length; index += info.channels) {
+      const [red, green, blue, alpha] = data.subarray(index, index + info.channels);
+      if (alpha < 128) continue;
+      visible += 1;
+      if (red > blue * 1.35 && green > blue * 1.1 && red > 100) warm += 1;
+      if (blue > red * 1.25 && blue > green * 1.05 && blue > 100) cool += 1;
+    }
+
+    expect(warm / visible).toBeGreaterThan(0.2);
+    expect(cool / visible).toBeLessThan(0.1);
+  });
+
   it("builds a 380-icon centering sheet with target guides", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-centering-"));
     try {

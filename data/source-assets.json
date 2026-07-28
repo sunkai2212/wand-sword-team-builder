@@ -3,10 +3,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-1.jpg",
     "output": "public/assets/skills/fighter-s1-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -18,10 +18,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-2.jpg",
     "output": "public/assets/skills/fighter-s1-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -33,10 +33,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-3.jpg",
     "output": "public/assets/skills/fighter-s1-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -48,10 +48,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-4.jpg",
     "output": "public/assets/skills/fighter-s1-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -63,10 +63,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-5.jpg",
     "output": "public/assets/skills/fighter-s1-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -78,10 +78,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-6.jpg",
     "output": "public/assets/skills/fighter-s1-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -93,10 +93,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-7.jpg",
     "output": "public/assets/skills/fighter-s1-active-7.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -108,10 +108,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-8.jpg",
     "output": "public/assets/skills/fighter-s1-active-8.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -123,10 +123,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-9.jpg",
     "output": "public/assets/skills/fighter-s1-active-9.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -138,10 +138,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-10.jpg",
     "output": "public/assets/skills/fighter-s1-active-10.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -153,10 +153,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-11.jpg",
     "output": "public/assets/skills/fighter-s1-active-11.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -168,10 +168,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-12.jpg",
     "output": "public/assets/skills/fighter-s1-active-12.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -183,10 +183,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-13.jpg",
     "output": "public/assets/skills/fighter-s1-active-13.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -198,10 +198,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-1.jpg",
     "output": "public/assets/skills/fighter-s1-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -213,10 +213,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-2.jpg",
     "output": "public/assets/skills/fighter-s1-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -228,10 +228,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-3.jpg",
     "output": "public/assets/skills/fighter-s1-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -243,10 +243,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-4.jpg",
     "output": "public/assets/skills/fighter-s1-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -258,10 +258,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-5.jpg",
     "output": "public/assets/skills/fighter-s1-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -273,10 +273,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-6.jpg",
     "output": "public/assets/skills/fighter-s1-passive-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -288,10 +288,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-7.jpg",
     "output": "public/assets/skills/fighter-s1-passive-7.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -303,10 +303,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-8.jpg",
     "output": "public/assets/skills/fighter-s1-passive-8.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -318,10 +318,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-9.jpg",
     "output": "public/assets/skills/fighter-s1-passive-9.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -333,10 +333,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-10.jpg",
     "output": "public/assets/skills/fighter-s1-passive-10.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -348,10 +348,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-11.jpg",
     "output": "public/assets/skills/fighter-s1-passive-11.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -363,10 +363,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-12.jpg",
     "output": "public/assets/skills/fighter-s1-passive-12.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -378,10 +378,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-13.jpg",
     "output": "public/assets/skills/fighter-s1-passive-13.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -393,10 +393,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-1.jpg",
     "output": "public/assets/skills/knight-s1-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -408,10 +408,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-2.jpg",
     "output": "public/assets/skills/knight-s1-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -423,10 +423,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-3.jpg",
     "output": "public/assets/skills/knight-s1-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -438,10 +438,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-4.jpg",
     "output": "public/assets/skills/knight-s1-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -453,10 +453,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-5.jpg",
     "output": "public/assets/skills/knight-s1-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -468,10 +468,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-6.jpg",
     "output": "public/assets/skills/knight-s1-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -483,10 +483,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-7.jpg",
     "output": "public/assets/skills/knight-s1-active-7.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -498,10 +498,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-8.jpg",
     "output": "public/assets/skills/knight-s1-active-8.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -513,10 +513,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-9.jpg",
     "output": "public/assets/skills/knight-s1-active-9.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -528,10 +528,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-10.jpg",
     "output": "public/assets/skills/knight-s1-active-10.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -543,10 +543,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-11.jpg",
     "output": "public/assets/skills/knight-s1-active-11.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -558,10 +558,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-12.jpg",
     "output": "public/assets/skills/knight-s1-active-12.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -573,10 +573,10 @@
     "source": "data/source/manual/knight-fighter-s1/active-13.jpg",
     "output": "public/assets/skills/knight-s1-active-13.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -588,10 +588,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-1.jpg",
     "output": "public/assets/skills/knight-s1-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -603,10 +603,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-2.jpg",
     "output": "public/assets/skills/knight-s1-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -618,10 +618,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-3.jpg",
     "output": "public/assets/skills/knight-s1-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -633,10 +633,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-4.jpg",
     "output": "public/assets/skills/knight-s1-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -648,10 +648,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-5.jpg",
     "output": "public/assets/skills/knight-s1-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -663,10 +663,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-6.jpg",
     "output": "public/assets/skills/knight-s1-passive-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -678,10 +678,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-7.jpg",
     "output": "public/assets/skills/knight-s1-passive-7.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -693,10 +693,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-8.jpg",
     "output": "public/assets/skills/knight-s1-passive-8.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -708,10 +708,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-9.jpg",
     "output": "public/assets/skills/knight-s1-passive-9.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -723,10 +723,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-10.jpg",
     "output": "public/assets/skills/knight-s1-passive-10.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -738,10 +738,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-11.jpg",
     "output": "public/assets/skills/knight-s1-passive-11.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -753,10 +753,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-12.jpg",
     "output": "public/assets/skills/knight-s1-passive-12.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -768,10 +768,10 @@
     "source": "data/source/manual/knight-fighter-s1/passive-13.jpg",
     "output": "public/assets/skills/knight-s1-passive-13.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1539,10 +1539,10 @@
     "source": "data/source/manual/knight/s2/active-1.jpg",
     "output": "public/assets/skills/knight-s2-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1554,10 +1554,10 @@
     "source": "data/source/manual/knight/s2/active-2.jpg",
     "output": "public/assets/skills/knight-s2-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1569,10 +1569,10 @@
     "source": "data/source/manual/knight/s2/active-3.jpg",
     "output": "public/assets/skills/knight-s2-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1584,10 +1584,10 @@
     "source": "data/source/manual/knight/s2/active-4.jpg",
     "output": "public/assets/skills/knight-s2-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1599,10 +1599,10 @@
     "source": "data/source/manual/knight/s2/active-5.jpg",
     "output": "public/assets/skills/knight-s2-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1614,10 +1614,10 @@
     "source": "data/source/manual/knight/s2/active-6.jpg",
     "output": "public/assets/skills/knight-s2-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1629,10 +1629,10 @@
     "source": "data/source/manual/knight/s2/passive-1.jpg",
     "output": "public/assets/skills/knight-s2-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1644,10 +1644,10 @@
     "source": "data/source/manual/knight/s2/passive-2.jpg",
     "output": "public/assets/skills/knight-s2-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1659,10 +1659,10 @@
     "source": "data/source/manual/knight/s2/passive-3.jpg",
     "output": "public/assets/skills/knight-s2-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1674,10 +1674,10 @@
     "source": "data/source/manual/knight/s2/passive-4.jpg",
     "output": "public/assets/skills/knight-s2-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -1689,10 +1689,10 @@
     "source": "data/source/manual/knight/s2/passive-5.jpg",
     "output": "public/assets/skills/knight-s2-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2121,10 +2121,10 @@
     "source": "data/source/manual/knight/s3/active-1.jpg",
     "output": "public/assets/skills/knight-s3-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2136,10 +2136,10 @@
     "source": "data/source/manual/knight/s3/active-2.jpg",
     "output": "public/assets/skills/knight-s3-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2151,10 +2151,10 @@
     "source": "data/source/manual/knight/s3/active-3.jpg",
     "output": "public/assets/skills/knight-s3-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2166,10 +2166,10 @@
     "source": "data/source/manual/knight/s3/active-4.jpg",
     "output": "public/assets/skills/knight-s3-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2181,10 +2181,10 @@
     "source": "data/source/manual/knight/s3/active-5.jpg",
     "output": "public/assets/skills/knight-s3-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2196,10 +2196,10 @@
     "source": "data/source/manual/knight/s3/passive-1.jpg",
     "output": "public/assets/skills/knight-s3-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2211,10 +2211,10 @@
     "source": "data/source/manual/knight/s3/passive-2.jpg",
     "output": "public/assets/skills/knight-s3-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2226,10 +2226,10 @@
     "source": "data/source/manual/knight/s3/passive-3.jpg",
     "output": "public/assets/skills/knight-s3-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2241,10 +2241,10 @@
     "source": "data/source/manual/knight/s3/passive-4.jpg",
     "output": "public/assets/skills/knight-s3-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2256,10 +2256,10 @@
     "source": "data/source/manual/knight/s3/passive-5.jpg",
     "output": "public/assets/skills/knight-s3-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2655,10 +2655,10 @@
     "source": "data/source/manual/knight/s4/active-1.jpg",
     "output": "public/assets/skills/knight-s4-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2670,10 +2670,10 @@
     "source": "data/source/manual/knight/s4/active-2.jpg",
     "output": "public/assets/skills/knight-s4-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2685,10 +2685,10 @@
     "source": "data/source/manual/knight/s4/active-3.jpg",
     "output": "public/assets/skills/knight-s4-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2700,10 +2700,10 @@
     "source": "data/source/manual/knight/s4/active-4.jpg",
     "output": "public/assets/skills/knight-s4-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2715,10 +2715,10 @@
     "source": "data/source/manual/knight/s4/active-5.jpg",
     "output": "public/assets/skills/knight-s4-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2730,10 +2730,10 @@
     "source": "data/source/manual/knight/s4/active-6.jpg",
     "output": "public/assets/skills/knight-s4-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2745,10 +2745,10 @@
     "source": "data/source/manual/knight/s4/passive-1.jpg",
     "output": "public/assets/skills/knight-s4-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2760,10 +2760,10 @@
     "source": "data/source/manual/knight/s4/passive-2.jpg",
     "output": "public/assets/skills/knight-s4-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2775,10 +2775,10 @@
     "source": "data/source/manual/knight/s4/passive-3.jpg",
     "output": "public/assets/skills/knight-s4-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2790,10 +2790,10 @@
     "source": "data/source/manual/knight/s4/passive-4.jpg",
     "output": "public/assets/skills/knight-s4-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2805,10 +2805,10 @@
     "source": "data/source/manual/knight/s4/passive-5.jpg",
     "output": "public/assets/skills/knight-s4-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -2820,10 +2820,10 @@
     "source": "data/source/manual/knight/s4/passive-6.jpg",
     "output": "public/assets/skills/knight-s4-passive-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3267,10 +3267,10 @@
     "source": "data/source/manual/knight/s5/active-1.jpg",
     "output": "public/assets/skills/knight-s5-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3282,10 +3282,10 @@
     "source": "data/source/manual/knight/s5/active-2.jpg",
     "output": "public/assets/skills/knight-s5-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3297,10 +3297,10 @@
     "source": "data/source/manual/knight/s5/active-3.jpg",
     "output": "public/assets/skills/knight-s5-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3312,10 +3312,10 @@
     "source": "data/source/manual/knight/s5/active-4.jpg",
     "output": "public/assets/skills/knight-s5-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3327,10 +3327,10 @@
     "source": "data/source/manual/knight/s5/active-5.jpg",
     "output": "public/assets/skills/knight-s5-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3342,10 +3342,10 @@
     "source": "data/source/manual/knight/s5/active-6.jpg",
     "output": "public/assets/skills/knight-s5-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3357,10 +3357,10 @@
     "source": "data/source/manual/knight/s5/passive-1.jpg",
     "output": "public/assets/skills/knight-s5-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3372,10 +3372,10 @@
     "source": "data/source/manual/knight/s5/passive-2.jpg",
     "output": "public/assets/skills/knight-s5-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3387,10 +3387,10 @@
     "source": "data/source/manual/knight/s5/passive-3.jpg",
     "output": "public/assets/skills/knight-s5-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3402,10 +3402,10 @@
     "source": "data/source/manual/knight/s5/passive-4.jpg",
     "output": "public/assets/skills/knight-s5-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3417,10 +3417,10 @@
     "source": "data/source/manual/knight/s5/passive-5.jpg",
     "output": "public/assets/skills/knight-s5-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3432,10 +3432,10 @@
     "source": "data/source/manual/knight/s5/passive-6.jpg",
     "output": "public/assets/skills/knight-s5-passive-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3915,10 +3915,10 @@
     "source": "data/source/manual/knight/s6/active-1.jpg",
     "output": "public/assets/skills/knight-s6-active-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3930,10 +3930,10 @@
     "source": "data/source/manual/knight/s6/active-2.jpg",
     "output": "public/assets/skills/knight-s6-active-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3945,10 +3945,10 @@
     "source": "data/source/manual/knight/s6/active-3.jpg",
     "output": "public/assets/skills/knight-s6-active-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3960,10 +3960,10 @@
     "source": "data/source/manual/knight/s6/active-4.jpg",
     "output": "public/assets/skills/knight-s6-active-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3975,10 +3975,10 @@
     "source": "data/source/manual/knight/s6/active-5.jpg",
     "output": "public/assets/skills/knight-s6-active-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -3990,10 +3990,10 @@
     "source": "data/source/manual/knight/s6/active-6.jpg",
     "output": "public/assets/skills/knight-s6-active-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4005,10 +4005,10 @@
     "source": "data/source/manual/knight/s6/passive-1.jpg",
     "output": "public/assets/skills/knight-s6-passive-1.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4020,10 +4020,10 @@
     "source": "data/source/manual/knight/s6/passive-2.jpg",
     "output": "public/assets/skills/knight-s6-passive-2.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4035,10 +4035,10 @@
     "source": "data/source/manual/knight/s6/passive-3.jpg",
     "output": "public/assets/skills/knight-s6-passive-3.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4050,10 +4050,10 @@
     "source": "data/source/manual/knight/s6/passive-4.jpg",
     "output": "public/assets/skills/knight-s6-passive-4.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4065,10 +4065,10 @@
     "source": "data/source/manual/knight/s6/passive-5.jpg",
     "output": "public/assets/skills/knight-s6-passive-5.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",
@@ -4080,10 +4080,10 @@
     "source": "data/source/manual/knight/s6/passive-6.jpg",
     "output": "public/assets/skills/knight-s6-passive-6.webp",
     "crop": {
-      "left": 0,
-      "top": 0,
-      "width": 260,
-      "height": 260
+      "left": 26,
+      "top": 26,
+      "width": 208,
+      "height": 208
     },
     "size": 128,
     "mask": "circle",

@@ -141,10 +141,10 @@ describe("asset scripts diagnostics", () => {
       entry.source.startsWith("data/source/manual/knight")
     )).toBe(true);
     expect(knightManual.every((entry) =>
-      entry.crop.left === 0 &&
-      entry.crop.top === 0 &&
-      entry.crop.width === 260 &&
-      entry.crop.height === 260
+      entry.crop.left === 26 &&
+      entry.crop.top === 26 &&
+      entry.crop.width === 208 &&
+      entry.crop.height === 208
     )).toBe(true);
     expect(knightManual.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
     expect(knightManual.every((entry) => entry.sharpen === true)).toBe(true);
@@ -154,6 +154,8 @@ describe("asset scripts diagnostics", () => {
     )).toBe(true);
     expect(fighterStageOne.map((entry) => entry.source))
       .toEqual(knightStageOne.map((entry) => entry.source));
+    expect(fighterStageOne.map((entry) => entry.crop))
+      .toEqual(knightStageOne.map((entry) => entry.crop));
   });
 
   it("uses full-frame circular crops and sharpening for stage-six skill icons", async () => {

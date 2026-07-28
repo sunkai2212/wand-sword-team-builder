@@ -72,6 +72,29 @@ describe("asset scripts diagnostics", () => {
     expect(skills.every((entry) => entry.mask === "circle")).toBe(true);
   });
 
+  it("uses the curated manual source sheet for stage-two warlock icons", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      source: string;
+      output: string;
+      maskRadiusRatio?: number;
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const warlockStageTwo = manifest.filter((entry) =>
+      entry.output.includes("/skills/warlock-s2-")
+    );
+
+    expect(warlockStageTwo).toHaveLength(11);
+    expect(warlockStageTwo.every((entry) =>
+      entry.source === "data/source/manual/warlock-s2-icons.jpg"
+    )).toBe(true);
+    expect(warlockStageTwo.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
+    expect(warlockStageTwo.every((entry) => entry.sharpen === true)).toBe(true);
+    expect(warlockStageTwo.every((entry) => entry.quality === 95)).toBe(true);
+  });
+
   it("uses full-frame circular crops and sharpening for stage-six skill icons", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),

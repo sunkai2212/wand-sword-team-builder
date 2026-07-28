@@ -1512,136 +1512,169 @@
     "mask": "circle"
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-1.webp",
     "crop": {
-      "left": 200,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 70,
+      "top": 33,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-2.webp",
     "crop": {
-      "left": 536,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 318,
+      "top": 33,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-3.webp",
     "crop": {
-      "left": 872,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 566,
+      "top": 33,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-4.webp",
     "crop": {
-      "left": 1208,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 814,
+      "top": 33,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-5.webp",
     "crop": {
-      "left": 1544,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 1062,
+      "top": 33,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-active-6.webp",
     "crop": {
-      "left": 1880,
-      "top": 57,
-      "width": 95,
-      "height": 95
+      "left": 70,
+      "top": 281,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-passive-1.webp",
     "crop": {
-      "left": 261,
-      "top": 511,
-      "width": 74,
-      "height": 74
+      "left": 318,
+      "top": 281,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-passive-2.webp",
     "crop": {
-      "left": 664,
-      "top": 511,
-      "width": 74,
-      "height": 74
+      "left": 566,
+      "top": 281,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-passive-3.webp",
     "crop": {
-      "left": 1067,
-      "top": 511,
-      "width": 74,
-      "height": 74
+      "left": 814,
+      "top": 281,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-passive-4.webp",
     "crop": {
-      "left": 1470,
-      "top": 511,
-      "width": 74,
-      "height": 74
+      "left": 1062,
+      "top": 281,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
-    "source": "data/source/skills/2-warlock.jpg",
+    "source": "data/source/manual/warlock-s2-icons.jpg",
     "output": "public/assets/skills/warlock-s2-passive-5.webp",
     "crop": {
-      "left": 1873,
-      "top": 511,
-      "width": 74,
-      "height": 74
+      "left": 70,
+      "top": 529,
+      "width": 190,
+      "height": 190
     },
     "size": 128,
-    "mask": "circle"
+    "mask": "circle",
+    "maskRadiusRatio": 0.5,
+    "sharpen": true,
+    "quality": 95
   },
   {
     "source": "data/source/skills/2-sage.jpg",

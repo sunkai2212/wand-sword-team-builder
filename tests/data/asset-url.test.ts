@@ -19,8 +19,8 @@ describe("resolveAssetUrl", () => {
 
   it("adds a cache-busting version to skill icons", () => {
     expect(resolveAssetUrl("/assets/skills/knight-s6-active-1.webp", "/"))
-      .toMatch(/^\/assets\/skills\/knight-s6-active-1\.webp\?v=.+/);
+      .toBe("/assets/skills/knight-s6-active-1.webp?v=2026-07-28-warlock-s2-manual");
     expect(resolveAssetUrl("/assets/skills/knight-s6-active-1.webp", "/wand-sword-team-builder/"))
-      .toMatch(/^\/wand-sword-team-builder\/assets\/skills\/knight-s6-active-1\.webp\?v=.+/);
+      .toBe("/wand-sword-team-builder/assets/skills/knight-s6-active-1.webp?v=2026-07-28-warlock-s2-manual");
   });
 });

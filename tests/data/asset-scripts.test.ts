@@ -4,7 +4,10 @@ import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
-import { listDetailSkillScreenshots } from "../../scripts/rebuild-detail-skill-icons.mjs";
+import {
+  classifyDetailSkillKinds,
+  listDetailSkillScreenshots,
+} from "../../scripts/rebuild-detail-skill-icons.mjs";
 
 const root = process.cwd();
 sharp.cache(false);
@@ -31,6 +34,37 @@ describe("asset scripts diagnostics", () => {
     expect(screenshots.filter((file) => file.group === "warlock-sage-s1")).toHaveLength(26);
     expect(screenshots.filter((file) => file.group === "fighter-s2")).toHaveLength(11);
     expect(screenshots.filter((file) => file.group === "sage-s6")).toHaveLength(12);
+  });
+
+  it("separates active and passive screenshots within a single turn", async () => {
+    const screenshots = await classifyDetailSkillKinds(root);
+    const fighterStageTwo = screenshots.filter((file) => file.group === "fighter-s2");
+
+    expect(fighterStageTwo).toHaveLength(11);
+    expect(fighterStageTwo.filter((file) => file.kind === "active")).toHaveLength(6);
+    expect(fighterStageTwo.filter((file) => file.kind === "passive")).toHaveLength(5);
+  });
+
+  it("preserves the active and passive count for every supplied skill group", async () => {
+    const screenshots = await classifyDetailSkillKinds(root);
+    const expected = {
+      "fighter-knight-s1": [13, 13],
+      "fighter-s2": [6, 5], "fighter-s3": [5, 5], "fighter-s4": [6, 6],
+      "fighter-s5": [6, 6], "fighter-s6": [6, 6],
+      "knight-s2": [6, 5], "knight-s3": [5, 5], "knight-s4": [6, 6],
+      "knight-s5": [6, 6], "knight-s6": [6, 6],
+      "warlock-sage-s1": [13, 13],
+      "warlock-s2": [6, 5], "warlock-s3": [5, 5], "warlock-s4": [6, 6],
+      "warlock-s5": [6, 6], "warlock-s6": [6, 6],
+      "sage-s2": [6, 5], "sage-s3": [5, 5], "sage-s4": [6, 6],
+      "sage-s5": [6, 6], "sage-s6": [6, 6],
+    } as const;
+
+    for (const [group, [active, passive]] of Object.entries(expected)) {
+      const entries = screenshots.filter((file) => file.group === group);
+      expect(entries.filter((file) => file.kind === "active"), group).toHaveLength(active);
+      expect(entries.filter((file) => file.kind === "passive"), group).toHaveLength(passive);
+    }
   });
 
   it("builds a 380-icon centering sheet with target guides", async () => {

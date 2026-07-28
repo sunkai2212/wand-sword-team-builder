@@ -3,10 +3,10 @@ import type { Profession } from "../domain/types";
 import { resolveAssetUrl } from "../asset-url";
 
 const PROFESSIONS: Record<Profession, { name: string; image: string }> = {
-  knight: { name: "骑士", image: resolveAssetUrl("/assets/professions/knight.svg") },
-  fighter: { name: "斗士", image: resolveAssetUrl("/assets/professions/fighter.svg") },
-  warlock: { name: "术士", image: resolveAssetUrl("/assets/professions/warlock.svg") },
-  sage: { name: "贤者", image: resolveAssetUrl("/assets/professions/sage.svg") },
+  knight: { name: "骑士", image: resolveAssetUrl("/assets/professions/knight.webp") },
+  fighter: { name: "斗士", image: resolveAssetUrl("/assets/professions/fighter.webp") },
+  warlock: { name: "术士", image: resolveAssetUrl("/assets/professions/warlock.webp") },
+  sage: { name: "贤者", image: resolveAssetUrl("/assets/professions/sage.webp") },
 };
 
 export interface BoardHandlers {

@@ -108,7 +108,7 @@ function renderMember(
   const header = document.createElement("header");
   header.className = "member-editor-header";
   const portrait = document.createElement("img");
-  portrait.src = resolveAssetUrl(`/assets/professions/${member.profession}.svg`);
+  portrait.src = resolveAssetUrl(`/assets/professions/${member.profession}.webp`);
   portrait.alt = "";
   const title = document.createElement("h2");
   title.textContent = `位置 ${member.cell + 1} · ${professionName(member.profession)}`;

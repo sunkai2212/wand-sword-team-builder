@@ -170,9 +170,9 @@ async function drawBoard(ctx: CanvasRenderingContext2D, team: Team): Promise<voi
     fillRoundedRect(ctx, x, y, cellSize, cellSize, 16, COLORS.panel, COLORS.line);
     if (!member) continue;
 
-    const image = await safeLoadImage(resolveAssetUrl(`/assets/professions/${member.profession}.svg`));
+    const image = await safeLoadImage(resolveAssetUrl(`/assets/professions/${member.profession}.webp`));
     if (image) {
-      drawContainedImage(ctx, image, x + 24, y + 18, cellSize - 48, cellSize - 62);
+      drawContainedImage(ctx, image, x + 18, y + 12, cellSize - 36, cellSize - 56);
     } else {
       drawPlaceholder(ctx, x + 34, y + 24, cellSize - 68, cellSize - 72);
     }
@@ -215,7 +215,7 @@ async function drawMemberRow(
     + index * (EXPORT_LAYOUT.memberRowHeight + EXPORT_LAYOUT.memberRowGap);
   fillRoundedRect(ctx, 54, y, 972, EXPORT_LAYOUT.memberRowHeight, 18, COLORS.panel, COLORS.line);
 
-  await drawIcon(ctx, resolveAssetUrl(`/assets/professions/${member.profession}.svg`), 72, y + 45, 88);
+  await drawIcon(ctx, resolveAssetUrl(`/assets/professions/${member.profession}.webp`), 72, y + 45, 88);
   ctx.fillStyle = COLORS.ink;
   ctx.font = "700 25px system-ui, sans-serif";
   ctx.textAlign = "center";

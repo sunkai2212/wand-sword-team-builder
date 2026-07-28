@@ -4613,5 +4613,65 @@
       "height": 460
     },
     "size": 160
+  },
+  {
+    "source": "data/source/professions/knight.jpg",
+    "output": "public/assets/professions/knight.webp",
+    "crop": {
+      "left": 2,
+      "top": 0,
+      "width": 535,
+      "height": 535
+    },
+    "size": 512,
+    "mask": "circle",
+    "maskRadiusRatio": 0.48,
+    "sharpen": true,
+    "quality": 95
+  },
+  {
+    "source": "data/source/professions/fighter.jpg",
+    "output": "public/assets/professions/fighter.webp",
+    "crop": {
+      "left": 0,
+      "top": 19,
+      "width": 542,
+      "height": 542
+    },
+    "size": 512,
+    "mask": "circle",
+    "maskRadiusRatio": 0.48,
+    "sharpen": true,
+    "quality": 95
+  },
+  {
+    "source": "data/source/professions/warlock.jpg",
+    "output": "public/assets/professions/warlock.webp",
+    "crop": {
+      "left": 0,
+      "top": 12,
+      "width": 413,
+      "height": 413
+    },
+    "size": 512,
+    "mask": "circle",
+    "maskRadiusRatio": 0.48,
+    "sharpen": true,
+    "quality": 95
+  },
+  {
+    "source": "data/source/professions/sage.jpg",
+    "output": "public/assets/professions/sage.webp",
+    "crop": {
+      "left": 0,
+      "top": 2,
+      "width": 553,
+      "height": 553
+    },
+    "size": 512,
+    "mask": "circle",
+    "maskRadiusRatio": 0.48,
+    "sharpen": true,
+    "quality": 95
   }
 ]

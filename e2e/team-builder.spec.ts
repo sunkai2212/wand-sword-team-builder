@@ -722,7 +722,7 @@ test("four member export draws the final member row without clipping", async ({ 
 
 test("failed profession asset still exports a valid image with a placeholder", async ({ page }) => {
   let failedProfessionRequests = 0;
-  await page.route("**/assets/professions/knight.svg", async (route) => {
+  await page.route("**/assets/professions/knight.webp", async (route) => {
     failedProfessionRequests += 1;
     await route.abort();
   });

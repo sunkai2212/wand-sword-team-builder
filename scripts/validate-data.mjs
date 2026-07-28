@@ -34,6 +34,9 @@ const requiredPets = [
   ["bamboo", "竹林仙君"],
   ["dawn-angel", "晨曦天使"],
 ];
+const requiredProfessionOutputs = professions.map(
+  (profession) => `public/assets/professions/${profession}.webp`,
+);
 const errors = [];
 
 function duplicates(items) {
@@ -112,14 +115,17 @@ for (const [index, asset] of manifest.entries()) {
 const catalogOutputs = new Set(
   [...skills, ...pets].map((entry) => `public${entry.icon}`.replaceAll("\\", "/")),
 );
-if (manifest.length !== 385) errors.push(`expected 385 manifest entries, found ${manifest.length}`);
+for (const output of requiredProfessionOutputs) {
+  catalogOutputs.add(output);
+}
+if (manifest.length !== 389) errors.push(`expected 389 manifest entries, found ${manifest.length}`);
 for (const output of catalogOutputs) {
   if (!manifestOutputs.has(output)) errors.push(`catalog icon missing from manifest: ${output}`);
 }
 for (const output of manifestOutputs) {
   if (!catalogOutputs.has(output)) errors.push(`manifest output missing from catalog: ${output}`);
 }
-if (catalogOutputs.size !== 385 || manifestOutputs.size !== 385) {
+if (catalogOutputs.size !== 389 || manifestOutputs.size !== 389) {
   errors.push(`expected one-to-one catalog and manifest outputs (catalog ${catalogOutputs.size}, manifest ${manifestOutputs.size})`);
 }
 
@@ -127,5 +133,5 @@ if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(`Validated ${skills.length} skills, ${pets.length} pets, and ${manifest.length} tracked assets.`);
+  console.log(`Validated ${skills.length} skills, ${pets.length} pets, 4 professions, and ${manifest.length} tracked assets.`);
 }

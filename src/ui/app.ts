@@ -205,6 +205,24 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     render();
   }
 
+  function handleCellDrop(from: number, to: number): void {
+    if (!team || from === to) return;
+    const source = team.members.find((candidate) => candidate.cell === from);
+    const target = team.members.find((candidate) => candidate.cell === to);
+    if (!source || target) {
+      statusMessage = target ? "目标站位已有角色" : "";
+      render();
+      focusCell(from);
+      return;
+    }
+
+    team = moveMember(team, from, to);
+    selectedMemberId = null;
+    statusMessage = "";
+    render();
+    focusCell(to);
+  }
+
   function renderOpenPicker(): HTMLDialogElement | null {
     if (!team || !picker) return null;
     const member = team.members.find((candidate) => candidate.id === picker?.memberId);
@@ -300,7 +318,10 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
     });
     toolbar.append(currentStage, changeStageButton);
 
-    const board = renderBoard(team, selectedMemberId, { onCellClick: handleCellClick });
+    const board = renderBoard(team, selectedMemberId, {
+      onCellClick: handleCellClick,
+      onCellDrop: handleCellDrop,
+    });
     const editors = renderMemberEditors(team, skills, pets, {
       onOpenSkill: (memberId, kind, slot) => {
         picker = { type: "skill", memberId, kind, slot };

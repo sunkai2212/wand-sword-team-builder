@@ -49,66 +49,65 @@ export interface SkillPickerOptions {
 export function renderSkillPicker(options: SkillPickerOptions): HTMLDialogElement {
   const prefix = options.kind === "active" ? "战技" : "秘法";
   const dialog = createDialog(`选择${prefix}${options.slot + 1}`, "skill-picker-title", options.onClose);
-  const tabs = document.createElement("div");
-  tabs.className = "skill-stage-tabs";
+  const summary = document.createElement("p");
+  summary.className = "skill-picker-summary";
+  summary.textContent = `${professionName(options.member.profession)} · ${stageName(1)}至${stageName(options.stage)} · ${prefix}`;
   const grid = document.createElement("div");
   grid.className = "skill-picker-grid";
   const used = new Set([...options.member.active, ...options.member.passive].filter(Boolean));
 
-  function showStage(stage: Stage): void {
-    for (const tab of tabs.querySelectorAll<HTMLButtonElement>("button")) {
-      tab.setAttribute("aria-pressed", String(tab.dataset.stage === String(stage)));
-    }
-    grid.replaceChildren();
+  function renderSkillOption(skill: Skill, index: number): HTMLButtonElement {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "skill-option";
+    button.dataset.testid = "skill-option";
+    button.dataset.skillId = skill.id;
+    button.dataset.stage = String(skill.stage);
+    button.dataset.kind = skill.kind;
+    button.setAttribute(
+      "aria-label",
+      `${professionName(skill.profession)}·${stageName(skill.stage)}·图标${index + 1}`,
+    );
+    const isUsed = used.has(skill.id);
+    if (isUsed) button.setAttribute("aria-disabled", "true");
+    button.addEventListener("click", () => {
+      if (isUsed) {
+        options.onDuplicate();
+      } else {
+        options.onSelect(skill.id);
+      }
+    });
+    const image = document.createElement("img");
+    image.src = skill.icon;
+    image.alt = "";
+    image.loading = "lazy";
+    button.append(image);
+    return button;
+  }
+
+  for (let stage = 1; stage <= options.stage; stage += 1) {
     const stageSkills = options.catalog.filter(
       (skill) =>
         skill.profession === options.member.profession &&
         skill.kind === options.kind &&
         skill.stage === stage,
     );
+    if (stageSkills.length === 0) continue;
+    const group = document.createElement("section");
+    group.className = "skill-stage-group";
+    group.dataset.testid = "skill-stage-group";
+    group.dataset.stage = String(stage);
+    const heading = document.createElement("h3");
+    heading.textContent = stageName(stage as Stage);
+    const optionsGrid = document.createElement("div");
+    optionsGrid.className = "skill-stage-options";
     stageSkills.forEach((skill, index) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "skill-option";
-      button.dataset.testid = "skill-option";
-      button.dataset.skillId = skill.id;
-      button.dataset.stage = String(skill.stage);
-      button.dataset.kind = skill.kind;
-      button.setAttribute(
-        "aria-label",
-        `${professionName(skill.profession)}·${stageName(skill.stage)}·图标${index + 1}`,
-      );
-      const isUsed = used.has(skill.id);
-      if (isUsed) button.setAttribute("aria-disabled", "true");
-      button.addEventListener("click", () => {
-        if (isUsed) {
-          options.onDuplicate();
-        } else {
-          options.onSelect(skill.id);
-        }
-      });
-      const image = document.createElement("img");
-      image.src = skill.icon;
-      image.alt = "";
-      image.loading = "lazy";
-      button.append(image);
-      grid.append(button);
+      optionsGrid.append(renderSkillOption(skill, index));
     });
+    group.append(heading, optionsGrid);
+    grid.append(group);
   }
-
-  for (let stage = 1; stage <= options.stage; stage += 1) {
-    const tab = document.createElement("button");
-    tab.type = "button";
-    tab.className = "stage-tab";
-    tab.dataset.testid = "skill-stage-tab";
-    tab.dataset.stage = String(stage);
-    tab.textContent = stageName(stage as Stage);
-    tab.autofocus = stage === options.stage;
-    tab.addEventListener("click", () => showStage(stage as Stage));
-    tabs.append(tab);
-  }
-  showStage(options.stage);
-  dialog.append(tabs, grid);
+  dialog.append(summary, grid);
 
   if (options.member[options.kind][options.slot]) {
     const clear = document.createElement("button");

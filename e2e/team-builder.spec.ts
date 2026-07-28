@@ -43,6 +43,17 @@ async function addKnight(page: import("@playwright/test").Page, cell: number) {
   await professionDialog.getByRole("button", { name: "骑士", exact: true }).click();
 }
 
+async function addProfession(
+  page: import("@playwright/test").Page,
+  cell: number,
+  professionName: string,
+) {
+  await page.getByTestId("board-cell").nth(cell).click();
+  const professionDialog = page.getByRole("dialog", { name: "选择职业" });
+  await expect(professionDialog).toBeVisible();
+  await professionDialog.getByRole("button", { name: professionName, exact: true }).click();
+}
+
 function memberEditor(page: import("@playwright/test").Page, index = 0) {
   return page.getByTestId("member-editor").nth(index);
 }
@@ -239,17 +250,15 @@ test("满员提示更新时 live region 节点保持稳定", async ({ page }) =>
   await expect(page.getByTestId("board-cell").nth(4)).toBeFocused();
 });
 
-test("六转技能选择器只提供一至六转，七转队伍才提供七转", async ({ page }) => {
+test("六转技能选择器只提供一至六转技能，七转队伍才提供七转", async ({ page }) => {
   await chooseStage(page);
   await addKnight(page, 0);
 
   await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
   let dialog = page.getByRole("dialog", { name: "选择战技1" });
-  await expect(dialog.locator('[data-testid="skill-stage-tab"]')).toHaveCount(6);
+  await expect(dialog.locator('[data-testid="skill-stage-tab"]')).toHaveCount(0);
   for (let stage = 1; stage <= 6; stage += 1) {
-    const tab = dialog.locator(`[data-testid="skill-stage-tab"][data-stage="${stage}"]`);
-    await expect(tab).toBeVisible();
-    await tab.click();
+    await expect(dialog.locator(`[data-testid="skill-stage-group"][data-stage="${stage}"]`)).toBeVisible();
     await expect(dialog.locator(`[data-testid="skill-option"][data-stage="${stage}"]`).first()).toBeVisible();
   }
   await expect(dialog.locator('[data-stage="7"]')).toHaveCount(0);
@@ -261,8 +270,59 @@ test("六转技能选择器只提供一至六转，七转队伍才提供七转",
     .getByRole("button", { name: "七转", exact: true }).click();
   await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
   dialog = page.getByRole("dialog", { name: "选择战技1" });
-  await expect(dialog.locator('[data-testid="skill-stage-tab"][data-stage="7"]')).toBeVisible();
+  await expect(dialog.locator('[data-testid="skill-stage-group"][data-stage="7"]')).toBeVisible();
   await expect(dialog.locator('[data-skill-id="knight-s7-active-1"]')).toBeVisible();
+});
+
+test("四转骑士技能选择器直接展示一至四转全部战技", async ({ page }) => {
+  await chooseStage(page, "四转");
+  await addKnight(page, 0);
+
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "选择战技1" });
+  await expect(dialog.locator('[data-testid="skill-stage-tab"]')).toHaveCount(0);
+  for (let stage = 1; stage <= 4; stage += 1) {
+    await expect(dialog.locator(`[data-testid="skill-stage-group"][data-stage="${stage}"]`)).toBeVisible();
+    await expect(dialog.locator(`[data-testid="skill-option"][data-skill-id^="knight-s${stage}-active-"]`).first()).toBeVisible();
+  }
+  for (let stage = 5; stage <= 7; stage += 1) {
+    await expect(dialog.locator(`[data-testid="skill-stage-group"][data-stage="${stage}"]`)).toHaveCount(0);
+    await expect(dialog.locator(`[data-testid="skill-option"][data-skill-id^="knight-s${stage}-active-"]`)).toHaveCount(0);
+  }
+});
+
+test("七转术士技能选择器直接展示一至七转全部战技", async ({ page }) => {
+  await chooseStage(page, "七转");
+  await addProfession(page, 0, "术士");
+
+  await memberEditor(page).getByRole("button", { name: "战技1", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "选择战技1" });
+  await expect(dialog.locator('[data-testid="skill-stage-tab"]')).toHaveCount(0);
+  for (let stage = 1; stage <= 7; stage += 1) {
+    await expect(dialog.locator(`[data-testid="skill-stage-group"][data-stage="${stage}"]`)).toBeVisible();
+    await expect(dialog.locator(`[data-testid="skill-option"][data-skill-id^="warlock-s${stage}-active-"]`).first()).toBeVisible();
+  }
+});
+
+test("可拖动角色到空站位", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  await page.getByTestId("board-cell").nth(0).dragTo(page.getByTestId("board-cell").nth(8));
+
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("空位1");
+  await expect(page.getByTestId("board-cell").nth(8)).toHaveAccessibleName("位置 9，骑士");
+});
+
+test("拖到已有角色的站位不会交换或覆盖", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  await addProfession(page, 1, "斗士");
+
+  await page.getByTestId("board-cell").nth(0).dragTo(page.getByTestId("board-cell").nth(1));
+
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，骑士");
+  await expect(page.getByTestId("board-cell").nth(1)).toHaveAccessibleName("位置 2，斗士");
 });
 
 test("技能按槽显示图标、禁止同成员重复并可清空", async ({ page }) => {
@@ -347,7 +407,6 @@ test("降低转数可取消，确认后只清除超阶技能", async ({ page }) 
   await editor.getByRole("button", { name: "战技1", exact: true }).click();
   await page.locator('[data-skill-id="knight-s7-active-1"]').click();
   await editor.getByRole("button", { name: "战技2", exact: true }).click();
-  await page.locator('[data-testid="skill-stage-tab"][data-stage="6"]').click();
   await page.locator('[data-skill-id="knight-s6-active-1"]').click();
 
   page.once("dialog", (dialog) => dialog.dismiss());

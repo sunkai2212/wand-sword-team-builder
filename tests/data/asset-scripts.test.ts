@@ -4,6 +4,27 @@ import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
+// @ts-expect-error This test intentionally imports the plain-JavaScript asset curation script.
+import * as detailCropScript from "../../scripts/rebuild-detail-skill-icons.mjs";
+
+type DetailSkillKind = "active" | "passive";
+type DetailScreenshot = { file: string; group: string; kind?: DetailSkillKind };
+type DetailMapping = { source: string; output: string; kind: DetailSkillKind };
+type DetailCrop = { left: number; top: number; width: number; height: number };
+
+const {
+  buildDetailSkillMapping,
+  classifyDetailSkillKinds,
+  detailPassiveIconCrop,
+  listDetailSkillScreenshots,
+  writeCroppedDetailSource,
+} = detailCropScript as unknown as {
+  buildDetailSkillMapping(root: string): Promise<DetailMapping[]>;
+  classifyDetailSkillKinds(root: string): Promise<Array<DetailScreenshot & { kind: DetailSkillKind }>>;
+  detailPassiveIconCrop: DetailCrop;
+  listDetailSkillScreenshots(root: string): Promise<DetailScreenshot[]>;
+  writeCroppedDetailSource(source: string, output: string, crop?: DetailCrop): Promise<void>;
+};
 
 const root = process.cwd();
 sharp.cache(false);
@@ -22,6 +43,168 @@ function runFailure(script: string, cwd: string): string {
 }
 
 describe("asset scripts diagnostics", () => {
+  it("finds every supplied non-seventh detail screenshot by profession and turn", async () => {
+    const screenshots = await listDetailSkillScreenshots(root);
+
+    expect(screenshots).toHaveLength(280);
+    expect(screenshots.filter((file) => file.group === "fighter-knight-s1")).toHaveLength(26);
+    expect(screenshots.filter((file) => file.group === "warlock-sage-s1")).toHaveLength(26);
+    expect(screenshots.filter((file) => file.group === "fighter-s2")).toHaveLength(11);
+    expect(screenshots.filter((file) => file.group === "sage-s6")).toHaveLength(12);
+  });
+
+  it("separates active and passive screenshots within a single turn", async () => {
+    const screenshots = await classifyDetailSkillKinds(root);
+    const fighterStageTwo = screenshots.filter((file) => file.group === "fighter-s2");
+
+    expect(fighterStageTwo).toHaveLength(11);
+    expect(fighterStageTwo.filter((file) => file.kind === "active")).toHaveLength(6);
+    expect(fighterStageTwo.filter((file) => file.kind === "passive")).toHaveLength(5);
+  });
+
+  it("preserves the active and passive count for every supplied skill group", async () => {
+    const screenshots = await classifyDetailSkillKinds(root);
+    const expected = {
+      "fighter-knight-s1": [13, 13],
+      "fighter-s2": [6, 5], "fighter-s3": [5, 5], "fighter-s4": [6, 6],
+      "fighter-s5": [6, 6], "fighter-s6": [6, 6],
+      "knight-s2": [6, 5], "knight-s3": [5, 5], "knight-s4": [6, 6],
+      "knight-s5": [6, 6], "knight-s6": [6, 6],
+      "warlock-sage-s1": [13, 13],
+      "warlock-s2": [6, 5], "warlock-s3": [5, 5], "warlock-s4": [6, 6],
+      "warlock-s5": [6, 6], "warlock-s6": [6, 6],
+      "sage-s2": [6, 5], "sage-s3": [5, 5], "sage-s4": [6, 6],
+      "sage-s5": [6, 6], "sage-s6": [6, 6],
+    } as const;
+
+    for (const [group, [active, passive]] of Object.entries(expected)) {
+      const entries = screenshots.filter((file) => file.group === group);
+      expect(entries.filter((file) => file.kind === "active"), group).toHaveLength(active);
+      expect(entries.filter((file) => file.kind === "passive"), group).toHaveLength(passive);
+    }
+  });
+
+  it("maps every non-seventh output to a screenshot of the same skill kind", async () => {
+    const mapping = await buildDetailSkillMapping(root);
+    const fighterStageOne = mapping.filter((entry) => entry.output.includes("/fighter-s1-"));
+    const knightStageOne = mapping.filter((entry) => entry.output.includes("/knight-s1-"));
+
+    expect(mapping).toHaveLength(332);
+    expect(mapping.some((entry) => entry.output.includes("-s7-"))).toBe(false);
+    expect(mapping.every((entry) => entry.output.includes(`-${entry.kind}-`))).toBe(true);
+    expect(fighterStageOne.map((entry) => entry.source))
+      .toEqual(knightStageOne.map((entry) => entry.source));
+  });
+
+  it("uses the seventh-turn reference frame for the fighter second-turn sample", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      source: string;
+      output: string;
+      crop: { left: number; top: number; width: number; height: number };
+      mask?: string;
+      maskRadiusRatio?: number;
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const entries = manifest.filter((entry) => entry.output.includes("/skills/fighter-s2-"));
+
+    expect(entries).toHaveLength(11);
+    expect(entries.every((entry) => entry.source.startsWith("data/source/manual/detail/fighter/s2/"))).toBe(true);
+    expect(entries.every((entry) => entry.crop.left === 0 && entry.crop.top === 0)).toBe(true);
+    expect(entries.filter((entry) => entry.output.includes("-active-")).every((entry) =>
+      entry.crop.width === 236 && entry.crop.height === 236
+    )).toBe(true);
+    expect(entries.filter((entry) => entry.output.includes("-passive-")).every((entry) =>
+      entry.crop.width === 166 && entry.crop.height === 166
+    )).toBe(true);
+    expect(entries.every((entry) => entry.mask === "circle" && entry.maskRadiusRatio === undefined)).toBe(true);
+    expect(entries.every((entry) => entry.sharpen === true && entry.quality === 95)).toBe(true);
+  });
+
+  it("stores the seventh-turn reference crop as a compact stable source", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-detail-source-"));
+    try {
+      const source = path.join(temp, "detail.jpg");
+      const output = path.join(temp, "stable.jpg");
+      await sharp({
+        create: { width: 1320, height: 2868, channels: 3, background: "#000000" },
+      }).composite([{
+        input: await sharp({
+          create: { width: 236, height: 236, channels: 3, background: "#ff0000" },
+        }).png().toBuffer(),
+        left: 768,
+        top: 887,
+      }]).jpeg().toFile(source);
+
+      await writeCroppedDetailSource(source, output);
+      const { data, info } = await sharp(output).raw().toBuffer({ resolveWithObject: true });
+
+      expect(info).toMatchObject({ width: 236, height: 236 });
+      expect(data[(100 * info.width + 100) * info.channels]).toBeGreaterThan(200);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("uses the smaller seventh-turn reference crop for a passive detail screenshot", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-passive-detail-source-"));
+    try {
+      const source = path.join(temp, "detail.jpg");
+      const output = path.join(temp, "stable.jpg");
+      await sharp({
+        create: { width: 1320, height: 2868, channels: 3, background: "#000000" },
+      }).composite([{
+        input: await sharp({
+          create: { width: 166, height: 166, channels: 3, background: "#00ff00" },
+        }).png().toBuffer(),
+        left: detailPassiveIconCrop.left,
+        top: detailPassiveIconCrop.top,
+      }]).jpeg().toFile(source);
+
+      await writeCroppedDetailSource(source, output, detailPassiveIconCrop);
+      const { data, info } = await sharp(output).raw().toBuffer({ resolveWithObject: true });
+
+      expect(info).toMatchObject({ width: 166, height: 166 });
+      expect(data[(80 * info.width + 80) * info.channels + 1]).toBeGreaterThan(200);
+    } finally {
+      await rm(temp, { recursive: true, force: true });
+    }
+  });
+
+  it("uses compact detail sources for every non-seventh skill and leaves seventh-turn entries unchanged", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      source: string;
+      output: string;
+      crop: { left: number; top: number; width: number; height: number };
+      mask?: string;
+      maskRadiusRatio?: number;
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const skills = manifest.filter((entry) => entry.output.includes("/skills/"));
+    const nonSeventh = skills.filter((entry) => !entry.output.includes("-s7-"));
+    const seventh = skills.filter((entry) => entry.output.includes("-s7-"));
+
+    expect(nonSeventh).toHaveLength(332);
+    expect(nonSeventh.every((entry) => entry.source.startsWith("data/source/manual/detail/"))).toBe(true);
+    expect(nonSeventh.every((entry) => entry.crop.left === 0 && entry.crop.top === 0)).toBe(true);
+    expect(nonSeventh.filter((entry) => entry.output.includes("-active-")).every((entry) =>
+      entry.crop.width === 236 && entry.crop.height === 236
+    )).toBe(true);
+    expect(nonSeventh.filter((entry) => entry.output.includes("-passive-")).every((entry) =>
+      entry.crop.width === 166 && entry.crop.height === 166
+    )).toBe(true);
+    expect(nonSeventh.every((entry) =>
+      entry.mask === "circle" && entry.maskRadiusRatio === undefined && entry.sharpen && entry.quality === 95
+    )).toBe(true);
+    expect(seventh).toHaveLength(48);
+    expect(seventh.every((entry) => !entry.source.startsWith("data/source/manual/detail/"))).toBe(true);
+  });
+
   it("builds a 380-icon centering sheet with target guides", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-centering-"));
     try {
@@ -72,7 +255,7 @@ describe("asset scripts diagnostics", () => {
     expect(skills.every((entry) => entry.mask === "circle")).toBe(true);
   });
 
-  it("uses the curated manual source sheet for stage-two warlock icons", async () => {
+  it("uses compact detail sources for stage-two warlock icons", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),
     ) as Array<{
@@ -89,30 +272,21 @@ describe("asset scripts diagnostics", () => {
 
     expect(warlockStageTwo).toHaveLength(11);
     expect(warlockStageTwo.every((entry) =>
-      entry.source === "data/source/manual/warlock-s2-icons.jpg"
+      entry.source.startsWith("data/source/manual/detail/warlock/s2/")
     )).toBe(true);
-    expect(Object.fromEntries(warlockStageTwo.map((entry) => [
-      path.basename(entry.output),
-      entry.crop,
-    ]))).toEqual({
-      "warlock-s2-active-1.webp": { left: 70, top: 33, width: 190, height: 190 },
-      "warlock-s2-active-2.webp": { left: 318, top: 33, width: 190, height: 190 },
-      "warlock-s2-active-3.webp": { left: 566, top: 33, width: 190, height: 190 },
-      "warlock-s2-active-4.webp": { left: 814, top: 33, width: 190, height: 190 },
-      "warlock-s2-active-5.webp": { left: 1062, top: 33, width: 190, height: 190 },
-      "warlock-s2-active-6.webp": { left: 70, top: 281, width: 190, height: 190 },
-      "warlock-s2-passive-1.webp": { left: 318, top: 281, width: 190, height: 190 },
-      "warlock-s2-passive-2.webp": { left: 566, top: 281, width: 190, height: 190 },
-      "warlock-s2-passive-3.webp": { left: 814, top: 281, width: 190, height: 190 },
-      "warlock-s2-passive-4.webp": { left: 1062, top: 281, width: 190, height: 190 },
-      "warlock-s2-passive-5.webp": { left: 70, top: 529, width: 190, height: 190 },
-    });
-    expect(warlockStageTwo.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
+    expect(warlockStageTwo.every((entry) => entry.crop.left === 0 && entry.crop.top === 0)).toBe(true);
+    expect(warlockStageTwo.filter((entry) => entry.output.includes("-active-")).every((entry) =>
+      entry.crop.width === 236 && entry.crop.height === 236
+    )).toBe(true);
+    expect(warlockStageTwo.filter((entry) => entry.output.includes("-passive-")).every((entry) =>
+      entry.crop.width === 166 && entry.crop.height === 166
+    )).toBe(true);
+    expect(warlockStageTwo.every((entry) => entry.maskRadiusRatio === undefined)).toBe(true);
     expect(warlockStageTwo.every((entry) => entry.sharpen === true)).toBe(true);
     expect(warlockStageTwo.every((entry) => entry.quality === 95)).toBe(true);
   });
 
-  it("uses curated manual screenshots for knight icons without changing stage seven", async () => {
+  it("uses compact detail sources for knight icons without changing stage seven", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),
     ) as Array<{
@@ -129,48 +303,26 @@ describe("asset scripts diagnostics", () => {
     const knightStageSeven = manifest.filter((entry) =>
       entry.output.includes("/skills/knight-s7-")
     );
-    const knightStageOne = manifest.filter((entry) =>
-      entry.output.includes("/skills/knight-s1-")
-    );
-    const fighterStageOne = manifest.filter((entry) =>
-      entry.output.includes("/skills/fighter-s1-")
-    );
-    const knightStageSixActiveOne = knightManual.find((entry) =>
-      entry.output.endsWith("/skills/knight-s6-active-1.webp")
-    );
-    const otherKnightManual = knightManual.filter((entry) =>
-      !entry.output.endsWith("/skills/knight-s6-active-1.webp")
-    );
-
     expect(knightManual).toHaveLength(83);
     expect(knightManual.every((entry) =>
-      entry.source.startsWith("data/source/manual/knight")
+      entry.source.startsWith("data/source/manual/detail/knight/")
     )).toBe(true);
-    expect(knightStageSixActiveOne?.crop).toEqual({
-      left: 12,
-      top: 12,
-      width: 208,
-      height: 208,
-    });
-    expect(otherKnightManual.every((entry) =>
-      entry.crop.left === 32 &&
-      entry.crop.top === 32 &&
-      entry.crop.width === 208 &&
-      entry.crop.height === 208
+    expect(knightManual.every((entry) => entry.crop.left === 0 && entry.crop.top === 0)).toBe(true);
+    expect(knightManual.filter((entry) => entry.output.includes("-active-")).every((entry) =>
+      entry.crop.width === 236 && entry.crop.height === 236
     )).toBe(true);
-    expect(knightManual.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
+    expect(knightManual.filter((entry) => entry.output.includes("-passive-")).every((entry) =>
+      entry.crop.width === 166 && entry.crop.height === 166
+    )).toBe(true);
+    expect(knightManual.every((entry) => entry.maskRadiusRatio === undefined)).toBe(true);
     expect(knightManual.every((entry) => entry.sharpen === true)).toBe(true);
     expect(knightManual.every((entry) => entry.quality === 95)).toBe(true);
     expect(knightStageSeven.every((entry) =>
       !entry.source.startsWith("data/source/manual/knight")
     )).toBe(true);
-    expect(fighterStageOne.map((entry) => entry.source))
-      .toEqual(knightStageOne.map((entry) => entry.source));
-    expect(fighterStageOne.map((entry) => entry.crop))
-      .toEqual(knightStageOne.map((entry) => entry.crop));
   });
 
-  it("uses full-frame circular crops and sharpening for stage-six skill icons", async () => {
+  it("uses compact detail crops and sharpening for stage-six skill icons", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),
     ) as Array<{
@@ -181,17 +333,20 @@ describe("asset scripts diagnostics", () => {
       quality?: number;
       maskRadiusRatio?: number;
     }>;
-    const stageSix = manifest.filter(
-      (entry) =>
-        entry.output.includes("/skills/") &&
-        entry.output.includes("-s6-") &&
-        !entry.source.startsWith("data/source/manual/")
+    const stageSix = manifest.filter((entry) =>
+      entry.output.includes("/skills/") && entry.output.includes("-s6-")
     );
 
-    expect(stageSix).toHaveLength(36);
-    expect(Math.max(...stageSix.map((entry) => entry.crop.width))).toBeLessThanOrEqual(90);
-    expect(Math.max(...stageSix.map((entry) => entry.crop.height))).toBeLessThanOrEqual(90);
-    expect(stageSix.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
+    expect(stageSix).toHaveLength(48);
+    expect(stageSix.filter((entry) => !entry.output.includes("-s7-")).every((entry) =>
+      entry.source.startsWith("data/source/manual/detail/")
+    )).toBe(true);
+    expect(stageSix.filter((entry) => !entry.output.includes("-s7-")).filter((entry) =>
+      entry.output.includes("-active-")
+    ).every((entry) => entry.crop.width === 236)).toBe(true);
+    expect(stageSix.filter((entry) => !entry.output.includes("-s7-")).filter((entry) =>
+      entry.output.includes("-passive-")
+    ).every((entry) => entry.crop.width === 166)).toBe(true);
     expect(stageSix.every((entry) => entry.sharpen === true)).toBe(true);
     expect(stageSix.every((entry) => entry.quality === 95)).toBe(true);
   });

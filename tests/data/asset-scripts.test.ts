@@ -210,41 +210,28 @@ describe("asset scripts diagnostics", () => {
     expect(seventh.every((entry) => !entry.source.startsWith("data/source/manual/detail/"))).toBe(true);
   });
 
-  it("maps the glowblade reference source to knight sixth-turn active four", async () => {
-    const source = await readFile(path.join(root, "data/source/manual/detail/knight/s6/active-4.jpg"));
+  it("keeps the glowblade reference source in knight sixth-turn active one", async () => {
+    const source = await readFile(path.join(root, "data/source/manual/detail/knight/s6/active-1.jpg"));
 
     expect(createHash("sha256").update(source).digest("hex"))
       .toBe("847e74e81d011641c44d55a39e9a8e6fc8c079b7bad14db55d5be3613d244e69");
   });
 
-  it("syncs knight sixth-turn active one to the glowblade source in active four", async () => {
-    const [first, fourth] = await Promise.all([
-      readFile(path.join(root, "data/source/manual/detail/knight/s6/active-1.jpg")),
-      readFile(path.join(root, "data/source/manual/detail/knight/s6/active-4.jpg")),
-    ]);
-
-    expect(createHash("sha256").update(first).digest("hex"))
-      .toBe(createHash("sha256").update(fourth).digest("hex"));
-  });
-
-  it("keeps knight sixth-turn active four as the warm-spectrum glowblade icon", async () => {
+  it("keeps knight sixth-turn active four as the blue water icon", async () => {
     const { data, info } = await sharp(
       path.join(root, "public/assets/skills/knight-s6-active-4.webp"),
     ).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     let visible = 0;
-    let warm = 0;
     let cool = 0;
 
     for (let index = 0; index < data.length; index += info.channels) {
       const [red, green, blue, alpha] = data.subarray(index, index + info.channels);
       if (alpha < 128) continue;
       visible += 1;
-      if (red > blue * 1.35 && green > blue * 1.1 && red > 100) warm += 1;
       if (blue > red * 1.25 && blue > green * 1.05 && blue > 100) cool += 1;
     }
 
-    expect(warm / visible).toBeGreaterThan(0.2);
-    expect(cool / visible).toBeLessThan(0.1);
+    expect(cool / visible).toBeGreaterThan(0.2);
   });
 
   it("builds a 380-icon centering sheet with target guides", async () => {

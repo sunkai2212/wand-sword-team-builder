@@ -1,4 +1,4 @@
-const SKILL_ASSET_VERSION = "2026-07-28-knight-s6-glowblade-slot-sync";
+const SKILL_ASSET_VERSION = "2026-07-28-knight-s6-slot-four-water";
 
 function versionSkillAsset(url: string): string {
   return url.includes("/assets/skills/")

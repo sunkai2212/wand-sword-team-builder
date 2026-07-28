@@ -423,6 +423,33 @@ test("技能按槽显示图标、禁止同成员重复并可清空", async ({ pa
   await expect(activeSlot.locator("img")).toHaveCount(0);
 });
 
+test("技能图标在槽位和选择器里贴近外框", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  await editor.getByRole("button", { name: "战技1", exact: true }).click();
+  const optionRatio = await page
+    .locator('[data-testid="skill-option"][data-skill-id="knight-s6-active-1"]')
+    .evaluate((button) => {
+      const image = button.querySelector("img");
+      if (!image) throw new Error("skill option image missing");
+      return image.getBoundingClientRect().width / button.getBoundingClientRect().width;
+    });
+  await page.locator('[data-testid="skill-option"][data-skill-id="knight-s6-active-1"]').click();
+
+  const slotRatio = await editor
+    .locator('[data-testid="skill-slot"][data-kind="active"][data-slot="0"]')
+    .evaluate((button) => {
+      const image = button.querySelector("img");
+      if (!image) throw new Error("skill slot image missing");
+      return image.getBoundingClientRect().width / button.getBoundingClientRect().width;
+    });
+
+  expect(optionRatio).toBeGreaterThanOrEqual(0.9);
+  expect(slotRatio).toBeGreaterThanOrEqual(0.9);
+});
+
 test("两名成员可选择同一只宠物并显示真实名称", async ({ page }) => {
   await chooseStage(page);
   await addKnight(page, 0);

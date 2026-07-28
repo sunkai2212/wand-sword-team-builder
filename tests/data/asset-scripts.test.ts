@@ -72,7 +72,7 @@ describe("asset scripts diagnostics", () => {
     expect(skills.every((entry) => entry.mask === "circle")).toBe(true);
   });
 
-  it("uses expanded source crops and sharpening for stage-six skill icons", async () => {
+  it("uses full-frame circular crops and sharpening for stage-six skill icons", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),
     ) as Array<{
@@ -80,14 +80,16 @@ describe("asset scripts diagnostics", () => {
       crop: { width: number; height: number };
       sharpen?: boolean;
       quality?: number;
+      maskRadiusRatio?: number;
     }>;
     const stageSix = manifest.filter(
       (entry) => entry.output.includes("/skills/") && entry.output.includes("-s6-"),
     );
 
     expect(stageSix).toHaveLength(48);
-    expect(Math.min(...stageSix.map((entry) => entry.crop.width))).toBeGreaterThanOrEqual(76);
-    expect(Math.min(...stageSix.map((entry) => entry.crop.height))).toBeGreaterThanOrEqual(76);
+    expect(Math.max(...stageSix.map((entry) => entry.crop.width))).toBeLessThanOrEqual(90);
+    expect(Math.max(...stageSix.map((entry) => entry.crop.height))).toBeLessThanOrEqual(90);
+    expect(stageSix.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
     expect(stageSix.every((entry) => entry.sharpen === true)).toBe(true);
     expect(stageSix.every((entry) => entry.quality === 95)).toBe(true);
   });

@@ -1,4 +1,4 @@
-const SKILL_ASSET_VERSION = "2026-07-28-stage-six-polish";
+const SKILL_ASSET_VERSION = "2026-07-28-stage-six-full-frame";
 
 function versionSkillAsset(url: string): string {
   return url.includes("/assets/skills/")

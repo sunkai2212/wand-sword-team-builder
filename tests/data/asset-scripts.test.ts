@@ -217,21 +217,14 @@ describe("asset scripts diagnostics", () => {
       .toBe("847e74e81d011641c44d55a39e9a8e6fc8c079b7bad14db55d5be3613d244e69");
   });
 
-  it("keeps knight sixth-turn active one as the blue water icon", async () => {
-    const { data, info } = await sharp(
-      path.join(root, "public/assets/skills/knight-s6-active-1.webp"),
-    ).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-    let visible = 0;
-    let cool = 0;
+  it("syncs knight sixth-turn active one to the glowblade source in active four", async () => {
+    const [first, fourth] = await Promise.all([
+      readFile(path.join(root, "data/source/manual/detail/knight/s6/active-1.jpg")),
+      readFile(path.join(root, "data/source/manual/detail/knight/s6/active-4.jpg")),
+    ]);
 
-    for (let index = 0; index < data.length; index += info.channels) {
-      const [red, green, blue, alpha] = data.subarray(index, index + info.channels);
-      if (alpha < 128) continue;
-      visible += 1;
-      if (blue > red * 1.25 && blue > green * 1.05 && blue > 100) cool += 1;
-    }
-
-    expect(cool / visible).toBeGreaterThan(0.2);
+    expect(createHash("sha256").update(first).digest("hex"))
+      .toBe(createHash("sha256").update(fourth).digest("hex"));
   });
 
   it("keeps knight sixth-turn active four as the warm-spectrum glowblade icon", async () => {

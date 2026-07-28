@@ -49,4 +49,4 @@
 - [x] Run `npm test`.
 - [x] Run `npm run build:pages`.
 - [x] Run `$env:CI='1'; npm run test:e2e`.
-- [ ] Save snapshot, commit, push, and verify GitHub Pages.
+- [x] Save snapshot, commit, push, and verify GitHub Pages.

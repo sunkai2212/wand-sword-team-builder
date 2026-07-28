@@ -28,7 +28,8 @@
 - `npm test`：64 项通过。
 - `npm run build:pages`：通过，数据校验显示 380 个技能、5 个宠物、4 个职业、389 个资产。
 - `$env:CI='1'; npm run test:e2e`：44 项通过。
+- GitHub Pages：`https://sunkai2212.github.io/wand-sword-team-builder/` 返回 200，线上 JS 包含 `队员ID` 与 `player-id-input` 标记。
 
 ## 恢复提示
 
-如果任务中断，从这个快照恢复时，优先检查 `git status --short` 和本文件列出的关键文件。最终收尾还需要重新跑完整验证、提交、推送，并确认 GitHub Pages 线上页面更新。
+如果任务中断，从这个快照恢复时，优先检查 `git status --short` 和本文件列出的关键文件。当前功能已提交、推送，并已确认 GitHub Pages 线上页面包含队员 ID 功能。

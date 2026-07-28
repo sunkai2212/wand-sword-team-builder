@@ -78,6 +78,7 @@ describe("asset scripts diagnostics", () => {
     ) as Array<{
       source: string;
       output: string;
+      crop: { left: number; top: number; width: number; height: number };
       maskRadiusRatio?: number;
       sharpen?: boolean;
       quality?: number;
@@ -90,6 +91,22 @@ describe("asset scripts diagnostics", () => {
     expect(warlockStageTwo.every((entry) =>
       entry.source === "data/source/manual/warlock-s2-icons.jpg"
     )).toBe(true);
+    expect(Object.fromEntries(warlockStageTwo.map((entry) => [
+      path.basename(entry.output),
+      entry.crop,
+    ]))).toEqual({
+      "warlock-s2-active-1.webp": { left: 88, top: 51, width: 154, height: 154 },
+      "warlock-s2-active-2.webp": { left: 336, top: 51, width: 154, height: 154 },
+      "warlock-s2-active-3.webp": { left: 584, top: 51, width: 154, height: 154 },
+      "warlock-s2-active-4.webp": { left: 832, top: 51, width: 154, height: 154 },
+      "warlock-s2-active-5.webp": { left: 1080, top: 51, width: 154, height: 154 },
+      "warlock-s2-active-6.webp": { left: 88, top: 299, width: 154, height: 154 },
+      "warlock-s2-passive-1.webp": { left: 336, top: 299, width: 154, height: 154 },
+      "warlock-s2-passive-2.webp": { left: 584, top: 299, width: 154, height: 154 },
+      "warlock-s2-passive-3.webp": { left: 832, top: 299, width: 154, height: 154 },
+      "warlock-s2-passive-4.webp": { left: 1080, top: 299, width: 154, height: 154 },
+      "warlock-s2-passive-5.webp": { left: 88, top: 547, width: 154, height: 154 },
+    });
     expect(warlockStageTwo.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
     expect(warlockStageTwo.every((entry) => entry.sharpen === true)).toBe(true);
     expect(warlockStageTwo.every((entry) => entry.quality === 95)).toBe(true);

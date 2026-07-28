@@ -1,4 +1,4 @@
-import type { Member, Team } from "../domain/team";
+import { memberDisplayName, type Member, type Team } from "../domain/team";
 import type { Profession } from "../domain/types";
 import { resolveAssetUrl } from "../asset-url";
 
@@ -18,7 +18,7 @@ export function professionName(profession: Profession): string {
   return PROFESSIONS[profession].name;
 }
 
-function renderMember(member: Member): DocumentFragment {
+function renderMember(member: Member, label: string): DocumentFragment {
   const fragment = document.createDocumentFragment();
   const image = document.createElement("img");
   image.src = PROFESSIONS[member.profession].image;
@@ -26,7 +26,7 @@ function renderMember(member: Member): DocumentFragment {
   image.setAttribute("aria-hidden", "true");
 
   const name = document.createElement("span");
-  name.textContent = professionName(member.profession);
+  name.textContent = label;
   fragment.append(image, name);
   return fragment;
 }
@@ -39,9 +39,15 @@ export function renderBoard(
   const board = document.createElement("div");
   board.className = "position-board";
   board.dataset.testid = "position-board";
+  const memberLabels = new Map(
+    [...team.members]
+      .sort((left, right) => left.cell - right.cell)
+      .map((member, index) => [member.id, memberDisplayName(member, index)]),
+  );
 
   for (let cell = 0; cell < 20; cell += 1) {
     const member = team.members.find((candidate) => candidate.cell === cell);
+    const label = member ? memberLabels.get(member.id) ?? memberDisplayName(member, 0) : "";
     const button = document.createElement("button");
     button.type = "button";
     button.className = member ? "board-cell has-member" : "board-cell";
@@ -51,9 +57,9 @@ export function renderBoard(
     button.setAttribute("aria-pressed", String(member?.id === selectedMemberId));
     button.setAttribute(
       "aria-label",
-      member ? `位置 ${cell + 1}，${professionName(member.profession)}` : `空位${cell + 1}`,
+      member ? `位置 ${cell + 1}，${label}，${professionName(member.profession)}` : `空位${cell + 1}`,
     );
-    if (member) button.append(renderMember(member));
+    if (member) button.append(renderMember(member, label));
     let suppressClick = false;
     if (member) {
       button.draggable = true;

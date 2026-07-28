@@ -17,6 +17,7 @@ export interface Member {
   id: string;
   cell: number;
   profession: Profession;
+  playerId: string;
   active: Slots;
   passive: Slots;
   petId: Pet["id"] | null;
@@ -94,6 +95,10 @@ export function createTeam(stage: Stage): Team {
   return { stage, members: [] };
 }
 
+export function memberDisplayName(member: Member, index: number): string {
+  return member.playerId.trim() || `队员${index + 1}`;
+}
+
 export function addMember(
   team: Team,
   cell: number,
@@ -115,6 +120,7 @@ export function addMember(
         id: globalThis.crypto.randomUUID(),
         cell,
         profession,
+        playerId: "",
         active: emptySlots(),
         passive: emptySlots(),
         petId: null,
@@ -160,6 +166,11 @@ export function removeMember(team: Team, id: string): Team {
     ...team,
     members: team.members.filter((member) => member.id !== id),
   };
+}
+
+export function setPlayerId(team: Team, id: string, playerId: string): Team {
+  const member = findMember(team, id);
+  return replaceMember(team, { ...member, playerId: playerId.trim() });
 }
 
 export function setSkill(

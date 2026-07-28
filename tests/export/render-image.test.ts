@@ -13,6 +13,7 @@ function member(cell: number): Member {
     id: `member-${cell}`,
     cell,
     profession: "knight",
+    playerId: "",
     active: [null, null, null, null],
     passive: [null, null, null, null],
     petId: null,

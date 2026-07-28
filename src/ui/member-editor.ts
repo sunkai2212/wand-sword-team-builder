@@ -1,10 +1,11 @@
-import type { Member, Team } from "../domain/team";
+import { memberDisplayName, type Member, type Team } from "../domain/team";
 import type { Pet, Skill, SkillKind } from "../domain/types";
 import { resolveAssetUrl } from "../asset-url";
 import { professionName } from "./board";
 import { stageName } from "./stage-selector";
 
 export interface MemberEditorHandlers {
+  onSetPlayerId: (memberId: string, playerId: string) => void;
   onOpenSkill: (memberId: string, kind: SkillKind, slot: number) => void;
   onOpenPet: (memberId: string) => void;
   onChangeProfession: (memberId: string) => void;
@@ -94,6 +95,7 @@ function renderPetSlot(
 
 function renderMember(
   member: Member,
+  index: number,
   catalog: readonly Skill[],
   pets: readonly Pet[],
   handlers: MemberEditorHandlers,
@@ -109,10 +111,27 @@ function renderMember(
   header.className = "member-editor-header";
   const portrait = document.createElement("img");
   portrait.src = resolveAssetUrl(`/assets/professions/${member.profession}.webp`);
-  portrait.alt = "";
+  portrait.alt = professionName(member.profession);
+  const titleBlock = document.createElement("div");
+  titleBlock.className = "member-title-block";
   const title = document.createElement("h2");
-  title.textContent = `位置 ${member.cell + 1} · ${professionName(member.profession)}`;
-  header.append(portrait, title);
+  title.textContent = `位置 ${member.cell + 1} · ${memberDisplayName(member, index)}`;
+  const idLabel = document.createElement("label");
+  idLabel.className = "player-id-field";
+  const idLabelText = document.createElement("span");
+  idLabelText.textContent = "队员ID";
+  const idInput = document.createElement("input");
+  idInput.type = "text";
+  idInput.className = "player-id-input";
+  idInput.dataset.testid = "player-id-input";
+  idInput.dataset.memberId = member.id;
+  idInput.maxLength = 16;
+  idInput.placeholder = memberDisplayName({ ...member, playerId: "" }, index);
+  idInput.value = member.playerId;
+  idInput.addEventListener("input", () => handlers.onSetPlayerId(member.id, idInput.value));
+  idLabel.append(idLabelText, idInput);
+  titleBlock.append(title, idLabel);
+  header.append(portrait, titleBlock);
 
   const skillGroups = document.createElement("div");
   skillGroups.className = "member-skill-groups";
@@ -163,8 +182,10 @@ export function renderMemberEditors(
 ): HTMLElement {
   const container = document.createElement("div");
   container.className = "member-editors";
-  for (const member of [...team.members].sort((left, right) => left.cell - right.cell)) {
-    container.append(renderMember(member, catalog, pets, handlers));
+  for (const [index, member] of [...team.members]
+    .sort((left, right) => left.cell - right.cell)
+    .entries()) {
+    container.append(renderMember(member, index, catalog, pets, handlers));
   }
   return container;
 }

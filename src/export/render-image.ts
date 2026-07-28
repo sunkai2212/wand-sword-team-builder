@@ -1,7 +1,7 @@
 import { pets, skills } from "../data/catalog";
 import { resolveAssetUrl } from "../asset-url";
-import type { Member, Team } from "../domain/team";
-import type { Pet, Profession, Skill } from "../domain/types";
+import { memberDisplayName, type Member, type Team } from "../domain/team";
+import type { Pet, Skill } from "../domain/types";
 import {
   calculateExportHeight,
   EXPORT_LAYOUT,
@@ -41,13 +41,6 @@ const BOARD = {
   rows: 4,
   gap: 12,
 } as const;
-
-const PROFESSION_NAMES: Record<Profession, string> = {
-  knight: "骑士",
-  fighter: "斗士",
-  warlock: "术士",
-  sage: "贤者",
-};
 
 function roundedRect(
   ctx: CanvasRenderingContext2D,
@@ -160,6 +153,10 @@ function drawHeader(ctx: CanvasRenderingContext2D, team: Team): void {
 async function drawBoard(ctx: CanvasRenderingContext2D, team: Team): Promise<void> {
   const cellSize = (BOARD.width - BOARD.gap * (BOARD.columns - 1)) / BOARD.columns;
   const membersByCell = new Map(team.members.map((member) => [member.cell, member]));
+  const memberLabels = new Map(
+    orderedMembers(team.members)
+      .map((member, index) => [member.id, memberDisplayName(member, index)]),
+  );
 
   for (let cell = 0; cell < BOARD.columns * BOARD.rows; cell += 1) {
     const column = cell % BOARD.columns;
@@ -180,7 +177,7 @@ async function drawBoard(ctx: CanvasRenderingContext2D, team: Team): Promise<voi
     ctx.font = "700 24px system-ui, sans-serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
-    ctx.fillText(PROFESSION_NAMES[member.profession], x + cellSize / 2, y + cellSize - 16);
+    ctx.fillText(memberLabels.get(member.id) ?? memberDisplayName(member, 0), x + cellSize / 2, y + cellSize - 16, cellSize - 18);
   }
 }
 
@@ -220,7 +217,7 @@ async function drawMemberRow(
   ctx.font = "700 25px system-ui, sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
-  ctx.fillText(PROFESSION_NAMES[member.profession], 116, y + 158);
+  ctx.fillText(memberDisplayName(member, index), 116, y + 158, 150);
 
   const pet = petCatalog.find((candidate) => candidate.id === member.petId);
   ctx.fillStyle = COLORS.muted;

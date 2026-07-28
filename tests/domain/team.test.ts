@@ -4,9 +4,11 @@ import {
   addMember,
   changeProfession,
   createTeam,
+  memberDisplayName,
   moveMember,
   removeMember,
   setPet,
+  setPlayerId,
   setSkill,
 } from "../../src/domain/team";
 
@@ -49,6 +51,35 @@ describe("team state", () => {
     expect(readded.members[0].id).not.toBe(removedId);
   });
 
+  it("starts members with an empty player id and exposes a fallback display name", () => {
+    const team = addMember(createTeam(7), 0, "knight");
+
+    expect(team.members[0].playerId).toBe("");
+    expect(memberDisplayName(team.members[0], 0)).toBe("队员1");
+  });
+
+  it("sets a player id while preserving member configuration", () => {
+    const added = addMember(createTeam(7), 5, "knight");
+    const id = added.members[0].id;
+    const configured = setPet(
+      setSkill(added, id, "active", 0, "skill-active"),
+      id,
+      "qianming",
+    );
+
+    const named = setPlayerId(configured, id, "  凉风.Arc  ");
+
+    expect(named.members[0]).toMatchObject({
+      id,
+      cell: 5,
+      profession: "knight",
+      playerId: "凉风.Arc",
+      petId: "qianming",
+      active: ["skill-active", null, null, null],
+    });
+    expect(memberDisplayName(named.members[0], 0)).toBe("凉风.Arc");
+  });
+
   it("moves a member to an empty cell and treats moving in place as valid", () => {
     const team = addMember(createTeam(7), 3, "knight");
     const moved = moveMember(team, 3, 9);
@@ -70,7 +101,7 @@ describe("team state", () => {
     expect(() => moveMember(team, 1, 2)).toThrow(/occupied/i);
   });
 
-  it("clears skills but preserves pet and cell when profession changes", () => {
+  it("clears skills but preserves pet, player id, and cell when profession changes", () => {
     const added = addMember(createTeam(7), 5, "knight");
     const id = added.members[0].id;
     const skilled = setSkill(
@@ -80,7 +111,7 @@ describe("team state", () => {
       3,
       "skill-passive",
     );
-    const configured = setPet(skilled, id, "qianming");
+    const configured = setPlayerId(setPet(skilled, id, "qianming"), id, "凉风.Arc");
 
     const changed = changeProfession(configured, id, "sage");
 
@@ -88,6 +119,7 @@ describe("team state", () => {
       id,
       cell: 5,
       profession: "sage",
+      playerId: "凉风.Arc",
       petId: "qianming",
       active: [null, null, null, null],
       passive: [null, null, null, null],

@@ -6,6 +6,7 @@ import {
   moveMember,
   removeMember,
   setPet,
+  setPlayerId,
   setSkill,
   setStage,
   type Team,
@@ -124,6 +125,13 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
 
   function focusPetSlot(memberId: string): void {
     findEditor(memberId)?.querySelector<HTMLButtonElement>('[data-testid="pet-slot"]')?.focus();
+  }
+
+  function focusPlayerIdInput(memberId: string): void {
+    const input = findEditor(memberId)
+      ?.querySelector<HTMLInputElement>('[data-testid="player-id-input"]');
+    input?.focus();
+    input?.setSelectionRange(input.value.length, input.value.length);
   }
 
   function focusProfessionButton(memberId: string): void {
@@ -323,6 +331,13 @@ export function mountApp(root: HTMLElement, title = "杖剑传说·4v4阵容图"
       onCellDrop: handleCellDrop,
     });
     const editors = renderMemberEditors(team, skills, pets, {
+      onSetPlayerId: (memberId, playerId) => {
+        if (!team) return;
+        team = setPlayerId(team, memberId, playerId);
+        statusMessage = "";
+        render();
+        focusPlayerIdInput(memberId);
+      },
       onOpenSkill: (memberId, kind, slot) => {
         picker = { type: "skill", memberId, kind, slot };
         render();

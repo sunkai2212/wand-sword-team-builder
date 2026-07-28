@@ -106,10 +106,40 @@ test("可添加骑士，并允许四个重复职业但拒绝第五人", async ({
 
   for (let cell = 0; cell < 4; cell += 1) await addKnight(page, cell);
 
-  await expect(page.getByRole("button", { name: /位置 \d+，骑士/ })).toHaveCount(4);
+  await expect(page.getByRole("button", { name: /位置 \d+，队员\d+，骑士/ })).toHaveCount(4);
   await page.getByTestId("board-cell").nth(4).click();
   await expect(page.getByRole("dialog", { name: "选择职业" })).toHaveCount(0);
   await expect(page.getByRole("status")).toHaveText("队伍已满4人");
+});
+
+test("可填写队员 ID，并用 ID 替代棋盘和编辑器里的职业文字", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  const editor = memberEditor(page);
+  await editor.getByLabel("队员ID").fill("凉风.Arc");
+
+  await expect(page.getByTestId("board-cell").nth(0)).toContainText("凉风.Arc");
+  await expect(page.getByTestId("board-cell").nth(0)).not.toContainText("骑士");
+  await expect(editor.getByRole("heading", { name: /凉风\.Arc/ })).toBeVisible();
+});
+
+test("更换职业保留队员 ID，并继续清空技能", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+  const editor = memberEditor(page);
+
+  await editor.getByLabel("队员ID").fill("雨沁.Arc");
+  await editor.getByRole("button", { name: "战技1", exact: true }).click();
+  await page.locator('[data-skill-id="knight-s6-active-1"]').click();
+  await editor.getByRole("button", { name: "更换职业", exact: true }).click();
+  await page.getByRole("dialog", { name: "更换职业" })
+    .getByRole("button", { name: "斗士", exact: true }).click();
+
+  const changed = memberEditor(page);
+  await expect(page.getByTestId("board-cell").nth(0)).toContainText("雨沁.Arc");
+  await expect(changed.getByRole("heading", { name: /雨沁\.Arc/ })).toBeVisible();
+  await expect(changed.getByRole("button", { name: "战技1", exact: true })).toHaveCount(1);
 });
 
 test("选中已有角色后可移动到空位并取消选中", async ({ page }) => {
@@ -125,7 +155,7 @@ test("选中已有角色后可移动到空位并取消选中", async ({ page }) 
   await page.getByTestId("board-cell").nth(8).click();
 
   await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("空位1");
-  await expect(page.getByTestId("board-cell").nth(8)).toHaveAccessibleName("位置 9，骑士");
+  await expect(page.getByTestId("board-cell").nth(8)).toHaveAccessibleName("位置 9，队员1，骑士");
   await expect(page.getByTestId("board-cell").nth(8)).toHaveAttribute("aria-pressed", "false");
 });
 
@@ -142,7 +172,7 @@ test("修改转数时保留已有角色且选择层可关闭", async ({ page }) 
   await page.getByRole("button", { name: "修改转数" }).click();
   await page.getByRole("button", { name: "三转", exact: true }).click();
   await expect(page.getByText("当前：三转", { exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: /位置 \d+，骑士/ })).toHaveCount(1);
+  await expect(page.getByRole("button", { name: /位置 \d+，队员1，骑士/ })).toHaveCount(1);
 });
 
 test("修改转数时焦点限制在层内，关闭后返回触发按钮", async ({ page }) => {
@@ -208,7 +238,7 @@ test("选择职业后焦点返回新成员站位", async ({ page }) => {
     .getByRole("button", { name: "骑士", exact: true }).click();
 
   await expect(cell).toBeFocused();
-  await expect(cell).toHaveAccessibleName("位置 7，骑士");
+  await expect(cell).toHaveAccessibleName("位置 7，队员1，骑士");
 });
 
 test("重复职业的站位可访问名唯一", async ({ page }) => {
@@ -216,8 +246,8 @@ test("重复职业的站位可访问名唯一", async ({ page }) => {
   await addKnight(page, 0);
   await addKnight(page, 1);
 
-  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，骑士");
-  await expect(page.getByTestId("board-cell").nth(1)).toHaveAccessibleName("位置 2，骑士");
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，队员1，骑士");
+  await expect(page.getByTestId("board-cell").nth(1)).toHaveAccessibleName("位置 2，队员2，骑士");
 });
 
 test("站位选中、取消和移动后保持合理焦点", async ({ page }) => {
@@ -233,7 +263,7 @@ test("站位选中、取消和移动后保持合理焦点", async ({ page }) => 
   const target = page.getByTestId("board-cell").nth(8);
   await target.click();
   await expect(target).toBeFocused();
-  await expect(target).toHaveAccessibleName("位置 9，骑士");
+  await expect(target).toHaveAccessibleName("位置 9，队员1，骑士");
 });
 
 test("满员提示更新时 live region 节点保持稳定", async ({ page }) => {
@@ -311,7 +341,7 @@ test("可拖动角色到空站位", async ({ page }) => {
   await page.getByTestId("board-cell").nth(0).dragTo(page.getByTestId("board-cell").nth(8));
 
   await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("空位1");
-  await expect(page.getByTestId("board-cell").nth(8)).toHaveAccessibleName("位置 9，骑士");
+  await expect(page.getByTestId("board-cell").nth(8)).toHaveAccessibleName("位置 9，队员1，骑士");
 });
 
 test("拖到已有角色的站位不会交换或覆盖", async ({ page }) => {
@@ -321,8 +351,8 @@ test("拖到已有角色的站位不会交换或覆盖", async ({ page }) => {
 
   await page.getByTestId("board-cell").nth(0).dragTo(page.getByTestId("board-cell").nth(1));
 
-  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，骑士");
-  await expect(page.getByTestId("board-cell").nth(1)).toHaveAccessibleName("位置 2，斗士");
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，队员1，骑士");
+  await expect(page.getByTestId("board-cell").nth(1)).toHaveAccessibleName("位置 2，队员2，斗士");
 });
 
 test("技能按槽显示图标、禁止同成员重复并可清空", async ({ page }) => {
@@ -388,7 +418,7 @@ test("更换职业清空技能但保留宠物，删除角色释放站位", async
     .getByRole("button", { name: "斗士", exact: true }).click();
   const changed = memberEditor(page);
   await expect(changed.getByTestId("change-profession")).toBeFocused();
-  await expect(changed).toContainText("斗士");
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，队员1，斗士");
   await expect(changed.getByRole("button", { name: "战技1", exact: true })).toHaveCount(1);
   await expect(changed.getByRole("button", { name: /千明灵狗/ })).toBeVisible();
 
@@ -529,6 +559,7 @@ test("空队禁用生成，添加一人后带缺项也可生成一次副本事�
   expect(await completionNode!.evaluate((element) => element.isConnected)).toBe(true);
 
   const editor = memberEditor(page);
+  await editor.getByLabel("队员ID").fill("凉风.Arc");
   await expect(editor.locator('[data-testid="skill-slot"].is-missing')).toHaveCount(8);
   await expect(editor.locator('[data-testid="skill-slot"][aria-invalid]')).toHaveCount(0);
   await expect(editor.locator('[data-testid="pet-slot"].is-missing')).toHaveCount(1);
@@ -536,14 +567,14 @@ test("空队禁用生成，添加一人后带缺项也可生成一次副本事�
   await generate.click();
   const events = await page.evaluate(() => (window as Window & { generatedTeams: Array<{ stage: number; members: unknown[] }> }).generatedTeams);
   expect(events).toHaveLength(1);
-  expect(events[0]).toMatchObject({ stage: 7, members: [{ profession: "knight" }] });
+  expect(events[0]).toMatchObject({ stage: 7, members: [{ profession: "knight", playerId: "凉风.Arc" }] });
   await page.evaluate(() => {
     const generated = (window as Window & { generatedTeams: Array<{ members: Array<{ profession: string }> }> }).generatedTeams;
     generated[0].members[0].profession = "fighter";
   });
   await page.getByRole("button", { name: "修改转数" }).click();
   await page.getByRole("dialog", { name: "选择当前转数" }).getByRole("button", { name: "关闭" }).click();
-  await expect(memberEditor(page)).toContainText("骑士");
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，凉风.Arc，骑士");
 });
 
 test("填写和清空缺项时完成度数字、缺失标记即时更新", async ({ page }) => {
@@ -691,7 +722,7 @@ test("PNG 生成失败后恢复按钮并保留队伍", async ({ page }) => {
 
   await expect(page.getByRole("status")).toHaveText("生成失败，请重试");
   await expect(button).toBeEnabled();
-  await expect(memberEditor(page)).toContainText("骑士");
+  await expect(page.getByTestId("board-cell").nth(0)).toHaveAccessibleName("位置 1，队员1，骑士");
 });
 
 test("one empty member export draws the header, board, member row, and empty slots", async ({ page }) => {

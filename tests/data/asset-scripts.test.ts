@@ -141,8 +141,8 @@ describe("asset scripts diagnostics", () => {
       entry.source.startsWith("data/source/manual/knight")
     )).toBe(true);
     expect(knightManual.every((entry) =>
-      entry.crop.left === 26 &&
-      entry.crop.top === 26 &&
+      entry.crop.left === 32 &&
+      entry.crop.top === 32 &&
       entry.crop.width === 208 &&
       entry.crop.height === 208
     )).toBe(true);

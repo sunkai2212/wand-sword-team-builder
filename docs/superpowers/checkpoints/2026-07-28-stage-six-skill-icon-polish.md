@@ -10,6 +10,7 @@
 - 六转技能输出开启 `sharpen: true` 与 `quality: 95`。
 - 重新生成 `public/assets/skills/*-s6-*.webp`。
 - 新增回归测试，要求六转技能不再使用过小裁切，并必须启用锐化和 95 质量。
+- 追加缓存修复：技能图标 URL 增加版本参数，避免浏览器继续显示同名旧图，尤其是六转战技。
 
 ## 关键文件
 
@@ -24,6 +25,7 @@
 - `npm run build:pages`：通过。
 - `$env:CI='1'; npm run test:e2e`：45 项通过。
 - `npm run assets:audit-centering`：生成 `dist/skill-icon-centering-audit.html`，包含 380 个技能图标审查页。
+- 缓存修复后重新验证：`npm test` 66 项通过，`npm run build:pages` 通过，`$env:CI='1'; npm run test:e2e` 45 项通过。
 
 ## 复核备注
 

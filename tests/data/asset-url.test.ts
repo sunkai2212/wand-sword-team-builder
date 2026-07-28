@@ -16,4 +16,11 @@ describe("resolveAssetUrl", () => {
       "/wand-sword-team-builder/",
     )).toBe("/wand-sword-team-builder/assets/pets/qianming.webp");
   });
+
+  it("adds a cache-busting version to skill icons", () => {
+    expect(resolveAssetUrl("/assets/skills/knight-s6-active-1.webp", "/"))
+      .toMatch(/^\/assets\/skills\/knight-s6-active-1\.webp\?v=.+/);
+    expect(resolveAssetUrl("/assets/skills/knight-s6-active-1.webp", "/wand-sword-team-builder/"))
+      .toMatch(/^\/wand-sword-team-builder\/assets\/skills\/knight-s6-active-1\.webp\?v=.+/);
+  });
 });

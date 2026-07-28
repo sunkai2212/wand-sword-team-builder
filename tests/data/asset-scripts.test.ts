@@ -4,6 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
+import { listDetailSkillScreenshots } from "../../scripts/rebuild-detail-skill-icons.mjs";
 
 const root = process.cwd();
 sharp.cache(false);
@@ -22,6 +23,16 @@ function runFailure(script: string, cwd: string): string {
 }
 
 describe("asset scripts diagnostics", () => {
+  it("finds every supplied non-seventh detail screenshot by profession and turn", async () => {
+    const screenshots = await listDetailSkillScreenshots(root);
+
+    expect(screenshots).toHaveLength(280);
+    expect(screenshots.filter((file) => file.group === "fighter-knight-s1")).toHaveLength(26);
+    expect(screenshots.filter((file) => file.group === "warlock-sage-s1")).toHaveLength(26);
+    expect(screenshots.filter((file) => file.group === "fighter-s2")).toHaveLength(11);
+    expect(screenshots.filter((file) => file.group === "sage-s6")).toHaveLength(12);
+  });
+
   it("builds a 380-icon centering sheet with target guides", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "team-builder-centering-"));
     try {

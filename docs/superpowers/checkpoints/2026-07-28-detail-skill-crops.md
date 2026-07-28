@@ -27,4 +27,3 @@
 - `npm run build:pages`：通过。
 - 抽检：四职业的 1、3、5、6 转图标；均已去除详情截图外部黑底。
 - 技能图标缓存版本：`2026-07-28-detail-crops-s7-reference`。
-

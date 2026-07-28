@@ -1606,7 +1606,7 @@
     "output": "public/assets/skills/warlock-s2-passive-1.webp",
     "crop": {
       "left": 336,
-      "top": 299,
+      "top": 311,
       "width": 154,
       "height": 154
     },
@@ -1621,7 +1621,7 @@
     "output": "public/assets/skills/warlock-s2-passive-2.webp",
     "crop": {
       "left": 584,
-      "top": 299,
+      "top": 311,
       "width": 154,
       "height": 154
     },
@@ -1636,7 +1636,7 @@
     "output": "public/assets/skills/warlock-s2-passive-3.webp",
     "crop": {
       "left": 832,
-      "top": 299,
+      "top": 311,
       "width": 154,
       "height": 154
     },
@@ -1651,7 +1651,7 @@
     "output": "public/assets/skills/warlock-s2-passive-4.webp",
     "crop": {
       "left": 1080,
-      "top": 299,
+      "top": 311,
       "width": 154,
       "height": 154
     },
@@ -1666,7 +1666,7 @@
     "output": "public/assets/skills/warlock-s2-passive-5.webp",
     "crop": {
       "left": 88,
-      "top": 547,
+      "top": 559,
       "width": 154,
       "height": 154
     },

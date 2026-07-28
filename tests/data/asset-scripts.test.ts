@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
@@ -209,9 +210,33 @@ describe("asset scripts diagnostics", () => {
     expect(seventh.every((entry) => !entry.source.startsWith("data/source/manual/detail/"))).toBe(true);
   });
 
-  it("keeps knight sixth-turn active one as the warm-spectrum glowblade icon", async () => {
+  it("maps the glowblade reference source to knight sixth-turn active four", async () => {
+    const source = await readFile(path.join(root, "data/source/manual/detail/knight/s6/active-4.jpg"));
+
+    expect(createHash("sha256").update(source).digest("hex"))
+      .toBe("847e74e81d011641c44d55a39e9a8e6fc8c079b7bad14db55d5be3613d244e69");
+  });
+
+  it("keeps knight sixth-turn active one as the blue water icon", async () => {
     const { data, info } = await sharp(
       path.join(root, "public/assets/skills/knight-s6-active-1.webp"),
+    ).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    let visible = 0;
+    let cool = 0;
+
+    for (let index = 0; index < data.length; index += info.channels) {
+      const [red, green, blue, alpha] = data.subarray(index, index + info.channels);
+      if (alpha < 128) continue;
+      visible += 1;
+      if (blue > red * 1.25 && blue > green * 1.05 && blue > 100) cool += 1;
+    }
+
+    expect(cool / visible).toBeGreaterThan(0.2);
+  });
+
+  it("keeps knight sixth-turn active four as the warm-spectrum glowblade icon", async () => {
+    const { data, info } = await sharp(
+      path.join(root, "public/assets/skills/knight-s6-active-4.webp"),
     ).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     let visible = 0;
     let warm = 0;

@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { existsSync } from "node:fs";
 import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -27,6 +28,9 @@ const {
 };
 
 const root = process.cwd();
+// Original phone screenshots are intentionally local-only; committed compact sources
+// remain validated below in every environment, including GitHub Actions.
+const withSuppliedDetailScreenshots = existsSync(path.join(root, "技能图标")) ? it : it.skip;
 sharp.cache(false);
 
 function runFailure(script: string, cwd: string): string {
@@ -43,7 +47,7 @@ function runFailure(script: string, cwd: string): string {
 }
 
 describe("asset scripts diagnostics", () => {
-  it("finds every supplied non-seventh detail screenshot by profession and turn", async () => {
+  withSuppliedDetailScreenshots("finds every supplied non-seventh detail screenshot by profession and turn", async () => {
     const screenshots = await listDetailSkillScreenshots(root);
 
     expect(screenshots).toHaveLength(280);
@@ -53,7 +57,7 @@ describe("asset scripts diagnostics", () => {
     expect(screenshots.filter((file) => file.group === "sage-s6")).toHaveLength(12);
   });
 
-  it("separates active and passive screenshots within a single turn", async () => {
+  withSuppliedDetailScreenshots("separates active and passive screenshots within a single turn", async () => {
     const screenshots = await classifyDetailSkillKinds(root);
     const fighterStageTwo = screenshots.filter((file) => file.group === "fighter-s2");
 
@@ -62,7 +66,7 @@ describe("asset scripts diagnostics", () => {
     expect(fighterStageTwo.filter((file) => file.kind === "passive")).toHaveLength(5);
   });
 
-  it("preserves the active and passive count for every supplied skill group", async () => {
+  withSuppliedDetailScreenshots("preserves the active and passive count for every supplied skill group", async () => {
     const screenshots = await classifyDetailSkillKinds(root);
     const expected = {
       "fighter-knight-s1": [13, 13],
@@ -84,7 +88,7 @@ describe("asset scripts diagnostics", () => {
     }
   });
 
-  it("maps every non-seventh output to a screenshot of the same skill kind", async () => {
+  withSuppliedDetailScreenshots("maps every non-seventh output to a screenshot of the same skill kind", async () => {
     const mapping = await buildDetailSkillMapping(root);
     const fighterStageOne = mapping.filter((entry) => entry.output.includes("/fighter-s1-"));
     const knightStageOne = mapping.filter((entry) => entry.output.includes("/knight-s1-"));

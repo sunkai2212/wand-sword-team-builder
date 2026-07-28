@@ -1,4 +1,4 @@
-const SKILL_ASSET_VERSION = "2026-07-28-warlock-s2-passive-align";
+const SKILL_ASSET_VERSION = "2026-07-28-warlock-s2-keep-badges";
 
 function versionSkillAsset(url: string): string {
   return url.includes("/assets/skills/")

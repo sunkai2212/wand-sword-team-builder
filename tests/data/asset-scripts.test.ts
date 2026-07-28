@@ -95,17 +95,17 @@ describe("asset scripts diagnostics", () => {
       path.basename(entry.output),
       entry.crop,
     ]))).toEqual({
-      "warlock-s2-active-1.webp": { left: 88, top: 51, width: 154, height: 154 },
-      "warlock-s2-active-2.webp": { left: 336, top: 51, width: 154, height: 154 },
-      "warlock-s2-active-3.webp": { left: 584, top: 51, width: 154, height: 154 },
-      "warlock-s2-active-4.webp": { left: 832, top: 51, width: 154, height: 154 },
-      "warlock-s2-active-5.webp": { left: 1080, top: 51, width: 154, height: 154 },
-      "warlock-s2-active-6.webp": { left: 88, top: 299, width: 154, height: 154 },
-      "warlock-s2-passive-1.webp": { left: 336, top: 311, width: 154, height: 154 },
-      "warlock-s2-passive-2.webp": { left: 584, top: 311, width: 154, height: 154 },
-      "warlock-s2-passive-3.webp": { left: 832, top: 311, width: 154, height: 154 },
-      "warlock-s2-passive-4.webp": { left: 1080, top: 311, width: 154, height: 154 },
-      "warlock-s2-passive-5.webp": { left: 88, top: 559, width: 154, height: 154 },
+      "warlock-s2-active-1.webp": { left: 70, top: 33, width: 190, height: 190 },
+      "warlock-s2-active-2.webp": { left: 318, top: 33, width: 190, height: 190 },
+      "warlock-s2-active-3.webp": { left: 566, top: 33, width: 190, height: 190 },
+      "warlock-s2-active-4.webp": { left: 814, top: 33, width: 190, height: 190 },
+      "warlock-s2-active-5.webp": { left: 1062, top: 33, width: 190, height: 190 },
+      "warlock-s2-active-6.webp": { left: 70, top: 281, width: 190, height: 190 },
+      "warlock-s2-passive-1.webp": { left: 318, top: 281, width: 190, height: 190 },
+      "warlock-s2-passive-2.webp": { left: 566, top: 281, width: 190, height: 190 },
+      "warlock-s2-passive-3.webp": { left: 814, top: 281, width: 190, height: 190 },
+      "warlock-s2-passive-4.webp": { left: 1062, top: 281, width: 190, height: 190 },
+      "warlock-s2-passive-5.webp": { left: 70, top: 529, width: 190, height: 190 },
     });
     expect(warlockStageTwo.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
     expect(warlockStageTwo.every((entry) => entry.sharpen === true)).toBe(true);

@@ -124,6 +124,42 @@ test("可填写队员 ID，并用 ID 替代棋盘和编辑器里的职业文字"
   await expect(editor.getByRole("heading", { name: /凉风\.Arc/ })).toBeVisible();
 });
 
+test("中文输入法组词期间不会重绘队员 ID 输入框", async ({ page }) => {
+  await chooseStage(page);
+  await addKnight(page, 0);
+
+  const input = memberEditor(page).getByLabel("队员ID");
+  await input.focus();
+  const inputSurvivedComposition = await input.evaluate((element) => {
+    element.dispatchEvent(new CompositionEvent("compositionstart", {
+      bubbles: true,
+      data: "liang",
+    }));
+    element.value = "liang";
+    element.dispatchEvent(new InputEvent("input", {
+      bubbles: true,
+      data: "liang",
+      inputType: "insertCompositionText",
+      isComposing: true,
+    }));
+
+    return element.isConnected && document.activeElement === element;
+  });
+
+  expect(inputSurvivedComposition).toBe(true);
+  await expect(page.getByTestId("board-cell").nth(0)).toContainText("队员1");
+
+  await input.evaluate((element) => {
+    element.value = "凉";
+    element.dispatchEvent(new CompositionEvent("compositionend", {
+      bubbles: true,
+      data: "凉",
+    }));
+  });
+
+  await expect(page.getByTestId("board-cell").nth(0)).toContainText("凉");
+});
+
 test("更换职业保留队员 ID，并继续清空技能", async ({ page }) => {
   await chooseStage(page);
   await addKnight(page, 0);

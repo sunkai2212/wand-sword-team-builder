@@ -128,7 +128,18 @@ function renderMember(
   idInput.maxLength = 16;
   idInput.placeholder = memberDisplayName({ ...member, playerId: "" }, index);
   idInput.value = member.playerId;
-  idInput.addEventListener("input", () => handlers.onSetPlayerId(member.id, idInput.value));
+  let isComposingPlayerId = false;
+  idInput.addEventListener("compositionstart", () => {
+    isComposingPlayerId = true;
+  });
+  idInput.addEventListener("compositionend", () => {
+    isComposingPlayerId = false;
+    handlers.onSetPlayerId(member.id, idInput.value);
+  });
+  idInput.addEventListener("input", (event) => {
+    if (isComposingPlayerId || (event as InputEvent).isComposing) return;
+    handlers.onSetPlayerId(member.id, idInput.value);
+  });
   idLabel.append(idLabelText, idInput);
   titleBlock.append(title, idLabel);
   header.append(portrait, titleBlock);

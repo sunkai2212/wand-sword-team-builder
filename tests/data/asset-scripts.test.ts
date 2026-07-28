@@ -135,12 +135,24 @@ describe("asset scripts diagnostics", () => {
     const fighterStageOne = manifest.filter((entry) =>
       entry.output.includes("/skills/fighter-s1-")
     );
+    const knightStageSixActiveOne = knightManual.find((entry) =>
+      entry.output.endsWith("/skills/knight-s6-active-1.webp")
+    );
+    const otherKnightManual = knightManual.filter((entry) =>
+      !entry.output.endsWith("/skills/knight-s6-active-1.webp")
+    );
 
     expect(knightManual).toHaveLength(83);
     expect(knightManual.every((entry) =>
       entry.source.startsWith("data/source/manual/knight")
     )).toBe(true);
-    expect(knightManual.every((entry) =>
+    expect(knightStageSixActiveOne?.crop).toEqual({
+      left: 12,
+      top: 12,
+      width: 208,
+      height: 208,
+    });
+    expect(otherKnightManual.every((entry) =>
       entry.crop.left === 32 &&
       entry.crop.top === 32 &&
       entry.crop.width === 208 &&

@@ -112,10 +112,55 @@ describe("asset scripts diagnostics", () => {
     expect(warlockStageTwo.every((entry) => entry.quality === 95)).toBe(true);
   });
 
+  it("uses curated manual screenshots for knight icons without changing stage seven", async () => {
+    const manifest = JSON.parse(
+      await readFile(path.join(root, "data/source-assets.json"), "utf8"),
+    ) as Array<{
+      source: string;
+      output: string;
+      crop: { left: number; top: number; width: number; height: number };
+      maskRadiusRatio?: number;
+      sharpen?: boolean;
+      quality?: number;
+    }>;
+    const knightManual = manifest.filter((entry) =>
+      /\/skills\/knight-s[1-6]-/.test(entry.output)
+    );
+    const knightStageSeven = manifest.filter((entry) =>
+      entry.output.includes("/skills/knight-s7-")
+    );
+    const knightStageOne = manifest.filter((entry) =>
+      entry.output.includes("/skills/knight-s1-")
+    );
+    const fighterStageOne = manifest.filter((entry) =>
+      entry.output.includes("/skills/fighter-s1-")
+    );
+
+    expect(knightManual).toHaveLength(83);
+    expect(knightManual.every((entry) =>
+      entry.source.startsWith("data/source/manual/knight")
+    )).toBe(true);
+    expect(knightManual.every((entry) =>
+      entry.crop.left === 0 &&
+      entry.crop.top === 0 &&
+      entry.crop.width === 260 &&
+      entry.crop.height === 260
+    )).toBe(true);
+    expect(knightManual.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
+    expect(knightManual.every((entry) => entry.sharpen === true)).toBe(true);
+    expect(knightManual.every((entry) => entry.quality === 95)).toBe(true);
+    expect(knightStageSeven.every((entry) =>
+      !entry.source.startsWith("data/source/manual/knight")
+    )).toBe(true);
+    expect(fighterStageOne.map((entry) => entry.source))
+      .toEqual(knightStageOne.map((entry) => entry.source));
+  });
+
   it("uses full-frame circular crops and sharpening for stage-six skill icons", async () => {
     const manifest = JSON.parse(
       await readFile(path.join(root, "data/source-assets.json"), "utf8"),
     ) as Array<{
+      source: string;
       output: string;
       crop: { width: number; height: number };
       sharpen?: boolean;
@@ -123,10 +168,13 @@ describe("asset scripts diagnostics", () => {
       maskRadiusRatio?: number;
     }>;
     const stageSix = manifest.filter(
-      (entry) => entry.output.includes("/skills/") && entry.output.includes("-s6-"),
+      (entry) =>
+        entry.output.includes("/skills/") &&
+        entry.output.includes("-s6-") &&
+        !entry.source.startsWith("data/source/manual/")
     );
 
-    expect(stageSix).toHaveLength(48);
+    expect(stageSix).toHaveLength(36);
     expect(Math.max(...stageSix.map((entry) => entry.crop.width))).toBeLessThanOrEqual(90);
     expect(Math.max(...stageSix.map((entry) => entry.crop.height))).toBeLessThanOrEqual(90);
     expect(stageSix.every((entry) => entry.maskRadiusRatio === 0.5)).toBe(true);
